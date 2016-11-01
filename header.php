@@ -1,13 +1,3 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="bibliotecas/css/style.css">
-    </head>
-    <body>
-
         <header>
             <nav class="navbar navbar-inverse">
                 <div class="container">
@@ -21,7 +11,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#">Nome da tela</a>
+                        <a class="navbar-brand" href="#"><?php echo $nome_tela;?></a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="collapse-navbar" aria-expanded="false">
@@ -37,9 +27,3 @@
             </nav>
         </header>
 
-
-        <script src="bibliotecas/js/jquery.js"></script>
-        <script src="bibliotecas/bootstrap/js/bootstrap.min.js"></script>
-        <script src="bibliotecas/js/navbar-animation-fix.js"></script>
-    </body>
-</html>
