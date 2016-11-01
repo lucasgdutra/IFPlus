@@ -17,10 +17,10 @@
             <div class="collapse navbar-collapse" id="collapse-navbar" aria-expanded="false">
                 <div class="col-md-9">
                      <ul class="nav navbar-nav ">
-                         <li class="active"><a  href="Agenda/index.php">Agenda</a></li>
-                        <li><a href="Caderno/index.php">Caderno</a></li>
-                        <li><a href="Chat/index.php">Chat</a></li>
-                        <li><a href="Compartilhador/index.php">Compartilhador de Arquivos</a></li>
+                         <li class="active"><a  href="../Agenda/index.php">Agenda</a></li>
+                        <li><a href="../Caderno/index.php">Caderno</a></li>
+                        <li><a href="../Chat/index.php">Chat</a></li>
+                        <li><a href="../Compartilhador/index.php">Compartilhador de Arquivos</a></li>
                     </ul>
                 </div>
                 <div class="col-md-1">
