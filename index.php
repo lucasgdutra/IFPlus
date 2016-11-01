@@ -12,6 +12,7 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap.css">
     </head>
     <body>
+        <?php $nome_tela="Inicio"?>
         <?php include_once './header.php';?>
         <div>TODO write content</div>
         
