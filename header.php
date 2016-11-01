@@ -11,17 +11,49 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand" href="#"><?php echo"IFPlus"; ?></a>
                 </div>
-                <a class="navbar-brand" href="#"><?php echo $nome_tela; ?></a>
+
             </div>
 
             <div class="collapse navbar-collapse" id="collapse-navbar" aria-expanded="false">
                 <div class="col-md-9">
                     <ul class="nav navbar-nav ">
-                        <li class="active"><a href="../Agenda/">Agenda</a></li>
-                        <li><a  href="../Caderno/">Caderno</a></li>
-                        <li><a  href="../Chat/">Chat</a></li>
-                        <li><a  href="../Compartilhador/">Compartilhador de Arquivos</a></li>
+                        <li <?php
+                        if ($nome_tela == 'Agenda') {
+                            echo 'class="active"';
+                        }
+                        ?>>
+                            <a href="../Agenda/">Agenda</a>
+                        </li>
+
+
+                        <li <?php
+                        if ($nome_tela == "Arquivos") {
+                            echo 'class="active"';
+                        }
+                        ?>>
+                            <a  href="../Arquivos/">Arquivos</a>
+                        </li>
+
+                        <li
+                            <?php
+                            if ($nome_tela == 'Caderno') {
+                                echo 'class="active"';
+                            }
+                            ?>>
+                            <a  href="../Caderno/">Caderno</a>
+                        </li>
+
+                        <li 
+                        <?php
+                        if ($nome_tela == 'Chat') {
+                            echo 'class="active"';
+                        }
+                        ?>>
+                            <a  href="../Chat/">Chat</a>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="col-md-1">
@@ -33,16 +65,3 @@
         </div>
     </nav>
 </header>
-
-<script>
-    $(function () {
-        $(".nav li").click(function () {
-            $(".nav li").removeClass('active');
-            setTimeout(function () {
-                var page = $.QueryString("page");
-                $(".nav li:eq(" + page + ")").addClass("active");
-            }, 300);
-
-        });
-    });
-</script>

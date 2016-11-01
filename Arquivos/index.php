@@ -12,7 +12,7 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
     </head>
     <body>
-        <?php $nome_tela="Compartilhador"?>
+        <?php $nome_tela="Arquivos"?>
         <?php require '../header.php';?>
         <div>TODO write content</div>
         
