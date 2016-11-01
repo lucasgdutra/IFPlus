@@ -9,13 +9,13 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap-theme.css">
+        <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
     </head>
     <body>
-        <?php include_once './cabecalho.php';?>
+        <?php require './cabecalho.php';;?>
         <div>TODO write content</div>
         
-        <script src="bibliotecas/js/jquery.js"></script>
-        <script src="bibliotecas/bootstrap/js/bootstrap.js"></script>
+        <script src="../bibliotecas/js/jquery.js"></script>
+        <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>
