@@ -18,10 +18,10 @@
             <div class="collapse navbar-collapse" id="collapse-navbar" aria-expanded="false">
                 <div class="col-md-9">
                     <ul class="nav navbar-nav ">
-                        <li><a  href="../Agenda/index.php">Agenda</a></li>
-                        <li><a  href="../Caderno/index.php">Caderno</a></li>
-                        <li><a  href="../Chat/index.php">Chat</a></li>
-                        <li><a  href="../Compartilhador/index.php">Compartilhador de Arquivos</a></li>
+                        <li class="active"><a href="../Agenda/">Agenda</a></li>
+                        <li><a  href="../Caderno/">Caderno</a></li>
+                        <li><a  href="../Chat/">Chat</a></li>
+                        <li><a  href="../Compartilhador/">Compartilhador de Arquivos</a></li>
                     </ul>
                 </div>
                 <div class="col-md-1">
@@ -34,3 +34,15 @@
     </nav>
 </header>
 
+<script>
+    $(function () {
+        $(".nav li").click(function () {
+            $(".nav li").removeClass('active');
+            setTimeout(function () {
+                var page = $.QueryString("page");
+                $(".nav li:eq(" + page + ")").addClass("active");
+            }, 300);
+
+        });
+    });
+</script>
