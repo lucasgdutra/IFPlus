@@ -6,15 +6,20 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>IFPlus - Arquivos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
+        <style>
+            
+        </style>
     </head>
     <body>
         <?php $nome_tela="Arquivos"?>
         <?php require '../header.php';?>
-        <div>TODO write content</div>
+        
+        <a href="prof.php">professor</a>
+        <a href="aluno.php">Aluno</a>
         
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
