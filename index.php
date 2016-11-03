@@ -1,5 +1,5 @@
 <?php
 
-header("Location: Agenda/");
+header("Location: ./View/Agenda/");
 ?>
 
