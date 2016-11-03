@@ -13,7 +13,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php $nome_tela = "Agenda" ?>
-        <?php require '../../header.php'; ?>
+        <?php require '../header.php'; ?>
         <div>
             <a href="#">link</a>
         </div>

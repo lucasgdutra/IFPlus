@@ -13,7 +13,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php $nome_tela="Chat"?>
-        <?php require '../../header.php'; ?>
+        <?php require '../header.php'; ?>
         <div>TODO write content</div>
         
         <script src="../bibliotecas/js/jquery.js"></script>

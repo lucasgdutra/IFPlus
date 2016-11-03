@@ -16,7 +16,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php $nome_tela="Arquivos"?>
-        <?php require '../../header.php'; ?>
+        <?php require '../header.php'; ?>
         
         <div class="input-group">
             <input type="text" class="form-control" aria-label="...">

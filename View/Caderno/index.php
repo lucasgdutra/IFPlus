@@ -12,10 +12,10 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
     </head>
     <body>
-        <?php $nome_tela = "Caderno" ?>
-        <?php require '../../header.php'; ?>
+        <?php $nome_tela="Caderno"?>
+        <?php require '../header.php';?>
         <div>TODO write content</div>
-
+        
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
     </body>
