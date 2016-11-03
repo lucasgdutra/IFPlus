@@ -11,7 +11,21 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <style>
+            .navbar
+            {
+                margin-bottom: 3px;
+            }
+            .nav li p
+            {
+                position: relative;
+                display: block;
+                padding: 10px 15px;
+            }
             
+            p
+            {
+                margin: 0 0 0px;
+            }
         </style>
     </head>
     <body>
@@ -19,9 +33,11 @@ and open the template in the editor.
         <?php require '../header.php';?>
         
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" style="background-color: #fff">
                 <ul class="nav">
-                    <li class="active col-xs-12"><a href="#all" data-toggle="tab">Todos os Arquivos</a></li>
+                    <li class="active col-xs-12">
+                        <p class="text-center">Todos os Arquivos</p>
+                    </li>
                 </ul>
             </div>
             <br>
