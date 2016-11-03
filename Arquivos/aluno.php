@@ -18,17 +18,22 @@ and open the template in the editor.
         <?php $nome_tela="Arquivos"?>
         <?php require '../header.php';?>
         
-        <div class="input-group">
-            <input type="text" class="form-control" aria-label="...">
-            <div class="input-group-btn">
-                <botton type="button" class="btn btn-default" aria-label="Help">
-                    <span class="glyphicon glyphicon-question-sign"></span>
-                </botton>
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="nav">
+                    <li class="active col-xs-12"><a href="#all" data-toggle="tab">Todos os Arquivos</a></li>
+                </ul>
             </div>
-            
+            <br>
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Arquivo">
+                <div class="input-group-btn">
+                    <botton type="button" class="btn btn-default" aria-label="Pesquisar">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </botton>
+                </div> 
+            </div>
         </div>
-
-        
         
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
