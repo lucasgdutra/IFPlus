@@ -16,7 +16,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php $nome_tela="Arquivos"?>
-        <?php require '../header.php';?>
+        <?php require '../../header.php'; ?>
         
         <a href="prof.php">professor</a>
         <a href="aluno.php">Aluno</a>
