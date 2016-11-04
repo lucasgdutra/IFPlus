@@ -26,37 +26,38 @@ and open the template in the editor.
             <div class="tab-content container">
 
                 <div role="tabpanel" class="tab-pane active" id="caderno-disc">
-                    <button type="button" class="list-group-item ">Artes</button>
+                    <a href="#" aria-controls="caderno-aula" class="list-group-item ">
+                        <h4>Matematica</h4>
+                    </a>
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="caderno-aula">
-                    <table class=" table table-bordered table-responsive">
-                        <thead>
-                            <tr >                      
-                                <th>#</th>
-                                <th>Nome</th>
-                                <th>Disciplina</th>
-                                <th>Professor</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="active">
-                                <td>1</td>
-                                <td>Neodarwinismo</td>
-                                <td>Biologia</td>
-                                <td>Tatiana</td>
-                                <td class="btn btn-default"><a >Vizualizar</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Segunda Guerra Mundial</td>
-                                <td>História</td>
-                                <td>Mário</td>
-                                <td><a class="btn btn-default">Vizualizar</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -52,7 +52,12 @@
                             ?>>
                                 <a  href="../Chat/">Chat</a>
                             </li>
-                            <li><a href="#">Configurações</a></li>
+                            <li>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                    Configurações
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
