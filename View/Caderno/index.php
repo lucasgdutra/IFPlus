@@ -24,22 +24,19 @@ and open the template in the editor.
                 </ul>
             </div>
             <div class="tab-content container">
+
                 <div role="tabpanel" class="tab-pane active" id="caderno-disc">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Artes</button>
-                        <button type="button" class="list-group-item">Física</button>
-                        <button type="button" class="list-group-item">Geografia</button>
-                        <button type="button" class="list-group-item">História</button>
-                        <button type="button" class="list-group-item">Matematica</button>
-                    </div>
+                    <button type="button" class="list-group-item ">Artes</button>
                 </div>
+
                 <div role="tabpanel" class="tab-pane" id="caderno-aula">2</div>
             </div>
-
         </div>
-        <!-- Tab panes -->
 
-        <script src="../bibliotecas/js/jquery.js"></script>
-        <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
-    </body>
+    </div>
+    <!-- Tab panes -->
+
+    <script src="../bibliotecas/js/jquery.js"></script>
+    <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
+</body>
 </html>
