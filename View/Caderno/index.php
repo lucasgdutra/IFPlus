@@ -24,7 +24,15 @@ and open the template in the editor.
                 </ul>
             </div>
             <div class="tab-content container">
-                <div role="tabpanel" class="tab-pane active" id="caderno-disc">1</div>
+                <div role="tabpanel" class="tab-pane active" id="caderno-disc">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item">Artes</button>
+                        <button type="button" class="list-group-item">Física</button>
+                        <button type="button" class="list-group-item">Geografia</button>
+                        <button type="button" class="list-group-item">História</button>
+                        <button type="button" class="list-group-item">Matematica</button>
+                    </div>
+                </div>
                 <div role="tabpanel" class="tab-pane" id="caderno-aula">2</div>
             </div>
 
