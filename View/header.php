@@ -1,8 +1,8 @@
 <header>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse ">
         <div class="container-fluid">
             <div class="row">
-                <div class="navbar-header col-md-2">
+                <div class="navbar-header col-md-7">
                     <div >
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" >
                             <span class="sr-only">Toggle navigation</span>
@@ -14,10 +14,10 @@
                     </div>
 
                 </div>
+                <div class="col-md-5">
+                    <div class="collapse navbar-collapse container " id="collapse-navbar" aria-expanded="false">
 
-                <div class="collapse navbar-collapse" id="collapse-navbar" aria-expanded="false">
-                    <div class="col-md-9">
-                        <ul class="nav navbar-nav ">
+                        <ul class="nav navbar-nav">
                             <li <?php
                             if ($nome_tela == 'Agenda') {
                                 echo 'class="active"';
@@ -36,11 +36,11 @@
                             </li>
 
                             <li
-                                <?php
-                                if ($nome_tela == 'Caderno') {
-                                    echo 'class="active"';
-                                }
-                                ?>>
+                            <?php
+                            if ($nome_tela == 'Caderno') {
+                                echo 'class="active"';
+                            }
+                            ?>>
                                 <a  href="../Caderno/">Caderno</a>
                             </li>
 
@@ -52,16 +52,12 @@
                             ?>>
                                 <a  href="../Chat/">Chat</a>
                             </li>
-
-                        </ul>
-                    </div>
-                    <div class="col-md-1">
-                        <ul class="nav navbar-nav ">
                             <li><a href="#">Configurações</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
     </nav>
 </header>

@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com.br/customize/?id=dcefb6401aae528e692f23f28af1313b)
- * Config saved to config.json and https://gist.github.com/dcefb6401aae528e692f23f28af1313b
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com.br/customize/?id=cc4d5e8121cf980159e24285ce074b9f)
+ * Config saved to config.json and https://gist.github.com/cc4d5e8121cf980159e24285ce074b9f
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -3064,25 +3064,25 @@ fieldset[disabled] a.btn {
 }
 .btn-default {
   color: #333333;
-  background-color: #ecd02c;
+  background-color: #e8c70c;
   border-color: #cccccc;
 }
 .btn-default:focus,
 .btn-default.focus {
   color: #333333;
-  background-color: #d2b613;
+  background-color: #b89d09;
   border-color: #8c8c8c;
 }
 .btn-default:hover {
   color: #333333;
-  background-color: #d2b613;
+  background-color: #b89d09;
   border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #333333;
-  background-color: #d2b613;
+  background-color: #b89d09;
   border-color: #adadad;
 }
 .btn-default:active:hover,
@@ -3095,7 +3095,7 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: #333333;
-  background-color: #b19a10;
+  background-color: #968008;
   border-color: #8c8c8c;
 }
 .btn-default:active,
@@ -3112,11 +3112,11 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
-  background-color: #ecd02c;
+  background-color: #e8c70c;
   border-color: #cccccc;
 }
 .btn-default .badge {
-  color: #ecd02c;
+  color: #e8c70c;
   background-color: #333333;
 }
 .btn-primary {
@@ -4021,9 +4021,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
-/*.nav-tabs {*/
-  /*border-bottom: 1px solid #dddddd;*/
-/*}*/
+.nav-tabs {
+  border-bottom: 1px solid #dddddd;
+}
 .nav-tabs > li {
   float: left;
   margin-bottom: -1px;
@@ -4034,10 +4034,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
-/*.nav-tabs > li > a:hover {
+.nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
-}*/
-/*.nav-tabs > li.active > a,
+}
+.nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
@@ -4045,7 +4045,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
-}*/
+}
 .nav-tabs.nav-justified {
   width: 100%;
   border-bottom: 0;
@@ -4074,11 +4074,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 0;
   border-radius: 4px;
 }
-/*.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs.nav-justified > .active > a:focus {
   border: 1px solid #dddddd;
-}*/
+}
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #dddddd;
@@ -4621,7 +4621,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #ecd02c;
+  background-color: #e8c70c;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4646,7 +4646,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #ecd02c;
+  background-color: #e8c70c;
   color: #ffffff;
 }
 @media (max-width: 767px) {
@@ -4668,7 +4668,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #ecd02c;
+    background-color: #e8c70c;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
