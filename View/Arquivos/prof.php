@@ -10,6 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
         <style>
             
         </style>
@@ -19,9 +20,9 @@
         <?php require '../header.php'; ?>
         
         <div class="container-fluid">
-            <div class="row">
+            <div id="submenu" class="row">
                 <ul class="nav nav-tabs">
-                    <li class="active col-xs-6"><a href="#all" data-toggle="tab">Todos os Arquivos</a></li>
+                    <li class="active col-xs-6"><a href="#all" data-toggle="tab">Enviados</a></li>
                     <li class="col-xs-6"><a href="#rec" data-toggle="tab">Recebidos</a></li>
                 </ul>
             </div>
