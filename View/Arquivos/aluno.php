@@ -11,21 +11,12 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">   
-        <style>
-            .panel-default .panel-heading {
-                color: #000;
-                background-color: #fff;
-            }
-            .panel-body{
-               background-color: #f5f5f5;
-            }
-        </style>
     </head>
     <body>
         <?php $nome_tela="Arquivos"?>
         <?php require '../header.php';?>
         
-        <div class="container-fluid">
+        <div class="container">
             <div id="submenu" class="row">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">

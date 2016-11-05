@@ -8,13 +8,14 @@
         <link type="text/css" rel="stylesheet" href="bibliotecas/css/style.css">
     </head>
 
-    <body >
-
+    <body>
         <div class="container">
             <div class="row">
-                <div class="col-xs-4 col-xs-offset-4">
+                <div class="col-xs-8 col-xs-offset-2">
                     <form action="../View/Agenda/" class="form-signin">
-                        <h2 class="form-signin-heading">Login</h2>
+                        <center>
+                            <h2 class="form-signin-heading">Login</h2>
+                        </center>
                         <label for="inputEmail" class="sr-only">Endereço de email</label>
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                         <label for="inputPassword" class="sr-only">Senha</label>
