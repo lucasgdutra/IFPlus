@@ -46,7 +46,6 @@
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
                                 </div>
-                                
                             </li>
                         </a>
                         <a>
@@ -78,9 +77,30 @@
             </div>
 
             <div id="arquivos-bio" class="collapse">
-            <div class="panel-body">
-                Bio
-            </div>
+                <div class="panel-body">
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -95,7 +115,28 @@
 
             <div id="arquivos-ef" class="collapse">
                 <div class="panel-body">
-                    ED
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -111,7 +152,28 @@
 
             <div id="arquivos-fil" class="collapse">
                 <div class="panel-body">
-                    filos
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -127,7 +189,28 @@
 
             <div id="arquivos-geo" class="collapse">
                 <div class="panel-body">
-                    geos
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -143,7 +226,28 @@
 
             <div id="arquivos-hist" class="collapse">
                 <div class="panel-body">
-                    his
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -159,7 +263,28 @@
 
             <div id="arquivos-esp" class="collapse">
                 <div class="panel-body">
-                    esp
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -175,7 +300,28 @@
 
             <div id="arquivos-ing" class="collapse">
                 <div class="panel-body">
-                    ing
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -191,7 +337,28 @@
 
             <div id="arquivos-port" class="collapse">
                 <div class="panel-body">
-                    port
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -207,7 +374,28 @@
 
             <div id="arquivos-mat" class="collapse">
                 <div class="panel-body">
-                    mat
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -222,7 +410,28 @@
 
             <div id="arquivos-qui" class="collapse">
                 <div class="panel-body">
-                    qui
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -237,7 +446,28 @@
 
             <div id="arquivos-red" class="collapse">
                 <div class="panel-body">
-                    reda
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -252,7 +482,28 @@
 
             <div id="arquivos-soc" class="collapse">
                 <div class="panel-body">
-                    SOOOOOS
+                    <ul id="arquivos">
+                        <a href="#d">
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        Aula sobre Vanguardas
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                        <a>
+                            <li class="list-group-item">
+                                <div class="container" id="container">
+                                    <div class="col-xs-11">
+                                        """"""""Aula""""""""
+                                    </div>
+                                    <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
