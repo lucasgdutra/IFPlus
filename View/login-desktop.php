@@ -83,7 +83,7 @@
             </div>
         </div>
         <footer>
-            <a href="http://www.freepik.com"> Projetado por Creativeart / Freepik </a>
+            <a href="http://www.freepik.com"> Imagem de Creativeart / Freepik </a>
         </footer>
         <script src="bibliotecas/js/jquery.js"></script>
         <script src="bibliotecas/bootstrap/js/bootstrap.js"></script>
