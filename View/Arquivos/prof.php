@@ -12,6 +12,11 @@
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
         <style>
+            #lnk-send
+            {
+                padding: 10px 15px 10px 10px;
+            }
+            
             .col-xs-3
             {
                 padding-left: 0px;
@@ -42,29 +47,23 @@
             <div id="submenu" class="row">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active col-xs-3">
-                        <a href="#arquivos-all" aria-controls="arquivos-all" role="tab" data-toggle="tab">Todos</a>
+                    <li role="presentation" class=" col-xs-4">
+                        <a href="#arquivos-send" aria-controls="arquivos-send" id="lnk-send" role="tab" data-toggle="tab">Enviados</a>
                     </li>
-                    <li role="presentation" class="col-xs-3">
-                        <a href="#arquivos-send" aria-controls="arquivos-send" role="tab" data-toggle="tab">Enviados</a>
-                    </li>
-                    <li role="presentation" class="col-xs-3">
+                    <li role="presentation" class="active col-xs-4">
                         <a href="#arquivos-new" aria-controls="arquivos-new" role="tab" data-toggle="tab">Novo</a>
                     </li>
-                    <li role="presentation" class="col-xs-3">
+                    <li role="presentation" class="col-xs-4">
                         <a href="#arquivos-turm" aria-controls="arquivos-turm" role="tab" data-toggle="tab">Turmas</a>
                     </li>
                 </ul>
             </div>
             <div class="tab-content container">
-                <div role="tabpanel" class="tab-pane active" id="arquivos-all">
-                    TODOS
-                </div>
                 <div role="tabpanel" class="tab-pane" id="arquivos-send">
-                    ENVIADOS
+                    <?php require 'enviados-prof.php';?>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="arquivos-new">
-                    NOVOS
+                <div role="tabpanel" class="tab-pane active" id="arquivos-new">
+                    <?php require 'novo-prof.php';?>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="arquivos-turm">
                     TURMAS

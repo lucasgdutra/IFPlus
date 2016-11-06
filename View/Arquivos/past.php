@@ -61,10 +61,6 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="list-gruop">
-                
-            </div>
         </div>
 
         <div class="panel panel-default">
