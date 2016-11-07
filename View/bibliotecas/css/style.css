@@ -52,8 +52,9 @@ table {
     box-sizing: border-box;
 }
 
-body{
-    /*FONTE*/
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
 .navbar-inverse{

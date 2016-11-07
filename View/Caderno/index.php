@@ -23,6 +23,9 @@ and open the template in the editor.
                     <li role="presentation" class="col-xs-6"><a href="#caderno-aula" aria-controls="caderno-aula" role="tab" data-toggle="tab">Aulas</a></li>
                 </ul>
             </div>
+
+
+
             <div class="tab-content container">
 
                 <div role="tabpanel" class="tab-pane active" id="caderno-disc">
@@ -60,12 +63,12 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
-    <!-- Tab panes -->
+        <!-- Tab panes -->
 
-    <script src="../bibliotecas/js/jquery.js"></script>
-    <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
-</body>
+        <script src="../bibliotecas/js/jquery.js"></script>
+        <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
+    </body>
 </html>

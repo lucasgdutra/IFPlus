@@ -2,7 +2,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="row">
-                <div class="navbar-header col-md-4">
+                <div class="navbar-header col-md-7">
                     <div >
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" >
                             <span class="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@
                         <a class="navbar-brand" href="#"><?php echo"IFPlus"; ?></a>
                     </div>
                 </div>
-                <div class=" col-md-8">
+                <div class=" col-md-5">
                     <div class="collapse navbar-collapse container " id="collapse-navbar" aria-expanded="false">
 
                         <ul id="ul" class="nav navbar-nav">
@@ -68,7 +68,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#myModal">
                                     <span class="glyphicon glyphicon-cog"></span>
                                     &nbsp;
                                     Configurações
@@ -82,3 +82,20 @@
 
     </nav>
 </header>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
