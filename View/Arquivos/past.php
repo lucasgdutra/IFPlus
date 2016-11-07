@@ -25,7 +25,7 @@
 </style>
 <br>
 <div class="row">
-    <div class="panel-group col-sm-6" id="paineis-pastas">
+    <div class="panel-group" id="paineis-pastas">
         <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-target="#arquivos-art" data-parent="#paineis-pastas">
                 <h3 class="panel-title">
@@ -41,7 +41,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -51,7 +51,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -78,7 +78,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -88,7 +88,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -115,7 +115,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -125,7 +125,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -152,7 +152,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -162,7 +162,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -189,7 +189,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -199,7 +199,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -226,7 +226,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -236,7 +236,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -263,7 +263,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -273,7 +273,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -300,7 +300,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -310,7 +310,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -337,7 +337,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -347,7 +347,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -374,7 +374,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -384,7 +384,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -410,7 +410,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -420,7 +420,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -446,7 +446,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -456,7 +456,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -482,7 +482,7 @@
                         <a href="#d">
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         Aula sobre Vanguardas
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>
@@ -492,7 +492,7 @@
                         <a>
                             <li class="list-group-item">
                                 <div class="container" id="container">
-                                    <div class="col-xs-11">
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                                         """"""""Aula""""""""
                                     </div>
                                     <span id="icon-download" class="glyphicon glyphicon-download-alt col-xs-1" aria-hidden="true"></span>

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="row">
-                <div class="navbar-header col-md-6">
+                <div class="navbar-header col-md-4">
                     <div >
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" >
                             <span class="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@
                         <a class="navbar-brand" href="#"><?php echo"IFPlus"; ?></a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class=" col-md-8">
                     <div class="collapse navbar-collapse container " id="collapse-navbar" aria-expanded="false">
 
                         <ul id="ul" class="nav navbar-nav">

@@ -16,7 +16,7 @@ and open the template in the editor.
         <?php $nome_tela="Arquivos"?>
         <?php require '../header.php';?>
         
-        <div class="container">
+        <div class="container-fluid">
             <div id="submenu" class="row">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
@@ -26,17 +26,19 @@ and open the template in the editor.
                 </ul>
             </div>
             <br>
-            <div>
-                <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Arquivo">
-                    <div class="input-group-btn">
-                        <botton type="button" class="btn btn-default" aria-label="Pesquisar">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </botton>
+            <div class="container">
+                <div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Arquivo">
+                        <div class="input-group-btn">
+                            <botton type="button" class="btn btn-default" aria-label="Pesquisar">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </botton>
+                        </div>
                     </div>
+
+                    <?php require 'past.php'; ?>
                 </div>
-                
-                <?php require 'past.php'; ?>
             </div>
         </div>
         
