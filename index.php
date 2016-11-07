@@ -9,8 +9,8 @@ $berry = strpos($_SERVER['HTTP_USER_AGENT'], "BlackBerry");
 $ipod = strpos($_SERVER['HTTP_USER_AGENT'], "iPod");
 $symbian = strpos($_SERVER['HTTP_USER_AGENT'], "Symbian");
 if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == true) {
-    header("Location: ./View/login-desktop.php");
-} else {
     header("Location: ./View/login-smartphone.php");
+} else {
+    header("Location: ./View/login-desktop.php");
 }
 ?>
