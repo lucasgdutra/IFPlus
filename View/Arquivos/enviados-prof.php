@@ -30,7 +30,7 @@
     }
 </style>
 <div class="row">
-    <div class="panel-group col-sm-6" id="paineis-pastas">
+    <div class="panel-group" id="paineis-pastas">
         <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-target="#arquivos-3c" data-parent="#paineis-pastas">
                 <h3 class="panel-title">
