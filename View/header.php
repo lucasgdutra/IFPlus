@@ -68,7 +68,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                <a href="#" data-toggle="modal" data-target="#ConfigModal">
                                     <span class="glyphicon glyphicon-cog"></span>
                                     &nbsp;
                                     Configurações
@@ -82,7 +82,7 @@
 
     </nav>
 </header>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="ConfigModal" tabindex="-1" role="dialog" aria-labelledby="ConfigModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
