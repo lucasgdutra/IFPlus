@@ -6,6 +6,9 @@
     <head>
         <title>IFPlus</title>
         <meta charset="utf-8"> 
+        <link type="text/css" rel="stylesheet" href="View//bibliotecas/css/reset.css">
+        <link type="text/css" rel="stylesheet" href="View/bibliotecas/bootstrap/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="View/bibliotecas/css/style.css">
     </head>
     <body>
         

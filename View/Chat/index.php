@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>mensageiro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/reset.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/chat.css">
@@ -24,23 +25,19 @@ and open the template in the editor.
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-2 col-xs-offset-10" id="mensageiro"><!--div msg podera ser removida-->
+                <div class="afix col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10 hidden-xs" id="mensageiro"><!--div msg podera ser removida-->
                     <aside id="users_online">
-                        <a href="#" class="list-group-item ">
-                            <h4 class="list-group-item-heading">Matematica</h4>
-                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                        </a>
-                        <ul>
-                            <?php for ($i = 1; $i <= 8; $i++): ?>
-                                <li id="5">
+                        <div class="list-group">
+                            <?php for ($i = 1; $i <= 35; $i++): ?>
+                                <a href="#" class="list-group-item ">
                                     <div class="imgSmall">
-                                        <img src="../bibliotecas/img/breno.png" border="0">
+                                        <img class="img-responsive img-circle" src="../bibliotecas/img/breno.png" border="0">
                                     </div>
-                                    <a href="#" id="3:5" class="comecar">Breno Mendes</a>
-                                    <span id="5" class="status off"></span>
-                                </li>
+                                    <p class="comecar">Breno Mendes</p>
+                                    <span  class="status off"></span>
+                                </a>
                             <?php endfor; ?>
-                        </ul>
+                            </div>
                     </aside>
                 </div>
                 <aside id="chats">

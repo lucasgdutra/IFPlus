@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/reset.css">
         <link type="text/css" rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="bibliotecas/css/style.css">
     </head>
