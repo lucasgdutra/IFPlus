@@ -14,65 +14,69 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/chat.css">
     </head>
     <body>
-        <?php $nome_tela="Chat"?>
+        <?php $nome_tela = "Chat" ?>
         <?php require '../header.php'; ?>
-        
-        <div id="principal"><!--div msg podera ser removida-->
 
+        <!--        <div id="principal">
+                    div msg podera ser removida
+                </div>
+                Comentada por Lucas -> Desnecessária-->
 
-        </div>
-        <div id="mensageiro"><!--div msg podera ser removida-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-10" id="mensageiro"><!--div msg podera ser removida-->
+                    <aside id="users_online">
+                        <a href="#" class="list-group-item ">
+                            <h4 class="list-group-item-heading">Matematica</h4>
+                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                        </a>
+                        <ul>
+                            <?php for ($i = 1; $i <= 8; $i++): ?>
+                                <li id="5">
+                                    <div class="imgSmall">
+                                        <img src="../bibliotecas/img/breno.png" border="0">
+                                    </div>
+                                    <a href="#" id="3:5" class="comecar">Breno Mendes</a>
+                                    <span id="5" class="status off"></span>
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </aside>
+                </div>
+                <aside id="chats">
 
-            <aside id="users_online">
-                <ul>
-                    <?php for ($i = 1; $i <= 8; $i++): ?>
-                        <div><!--div msg podera ser removida-->
-                            <li id="5">
-                                <div class="imgSmall">
-                                    <img src="img/breno.png" border="0">
-                                </div>
-                                <a href="#" id="3:5" class="comecar">Breno Mendes</a>
-                                <span id="5" class="status off"></span>
-                            </li>
+                    <div class="window" id="janela_x">
+                        <div class="header_window">
+                            <a href="#" class="close">x</a>
+                            <span class="name">breno mendes</span>
+                            <span id="5" class="status on"></span>
                         </div>
-                    <?php endfor; ?>
-                </ul>
-            </aside>
+                        <div class="body">
 
-            <aside id="chats">
-               
-                <div class="window" id="janela_x">
-                    <div class="header_window">
-                        <a href="#" class="close">x</a>
-                        <span class="name">breno mendes</span>
-                        <span id="5" class="status on"></span>
-                    </div>
-                    <div class="body">
-                        
-                        <div class="mensagens">
-                            <ul>
-                                <li class="eu"><p> exemplo de msg</p></li>
-                                <li class=""><p> exemplo de msg q eu estou usando para reproduzir uma mensagem de verdde</p><div class="imgSmall">
-                                        <img src="img/breno.png" border="0">
-                                    </div></li>
+                            <div class="mensagens">
+                                <ul>
+                                    <li class="eu"><p> exemplo de msg</p></li>
+                                    <li class=""><p> exemplo de msg q eu estou usando para reproduzir uma mensagem de verdde</p><div class="imgSmall">
+                                            <img src="../bibliotecas/img/breno.png" border="0">
+                                        </div></li>
                                     <!--<div class="imgSmall">-->
                                         <!--<img src="img/breno.png" border="0">
                                     </div>-->
-                            </ul>
+                                </ul>
+
+                            </div>
+                            <div class ="send_message" id="3:5">
+                                <input type="text" name="message" class="msg" id="3:5"/>
+                            </div>
 
                         </div>
-                        <div class ="send_message" id="3:5">
-                            <input type="text" name="message" class="msg" id="3:5"/>
-                        </div>
-                      
                     </div>
-                </div>
 
-            </aside>
+                </aside>
 
+            </div>
         </div>
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
-        
     </body>
 </html>
