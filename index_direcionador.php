@@ -13,4 +13,5 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
 } else {
     header("Location: ./View/login-desktop.php");
 }
+die();
 ?>
