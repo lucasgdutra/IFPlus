@@ -24,12 +24,9 @@
     margin:11px;
     modificado por Lucas -> contrapositor*/
     background-color: #ccc;
-    max-height: available;
+    max-height:10%;
     overflow: auto;
-    padding-bottom:1px;
-    padding-left:2px;
-    padding-right:2px;
-    padding-top:2px;
+    padding: 0;
 
 }
 

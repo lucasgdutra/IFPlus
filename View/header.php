@@ -57,10 +57,12 @@
                                 </a>
                             </li>
 
-                            <li 
+                            <li class="visible-xs
                             <?php
                             if ($nome_tela == 'Chat') {
-                                echo 'class="active"';
+                                echo ' active"';
+                            }else{
+                                echo '"';
                             }
                             ?>>
                                 <a  href="../Chat/">
