@@ -16,14 +16,16 @@
 
             <div class="row">
 
-                <div class="col-sm-9 col-md-10">
+                <div class="col-sm-9 col-md-10 no-padding">
                     <div style="padding: 0" class="container-fluid">
-                        <div id="submenu" class="row">
-                            <!-- Nav tabs -->
-                            <ul class="nav  nav-tabs " role="tablist">
-                                <li role="presentation" class="active col-xs-6"><a href="#caderno-disc" aria-controls="caderno-disc" role="tab" data-toggle="tab">Disciplinas</a></li>
-                                <li role="presentation" class="col-xs-6"><a href="#caderno-aula" aria-controls="caderno-aula" role="tab" data-toggle="tab">Aulas</a></li>
-                            </ul>
+                        <div style="margin-top: 50px;" class="">
+                            <div id="submenu">
+                                <!-- Nav tabs -->
+                                <ul class="nav  nav-tabs row" role="tablist">
+                                    <li role="presentation" class="active col-xs-6"><a href="#caderno-disc" aria-controls="caderno-disc" role="tab" data-toggle="tab">Disciplinas</a></li>
+                                    <li role="presentation" class="col-xs-6"><a href="#caderno-aula" aria-controls="caderno-aula" role="tab" data-toggle="tab">Aulas</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div style="padding: 10px" class="tab-content">
 
@@ -65,7 +67,7 @@
                     </div>
                 </div>
 
-                <div id="mensageiro" class="col-sm-3 col-md-2 hidden-xs">
+                <div class="col-sm-3 col-md-2 hidden-xs no-padding">
                     <?php include '../Chat/barra-lateral.php'; ?>
                 </div>
             </div>

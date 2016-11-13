@@ -13,16 +13,16 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
         <style>
-            
+
         </style>
     </head>
     <body>
-        <?php $nome_tela="Arquivos"?>
-        <?php require '../header.php';?>
-        
-        <a href="prof.php">professor</a>
-        <a href="aluno.php">Aluno</a>
-        
+        <?php $nome_tela = "Arquivos" ?>
+        <?php require '../header.php'; ?>
+        <div style="margin: 50px;" class="container">
+            <a href="prof.php">professor</a>
+            <a href="aluno.php">Aluno</a>
+        </div>
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
     </body>

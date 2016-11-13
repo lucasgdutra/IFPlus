@@ -3,7 +3,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- -->
+-->
 <html>
     <head>
         <title>IFPlus - Arquivos</title>
@@ -18,7 +18,7 @@
             {
                 padding: 10px 15px 10px 10px;
             }
-            
+
             .col-xs-3
             {
                 padding-left: 0px;
@@ -34,41 +34,43 @@
                 padding-left: 0px;
                 padding-right: 0px;
             }
-            li a 
+            li a
             {
-               padding-left: 0px;
-               padding-right: 0px; 
+                padding-left: 0px;
+                padding-right: 0px;
             }
         </style>
     </head>
     <body>
-        <?php $nome_tela="Arquivos"?>
+        <?php $nome_tela = "Arquivos" ?>
         <?php require '../header.php'; ?>
-        
-         <div  class="container-fluid">
+
+        <div  class="container-fluid">
             <div class="row">
                 <div class="col-sm-9 col-md-10">
                     <div style="padding: 0" class="container-fluid">
-                        <div id="submenu" class="row">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active col-xs-4">
-                                    <a href="#arquivos-send" aria-controls="arquivos-send" id="lnk-send" role="tab" data-toggle="tab">Enviados</a>
-                                </li>
-                                <li role="presentation" class="col-xs-4 col">
-                                    <a href="#arquivos-new" aria-controls="arquivos-new" role="tab" data-toggle="tab">Novo</a>
-                                </li>
-                                <li role="presentation" class="col-xs-4">
-                                    <a href="#arquivos-turm" aria-controls="arquivos-turm" role="tab" data-toggle="tab">Turmas</a>
-                                </li>
-                            </ul>
+                        <div style="margin-top: 50px;" class="">
+                            <div id="submenu" class="row">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active col-xs-4">
+                                        <a href="#arquivos-send" aria-controls="arquivos-send" id="lnk-send" role="tab" data-toggle="tab">Enviados</a>
+                                    </li>
+                                    <li role="presentation" class="col-xs-4 col">
+                                        <a href="#arquivos-new" aria-controls="arquivos-new" role="tab" data-toggle="tab">Novo</a>
+                                    </li>
+                                    <li role="presentation" class="col-xs-4">
+                                        <a href="#arquivos-turm" aria-controls="arquivos-turm" role="tab" data-toggle="tab">Turmas</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="tab-content container">
                             <div role="tabpanel" class="tab-pane active" id="arquivos-send">
-                                <?php require 'enviados-prof.php';?>
+                                <?php require 'enviados-prof.php'; ?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="arquivos-new">
-                                <?php require 'novo-prof.php';?>
+                                <?php require 'novo-prof.php'; ?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="arquivos-turm">
                                 <?php require 'turm-prof.php'; ?>
