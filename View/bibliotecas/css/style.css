@@ -23,7 +23,7 @@ body{
 }
 
 #submenu{
-    background-color: white; 
+    background-color: white;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -63,4 +63,16 @@ body{
 
 .bs-callout-info {
     border-left-color: #ffffff;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.vertical-bottom{
+    vertical-align: bottom;
 }

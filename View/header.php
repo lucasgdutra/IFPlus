@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-static-top navbar-inverse">
+    <nav style="margin-bottom: 60px;"class="navbar navbar-fixed-top navbar-inverse">
         <div class="container-fluid">
             <div class="row">
                 <div class="navbar-header col-md-6">
@@ -62,13 +62,13 @@
                             if ($nome_tela == 'Chat') {
                                 echo 'active';
                             }else{
-                                echo '';
+                                echo ' active"';
                             }
                             ?>">
                                 <a  href="../Chat/">
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-                                    &nbsp;
-                                    Chat
+                                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                &nbsp;
+                                Chat
                                 </a>
                             </li>
                             <li>

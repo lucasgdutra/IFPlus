@@ -10,21 +10,23 @@
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/chat.css">
     </head>
     <body>
-        <?php $nome_tela="Arquivos"?>
-        <?php require '../header.php';?>
-        
+        <?php $nome_tela = "Arquivos" ?>
+        <?php require '../header.php'; ?>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-9 col-md-10">
                     <div style="padding: 0" class="container-fluid">
                         <div class="row">
-                            <div id="submenu">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active col-xs-12 col-lg-12 col-md-12 col-sm-12">
-                                        <a class="disabled">Todos os Arquivos</a>
-                                    </li>
-                                </ul>
+                            <div style="margin-top: 50px;" class="">
+                                <div id="submenu">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                                            <a class="disabled">Todos os Arquivos</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <br>
                             <div  class="container-fluid">
@@ -48,7 +50,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
     </body>

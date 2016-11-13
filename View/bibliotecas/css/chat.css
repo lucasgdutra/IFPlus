@@ -20,7 +20,7 @@
 }
 #mensageiro{
     /*   float:right;*/
-    /*     width:240px; 
+    /*     width:240px;
     margin:11px;
     modificado por Lucas -> contrapositor*/
     background-color: #ccc;
@@ -43,7 +43,7 @@
 }
 
 ul{
-    list-style-type: none; 
+    list-style-type: none;
     height: 11%;
 }
 
@@ -105,22 +105,20 @@ ul{
 }*/
 
 .status{
-    position: absolute;
-    right:8px;
-    top: 35%;
-    margin-top: -6px;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#666;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid transparent;
+    background-color: #FFFF00;
 }
 
-.status.off{
-    background:red;
+.off{
+    background-color:red;
 }
 
-.status.on{
-    background:#090;
+.on{
+    background-color:#090;
 }
 
 /** asside dos chats position: absolute**/
@@ -146,7 +144,7 @@ ul{
 /**caixinha com o nome escrito  red;**/
 .window .header_window{
     float: left;
-    background:#00ACE6; 
+    background:#00ACE6;
     padding: 5px;
     width: 270px;
     position: relative;

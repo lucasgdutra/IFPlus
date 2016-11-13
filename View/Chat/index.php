@@ -17,7 +17,13 @@ and open the template in the editor.
     <body>
         <?php $nome_tela = "Chat" ?>
         <?php require '../header.php'; ?>
-        <?php require './barra-lateral.php';?>
+
+        <div class="row">
+            <div style="width: 100%" class="col-xs-12">
+                <?php require './barra-lateral.php'; ?>
+            </div>
+        </div>
+
         <script src="../bibliotecas/js/jquery.js"></script>
         <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
     </body>

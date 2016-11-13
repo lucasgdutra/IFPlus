@@ -4,20 +4,40 @@
         </div>
         Comentada por Lucas -> Desnecessária-->
 
-    <aside id="users_online">
+
+
+<div  class="affix" style=" padding-top: 50px; height: 100vh; background-color: #ccc">
+    <aside style="height: 80vh; overflow: auto; padding: 10px; ">
         <div class="list-group">
-            <?php for ($i = 1; $i <= 35; $i++): ?>
-                <a href="#" class="list-group-item ">
-                    <div class="imgSmall">
-                        <img class="img-responsive img-circle" src="../bibliotecas/img/breno.png" border="0">
+            <?php for ($i = 1; $i <= 70; $i++): ?>
+                <a href="#"  class="list-group-item" style="">
+                    <div class="row no-margin">
+                        <div class="col-xs-2 no-padding vertical-bottom">
+                            <img class="img img-responsive img-circle " src="../bibliotecas/img/breno.png" border="0">
+                        </div>
+                        <div class="col-xs-8 no-padding vertical-bottom">
+                            Breno Mendes
+                        </div>
+                        <div class="col-xs-2 no-padding vertical-bottom">
+                            <span  class="status off "></span>
+                        </div>
                     </div>
-                    <p class="comecar">Breno Mendes</p>
-                    <span  class="status off"></span>
                 </a>
             <?php endfor; ?>
         </div>
-    </aside>
 
+    </aside>
+    <div style="height: 20vh; padding: 10px;">
+        <div class="input-group">
+            <input class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Aluno" type="text">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default" aria-label="Pesquisar">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <!--<aside id="chats">
     <div class="window" id="janela_x">
         <div class="header_window">
