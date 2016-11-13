@@ -53,3 +53,8 @@ li a
     background-color: #fff;
     margin-bottom: 30px;
 }
+
+#submenu > ul
+{
+    height: 42px;
+}

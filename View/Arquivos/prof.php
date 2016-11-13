@@ -8,6 +8,11 @@
         $op = 0;
     }
     
+    if(!isset($up))
+    {
+        $up = 0;
+    }
+    
     if($op == 1)
     {
         $up = upload();
@@ -37,10 +42,22 @@
                         <div id="submenu" class="row">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="col-xs-4 active">
+                                <li role="presentation" class="col-xs-4 
+                                    <?php 
+                                        if($up == 0)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>">
                                     <a href="#arquivos-send" aria-controls="arquivos-send" id="lnk-send" role="tab" data-toggle="tab">Enviados</a>
                                 </li>
-                                <li role="presentation" class="col-xs-4">
+                                <li role="presentation" class="col-xs-4 
+                                    <?php 
+                                        if($up == 1)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>">
                                     <a href="#arquivos-new" aria-controls="arquivos-new" role="tab" data-toggle="tab">Novo</a>
                                 </li>
                                 <li role="presentation" class="col-xs-4">
@@ -49,10 +66,22 @@
                             </ul>
                         </div>
                         <div class="tab-content container">
-                            <div role="tabpanel" class="tab-pane active" id="arquivos-send">
+                            <div role="tabpanel" class="tab-pane 
+                                    <?php 
+                                        if($up == 0)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>" id="arquivos-send">
                                 <?php require 'enviados-prof.php';?>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="arquivos-new">
+                            <div role="tabpanel" class="tab-pane 
+                                    <?php 
+                                        if($up == 1)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>" id="arquivos-new">
                                 <?php require 'novo-prof.php';?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="arquivos-turm">
