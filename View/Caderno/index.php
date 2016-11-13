@@ -37,30 +37,16 @@
 
                             <div role="tabpanel" class="tab-pane" id="caderno-aula">
                                 <div class="list-group">
-                                    <a href="#" class="list-group-item " data-toggle="modal" data-target="#AulaModal">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
-                                    <a href="#" class="list-group-item ">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
-                                    <a href="#" class="list-group-item ">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
-                                    <a href="#" class="list-group-item ">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
-                                    <a href="#" class="list-group-item ">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
-                                    <a href="#" class="list-group-item ">
-                                        <h4 class="list-group-item-heading">Matematica</h4>
-                                        <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                    </a>
+                                    <?php
+                                    for ($i = 0; $i < 30; $i++):
+                                        ?>
+                                        <a href="#" class="list-group-item " data-toggle="modal" data-target="#AulaModal">
+                                            <h4 class="list-group-item-heading">Matematica</h4>
+                                            <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                                        </a>
+                                        <?php
+                                    endfor;
+                                    ?>
                                 </div>
                             </div>
                         </div>
