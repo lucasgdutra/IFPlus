@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="panel-group" id="paineis-info">
+    <div class="panel-group col-xs-11 col-sm-11 col-md-11 col-lg-11" id="paineis-info">
         <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-target="#info-1c" data-parent="#paineis-info">
                 <h3 class="panel-title">
