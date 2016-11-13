@@ -1,0 +1,55 @@
+#lnk-send
+{
+    padding: 10px 15px 10px 10px;
+}
+
+.col-xs-3
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-xs-2
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-xs-4
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+li a 
+{
+   padding-left: 0px;
+   padding-right: 0px; 
+}
+
+#select-turm > div > div > h6
+{
+    font-size: 11px;
+    margin-bottom: 0px;
+}
+
+#button-arquivo
+{
+    background-color: #ffffff;
+}
+
+#select-file
+{
+    margin-bottom: 50px;
+}
+
+.arr
+{
+    padding-left: 0px;
+}
+
+#select-turm
+{
+    background-color: #fff;
+    margin-bottom: 30px;
+}

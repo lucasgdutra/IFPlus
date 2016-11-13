@@ -2,7 +2,7 @@
     <nav class="navbar navbar-static-top navbar-inverse">
         <div class="container-fluid">
             <div class="row">
-                <div class="navbar-header">
+                <div class="navbar-header col-md-6">
                     <div >
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" >
                             <span class="sr-only">Toggle navigation</span>
@@ -15,7 +15,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="collapse navbar-collapse container " id="collapse-navbar" aria-expanded="false">
 
                         <ul id="ul" class="nav navbar-nav">
@@ -60,11 +60,11 @@
                             <li class="visible-xs
                             <?php
                             if ($nome_tela == 'Chat') {
-                                echo ' active"';
+                                echo 'active';
                             }else{
-                                echo '"';
+                                echo '';
                             }
-                            ?>>
+                            ?>">
                                 <a  href="../Chat/">
                                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                                     &nbsp;
@@ -83,7 +83,6 @@
                 </div>
             </div>
         </div>
-
     </nav>
 </header>
 <div class="modal fade" id="ConfigModal" tabindex="-1" role="dialog" aria-labelledby="ConfigModal">

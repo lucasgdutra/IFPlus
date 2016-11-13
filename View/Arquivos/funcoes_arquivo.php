@@ -1,4 +1,16 @@
 <?php
+
+function mostra_janela($texto)
+{
+    echo "<script type=\"text/javascript\" language=\"javascript\">";
+    echo "alert(\"$texto\");";
+    echo "</script>";
+}
+
+
+function upload()
+{
+    $erro = "";
     // Pasta onde o arquivo vai ser salvo
     $_UP['pasta'] = 'uploads/';
     
@@ -20,8 +32,9 @@
     
     // Verifica se houve algum erro com o upload. Se sim, exibe a mensagem do erro
     if ($_FILES['arquivo']['error'] != 0) {
-      die("Não foi possível fazer o upload, erro:" . $_UP['erros'][$_FILES['arquivo']['error']]);
-      exit; // Para a execução do script
+      $erro = $erro . "Não foi possível fazer o upload, erro:" . $_UP['erros'][$_FILES['arquivo']['error']];
+      mostra_janela($erro);
+      return 0; // Para a execução do script
     }
     
     // Caso script chegue a esse ponto, não houve erro com o upload e o PHP pode continuar
@@ -30,14 +43,16 @@
     $tmp = explode('.', $_FILES['arquivo']['name']);
     $extensao = end($tmp);
     if (array_search($extensao, $_UP['extensoes']) === false) {
-      echo "Por favor, envie arquivos com as seguintes extensões: pdf";
-      exit;
+      $erro = $erro . " Por favor, envie arquivos com as seguintes extensões: pdf";
+      mostra_janela($erro);
+      return 0;
     }
     
     // Faz a verificação do tamanho do arquivo
     if ($_UP['tamanho'] < $_FILES['arquivo']['size']) {
-      echo "O arquivo enviado é muito grande, envie arquivos de até 2Mb.";
-      exit;
+      $erro = $erro . " O arquivo enviado é muito grande, envie arquivos de até 2Mb.";
+      mostra_janela($erro);
+      return 0;
     }
     
     // O arquivo passou em todas as verificações, hora de tentar movê-lo para a pasta
@@ -54,9 +69,12 @@
     // Depois verifica se é possível mover o arquivo para a pasta escolhida
     if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
       // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
-      echo "Upload efetuado com sucesso!";
-      echo '<a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
+      mostra_janela("Upload efetuado com sucesso!");
+      return 1;
+      //echo '<a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
     } else {
       // Não foi possível fazer o upload, provavelmente a pasta está incorreta
-      echo "Não foi possível enviar o arquivo, tente novamente";
+      mostra_janela("Não foi possível enviar o arquivo, tente novamente");
+      return 0;
     }
+}

@@ -1,9 +1,20 @@
+<?php
+    include "funcoes_arquivo.php";
+    
+    $op = @ $_REQUEST['op'];
+    
+    if(!isset($op))
+    {
+        $op = 0;
+    }
+    
+    if($op == 1)
+    {
+        $up = upload();
+    }
+?>
+
 <!DOCTYPE html>
-<!--
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- -->
 <html>
     <head>
         <title>IFPlus - Arquivos</title>
@@ -13,33 +24,7 @@
         <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
         <link type="text/css" rel="stylesheet" href="../bibliotecas/css/chat.css">
-        <style>
-            #lnk-send
-            {
-                padding: 10px 15px 10px 10px;
-            }
-            
-            .col-xs-3
-            {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-            .col-xs-2
-            {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-            .col-xs-4
-            {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-            li a 
-            {
-               padding-left: 0px;
-               padding-right: 0px; 
-            }
-        </style>
+        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/arquivo-prof.css">
     </head>
     <body>
         <?php $nome_tela="Arquivos"?>
@@ -52,10 +37,22 @@
                         <div id="submenu" class="row">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active col-xs-4">
+                                <li role="presentation" class="col-xs-4
+                                    <?php 
+                                        if($up == 0)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>">
                                     <a href="#arquivos-send" aria-controls="arquivos-send" id="lnk-send" role="tab" data-toggle="tab">Enviados</a>
                                 </li>
-                                <li role="presentation" class="col-xs-4 col">
+                                <li role="presentation" class="col-xs-4
+                                    <?php 
+                                        if($up == 1)
+                                        {
+                                            echo 'active';
+                                        }
+                                    ?>">
                                     <a href="#arquivos-new" aria-controls="arquivos-new" role="tab" data-toggle="tab">Novo</a>
                                 </li>
                                 <li role="presentation" class="col-xs-4">
@@ -64,10 +61,22 @@
                             </ul>
                         </div>
                         <div class="tab-content container">
-                            <div role="tabpanel" class="tab-pane active" id="arquivos-send">
+                            <div role="tabpanel" class="tab-pane 
+                                 <?php
+                                    if($up == 0)
+                                    {
+                                        echo "active";
+                                    }
+                                 ?>" id="arquivos-send">
                                 <?php require 'enviados-prof.php';?>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="arquivos-new">
+                            <div role="tabpanel" class="tab-pane
+                                 <?php
+                                    if($up == 1)
+                                    {
+                                        echo "active";
+                                    }
+                                 ?>" id="arquivos-new">
                                 <?php require 'novo-prof.php';?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="arquivos-turm">
