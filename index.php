@@ -1,4 +1,6 @@
 <?php
+    /* Alteração feita por Matheus Santiago */
+    /* fiz tal alteração de teste para que ao meu ver ficasse mais responsivo */
     /*require './funcaomobile.php';
 
     $mobile = mobile();
@@ -10,6 +12,37 @@
         include './View/login-desktop.php';
     }
     die();*/
+
+    /* Login do usuário */
+    
+    include './Funcoes/funcoes_basicas.php';
+    
+    $op = @ $_REQUEST['op'];
+    
+    if(!isset($op))
+    {
+        $op = 0;
+    }
+    
+    if($op == 1)
+    {
+        $email = @ $_REQUEST['email'];
+        $senha = @ $_REQUEST['senha'];
+        
+        include './Funcoes/conecta.php';
+        
+        if (!mysqli_connect_errno())
+        {
+            $select = "SELECT nome, id FROM Usuario WHERE email like '$email' AND senha like '$senha'";
+            $query = $conexao->query($select);
+            
+            /* BUGUEI HAAARD AQUI.... SE ALGUÉM PUDER ME AJUDAR */
+        }
+        else
+        {
+            mostra_janela("Erro ao conectar com o Banco de Dados.\nTente novamente mais tarde!");
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,20 +62,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-8 col-xs-offset-2">
-                        <form action="../View/Agenda/" class="form-signin">
+                        <form action="index.php" class="form-signin">
                             <center>
                                 <h2 class="form-signin-heading">Login</h2>
                             </center>
                             <label for="inputEmail" class="sr-only">Endereço de email</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
                             <label for="inputPassword" class="sr-only">Senha</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            <input type="password" id="senha" class="form-control" placeholder="Password" required>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="remember-me"> Me lembre
                                 </label>
                             </div>
                             <button class="btn btn-lg btn-default btn-block" type="submit">Entrar</button>
+                            <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+                                <input id="op" name="op" value="1">
+                            </div>
                         </form>
                     </div>
                 </div>
