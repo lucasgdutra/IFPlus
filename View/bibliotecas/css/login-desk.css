@@ -1,0 +1,47 @@
+body
+{
+    background-image: url("../img/tt.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+footer
+{
+    padding-top: 55px;
+    text-align: center;
+}
+
+footer a
+{
+    color: #fff;
+}
+
+#cad
+{
+    padding-top: 22px;
+}
+
+h2, h5
+{
+    color: #ffffff;
+}
+
+#div-cad
+{
+    padding-bottom: 20px;
+}
+
+#div-cad .form-control
+{
+    height: 35px;
+}
+
+#div-div-cad .btn
+{
+    height: 35px;
+}
+
+.input-group .form-control
+{
+    margin-bottom: 20px;
+}
