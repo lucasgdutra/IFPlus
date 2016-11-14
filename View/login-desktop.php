@@ -4,58 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/reset.css">
-        <link type="text/css" rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap.css">
-        <link type="text/css" rel="stylesheet" href="bibliotecas/css/style.css">
-        
+        <link type="text/css" rel="stylesheet" href="./View/bibliotecas/css/reset.css">
+        <link type="text/css" rel="stylesheet" href="./View/bibliotecas/bootstrap/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="./View/bibliotecas/css/style.css">
+        <link type="text/css" rel="stylesheet" href="./View/bibliotecas/css/login-desk.css">
         <style>
-            body
-            {
-                background-image: url("bibliotecas/img/tt.jpg");
-                background-repeat: no-repeat;
-                background-size: 100%;
-            }
             
-            footer
-            {
-                padding-top: 55px;
-                text-align: center;
-            }
-            
-            footer a
-            {
-                color: #fff;
-            }
-            
-            #cad
-            {
-                padding-top: 22px;
-            }
-            
-            h2, h5
-            {
-                color: #ffffff;
-            }
-            
-            #div-cad
-            {
-                padding-bottom: 20px;
-            }
-            
-            #div-cad .form-control
-            {
-                height: 35px;
-            }
-            
-            #div-div-cad .btn
-            {
-                height: 35px;
-            }
-            
-            .input-group .form-control
-            {
-                margin-bottom: 20px;
-            }
         </style>
     </head>
 
@@ -74,9 +28,9 @@
                         <div id="div-cad" class="input-group col-lg-12">
                             <input type="text" class="form-control" placeholder="Nome">
                             <input type="text" class="form-control" placeholder="CPF">
-                            <input type="text" class="form-control" placeholder="E-mail">
-                            <input type="text" class="form-control" placeholder="Senha">
-                            <input type="text" class="form-control" placeholder="Confirmar senha">
+                            <input type="email" class="form-control" placeholder="E-mail">
+                            <input type="password" class="form-control" placeholder="Senha">
+                            <input type="password" class="form-control" placeholder="Confirmar senha">
                         </div>
                         <button type="submit" class="btn-default btn col-lg-12">Cadastrar</button>
                     </div>

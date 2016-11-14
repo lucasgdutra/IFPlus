@@ -30,8 +30,8 @@
                 <div class="col-md-6">
                     <form id="form-login" class="navbar-form navbar-left" role="login">
                         <div id="div-inputs" class="form-group">
-                          <input type="text" class="form-control" placeholder="E-mail ou CPF">
-                          <input type="text" class="form-control" placeholder="Senha">
+                            <input type="email" class="form-control" placeholder="E-mail ou CPF">
+                            <input type="password" class="form-control" placeholder="Senha">
                         </div>
                         <button type="submit" class="btn btn-default">Entrar</button>
                     </form>
