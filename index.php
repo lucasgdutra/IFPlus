@@ -1,52 +1,49 @@
 <?php
-    /* Alteração feita por Matheus Santiago */
-    /* fiz tal alteração de teste para que ao meu ver ficasse mais responsivo */
-    /*require './funcaomobile.php';
+/* Alteração feita por Matheus Santiago */
+/* fiz tal alteração de teste para que ao meu ver ficasse mais responsivo */
+/* require './funcaomobile.php';
 
-    $mobile = mobile();
-    if ($mobile) {
-        //header("Location: ./View/login-smartphone.php");
-        include './View/login-smartphone.php';
+  $mobile = mobile();
+  if ($mobile) {
+  //header("Location: ./View/login-smartphone.php");
+  include './View/login-smartphone.php';
+  } else {
+  //header("Location: ./View/login-desktop.php");
+  include './View/login-desktop.php';
+  }
+  die(); */
+
+/* Login do usuário */
+
+include './Funcoes/funcoes_basicas.php';
+
+$op = @ $_REQUEST['op'];
+
+if (!isset($op)) {
+    $op = 0;
+}
+
+if ($op == 1) {
+    $email = @ $_REQUEST['email'];
+    $senha = @ $_REQUEST['senha'];
+
+    include './Funcoes/conecta.php';
+
+    if (!mysqli_connect_errno()) {
+        $query = "SELECT nome, id FROM Usuario WHERE email = '$email' AND senha = '$senha'";
+        $select = mysqli_query($conexao, $query);
+        $texto = $select;
+        mostra_janela($texto);
+
+        /* BUGUEI HAAARD AQUI.... SE ALGUÉM PUDER ME AJUDAR */
     } else {
-        //header("Location: ./View/login-desktop.php");
-        include './View/login-desktop.php';
+        mostra_janela("Erro ao conectar com o Banco de Dados.\nTente novamente mais tarde!");
     }
-    die();*/
-
-    /* Login do usuário */
-    
-    include './Funcoes/funcoes_basicas.php';
-    
-    $op = @ $_REQUEST['op'];
-    
-    if(!isset($op))
-    {
-        $op = 0;
-    }
-    
-    if($op == 1)
-    {
-        $email = @ $_REQUEST['email'];
-        $senha = @ $_REQUEST['senha'];
-        
-        include './Funcoes/conecta.php';
-        
-        if (!mysqli_connect_errno())
-        {
-            $select = "SELECT nome, id FROM Usuario WHERE email like '$email' AND senha like '$senha'";
-            $query = $conexao->query($select);
-            
-            /* BUGUEI HAAARD AQUI.... SE ALGUÉM PUDER ME AJUDAR */
-        }
-        else
-        {
-            mostra_janela("Erro ao conectar com o Banco de Dados.\nTente novamente mais tarde!");
-        }
-    }
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +82,7 @@
             </div>
         </div>
         <div class=" visible-md visible-lg">
-            <?php require './View/header-initial.php';?>
+            <?php require './View/header-initial.php'; ?>
 
             <div class="container">
                 <div class="row">

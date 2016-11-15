@@ -62,7 +62,7 @@
                             if ($nome_tela == 'Chat') {
                                 echo 'active';
                             } else {
-                                echo ' active"';
+                                echo ' "';
                             }
                             ?>">
                                 <a  href="../Chat/">

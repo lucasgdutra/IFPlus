@@ -1,5 +1,5 @@
 <?php
-include_once './conecta.php';
+require_once './conecta.php';
 
 function insereProduto($conexao, $nome, $preco) {
     $query = "insert into produtos (nome, preco) values ('{$nome}', '{$preco}')";
@@ -11,16 +11,16 @@ $turma = "2";
 
 //função buscadisciplina
 function buscadisciplina($conexao, $turma) {
-    //definindo variavel como array
-    $aulas = array();
-    //executando query sql para buscar dados
-    $resultado = mysqli_query($conexao, "select * from aula");
-    //enquanto houver valores no banco:
-    while ($aula = mysqli_fetch_assoc($resultado)) {
-        //insira valores no vetor aulas
-        array_push($aulas, $aula);
+//definindo variavel como array
+    $disciplinas = array();
+//executando query sql para buscar dados
+    $resultado = mysqli_query($conexao, "select * from disciplinas");
+//enquanto houver valores no banco:
+    while ($disciplina = mysqli_fetch_assoc($resultado)) {
+//insira valores no vetor aulas
+        array_push($disciplinas, $disciplina);
     }
-    //função retorna array com todas as aulas
+//função retorna array com todas as aulas
     return $disciplinas;
 }
 
@@ -35,29 +35,24 @@ foreach ($buscadisciplina as $disciplina) :
     </div>
     <?php
 endforeach;
-?>
-
-<?php
 
 //função buscaaula
-function buscaaula($conexao, $disciplina) {
-    //definindo variavel como array
+function mostraaula($conexao, $disciplina) {
+//definindo variavel como array
     $aulas = array();
-    //executando query sql para buscar dados
+//executando query sql para buscar dados
     $resultado = mysqli_query($conexao, "select * from aula");
-    //enquanto houver valores no banco:
+//enquanto houver valores no banco:
     while ($aula = mysqli_fetch_assoc($resultado)) {
-        //insira valores no vetor aulas
+//insira valores no vetor aulas
         array_push($aulas, $aula);
     }
-    //função retorna array com todas as aulas
+//função retorna array com todas as aulas
     return $aulas;
 }
-?>
 
-<?php
 //para chamar função
-$buscaaula = mostraaula($conexao);
+$mostraaula = mostraaula($conexao);
 foreach ($mostraaula as $aula) :
     ?>
     <div role = "tabpanel" class = "tab-pane" id = "caderno-aula">
@@ -70,4 +65,19 @@ foreach ($mostraaula as $aula) :
     </div>
     <?php
 endforeach;
+
+
+
+//exemplo de array
+$data = array(
+    'nome' => 'Aluno3c',
+);
+
+function Inserir($tabela, array $data, $conexao) {
+    $atributos = implode(",", array_keys($data));
+    $valores = "'" . implode("','", $data) . "'";
+    $query = "INSERT INTO {$tabela} ( {$atributos} ) VALUES ( {$valores} )";
+    $resultado = mysqli_query($conexao, $query);
+    return $resultado;
+}
 ?>
