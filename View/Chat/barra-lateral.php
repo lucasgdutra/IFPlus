@@ -7,7 +7,7 @@
 
 
 <div  class="affix" style=" padding-top: 50px; height: 100vh; background-color: #ccc">
-    <aside style="height: 80vh; overflow: auto; padding: 10px; ">
+    <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; ">
         <div class="list-group">
             <?php for ($i = 1; $i <= 70; $i++): ?>
                 <a href="#"  class="list-group-item" style="">
@@ -27,7 +27,7 @@
         </div>
 
     </aside>
-    <div style="height: 20vh; padding: 10px;">
+    <div style=" padding: 10px;">
         <div class="input-group">
             <input class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Aluno" type="text">
             <div class="input-group-btn">
