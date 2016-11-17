@@ -13,7 +13,7 @@
                 <a href="#"  class="list-group-item" style="">
                     <div class="row no-margin">
                         <div class="col-xs-2 no-padding vertical-bottom">
-                            <img class="img img-responsive img-circle " src="../bibliotecas/img/breno.png" border="0">
+                            <img class="img img-responsive img-circle " src="/View/bibliotecas/img/breno.png" border="0">
                         </div>
                         <div class="col-xs-8 no-padding vertical-bottom">
                             Breno Mendes

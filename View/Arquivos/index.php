@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>IFPlus - Arquivos</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/reset.css">
-        <link type="text/css" rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap.css">
-        <link type="text/css" rel="stylesheet" href="../bibliotecas/css/style.css">
-        <style>
+<?php $nome_tela = "Arquivos"; ?>
+<?php include_once '../../cabecalho.php'; ?>
+<?php require ROOT . 'View' . DS . 'navbar.php'; ?>
 
-        </style>
-    </head>
-    <body>
-        <?php $nome_tela = "Arquivos" ?>
-        <?php require '../header.php'; ?>
-        <div style="margin: 50px;" class="container">
-            <a href="prof.php">professor</a>
-            <a href="aluno.php">Aluno</a>
-        </div>
-        <script src="../bibliotecas/js/jquery.js"></script>
-        <script src="../bibliotecas/bootstrap/js/bootstrap.js"></script>
-    </body>
-</html>
+<div style="margin: 50px;" class="container">
+    <a href="prof.php">professor</a>
+    <a href="aluno.php">Aluno</a>
+</div>
+<?php require ROOT . 'rodape.php'; ?>
