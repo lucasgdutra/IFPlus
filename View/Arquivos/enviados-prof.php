@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="panel-group col-xs-11 col-sm-11 col-md-11 col-lg-11" id="paineis-pastas">
+    <div class="panel-group col-xs-12 col-sm-11 col-md-11 col-lg-11" id="paineis-pastas">
         <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-target="#arquivos-3c" data-parent="#paineis-pastas">
                 <h3 class="panel-title">
