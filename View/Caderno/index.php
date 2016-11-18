@@ -1,6 +1,8 @@
 <?php $nome_tela = "Caderno" ?>
 <?php include_once '../../cabecalho.php'; ?>
+<?php verificaUsuario(); ?>
 <?php require ROOT . 'View' . DS . 'navbar.php'; ?>
+
 <div  class="container-fluid">
 
     <div class="row">

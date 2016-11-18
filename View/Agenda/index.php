@@ -1,5 +1,6 @@
 <?php $nome_tela = "Agenda"; ?>
 <?php include_once '../../cabecalho.php'; ?>
+<?php verificaUsuario(); ?>
 <?php require ROOT . 'View' . DS . 'navbar.php'; ?>
 
 

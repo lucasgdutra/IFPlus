@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form id="form-login" action="index.php" class="navbar-form navbar-left" role="login">
+                    <form id="form-login" action="/Funcoes/Login/login.php" method="post" class="navbar-form navbar-left">
                         <div id="div-inputs" class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="E-mail ou CPF">
                             <input type="password" class="form-control" name="senha" placeholder="Senha">

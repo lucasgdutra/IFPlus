@@ -1,9 +1,14 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+require_once("mostra-alerta.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <?php
         define('DS', DIRECTORY_SEPARATOR);
         define('ROOT', $_SERVER['DOCUMENT_ROOT'] . DS);
+        require_once ROOT . 'Funcoes' . DS . 'Login' . DS . 'logica-usuario.php';
         ?>
         <title>IFPLUS | <?php echo $nome_tela ?></title>
         <meta charset="UTF-8">

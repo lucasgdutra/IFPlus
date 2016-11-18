@@ -18,6 +18,7 @@ if ($op == 1) {
 
 <?php $nome_tela = "Arquivos"; ?>
 <?php include_once '../../cabecalho.php'; ?>
+<?php verificaUsuario(); ?>
 <?php require ROOT . 'View' . DS . 'navbar.php'; ?>
 
 <div  class="container-fluid">

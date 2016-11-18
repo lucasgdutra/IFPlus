@@ -1,13 +1,14 @@
 <?php $nome_tela = "Login Desktop"; ?>
-<?php include_once '../cabecalho.php'; ?>
+<?php require_once '../cabecalho.php'; ?>
 <?php require 'header-initial.php'; ?>
-
+<div>
+    <?php mostraAlerta("success"); ?>
+    <?php mostraAlerta("danger"); ?>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div id="cad" class="col-sm-6 col-sm-offset-6">
 
-        </div>
-        <div id="cad" class="col-lg-6">
             <h2>Cadastre-se!</h2>
             <h5>Faça parte você também da maior rede colaborativa de alunos e professores do Brasil!</h5>
             <div id="div-div-cad" class="bs-callout bs-callout-info container col-lg-12">

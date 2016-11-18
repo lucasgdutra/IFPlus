@@ -1,9 +1,14 @@
 <?php
 
-$host = "hostinger";
-$user = "u244818129_dipol";
-$pass = "Olo()176";
-$database = "u244818129_ifplu";
+//$host = "hostinger";
+//$user = "u244818129_dipol";
+//$pass = "Olo()176";
+//$database = "u244818129_ifplu";
+
+$host = "localhost";
+$user = "root";
+$pass = "mysql";
+$database = "ifplus";
 
 function conexao($host, $user, $pass, $database) {
     $conexao = mysqli_connect($host, $user, $pass, $database);
