@@ -16,16 +16,10 @@
     {
         padding-left: 2px;
     }
-    
-    #container .col-xs-1
-    {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
 </style>
 <br>
 <div class="row">
-    <div class="panel-group col-xs-11" id="paineis-pastas">
+    <div class="panel-group col-xs-12 col-sm-11 col-md-11 col-lg-11" id="paineis-pastas">
         <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-target="#arquivos-art" data-parent="#paineis-pastas">
                 <h3 class="panel-title">
@@ -36,7 +30,7 @@
             </div>
 
             <div id="arquivos-art" class="collapse">
-                <div class="panel-body col-xs-12">
+                <div class="panel-body">
                     <ul id="arquivos">
                         <a href="#d">
                             <li class="list-group-item">

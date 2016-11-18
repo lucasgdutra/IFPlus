@@ -31,7 +31,7 @@
                             <br>
                             <div  class="container-fluid">
                                 <div style="padding-left: 15px; padding-right: 15px;" class="row">
-                                    <div class="input-group col-xs-11">
+                                    <div class="input-group col-xs-12 col-sm-11 col-md-11 col-lg-11">
                                         <input type="text" class="form-control" aria-label="Pesquisar" placeholder="Pesquisar Arquivo">
                                         <div class="input-group-btn">
                                             <botton type="button" class="btn btn-default" aria-label="Pesquisar">
