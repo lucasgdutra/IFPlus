@@ -12,14 +12,20 @@ function verificaUsuario() {
         header("Location: /index.php");
         die();
     }
+    
 }
 
 function usuarioLogado() {
     return $_SESSION["usuario_logado"];
 }
 
-function logaUsuario($email) {
+function usuarioTipo() {
+    return $_SESSION["tipo_usuario"];
+}
+
+function logaUsuario($email, $tipo) {
     $_SESSION["usuario_logado"] = $email;
+    $_SESSION["tipo_usuario"] = $tipo;
 }
 
 function logout() {
