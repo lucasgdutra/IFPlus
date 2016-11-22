@@ -1,52 +1,28 @@
-<?php $nome_tela = "Caderno" ?>
-<?php include_once '../../cabecalho.php'; ?>
-<?php $restricao ="aluno";?>
-<?php verificaUsuario(); ?>
-<?php require ROOT . 'View' . DS . 'navbar.php'; ?>
-
-<div  class="container-fluid">
-
-    <div class="row">
-
-        <div class="col-sm-9 col-md-10 no-padding">
-            <div style="padding: 0" class="container-fluid">
-                <div style="margin-top: 50px;" class="">
-                    <div id="submenu">
-                        <!-- Nav tabs -->
-                        <ul class="nav  nav-tabs row" role="tablist">
-                            <li role="presentation" class="active col-xs-6"><a href="#caderno-disc" aria-controls="caderno-disc" role="tab" data-toggle="tab">Disciplinas</a></li>
-                            <li role="presentation" class="col-xs-6"><a href="#caderno-aula" aria-controls="caderno-aula" role="tab" data-toggle="tab">Aulas</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="padding: 10px" class="tab-content">
-
-                    <div role="tabpanel" class="tab-pane active " id="caderno-disc">
-                        <a href="#" aria-controls="caderno-aula" class="list-group-item ">
-                            <h4>Matematica</h4>
-                        </a>
-                    </div>
-
-                    <div role="tabpanel" class="tab-pane" id="caderno-aula">
-                        <div class="list-group">
-                            <?php
-                            for ($i = 0; $i < 30; $i++):
-                                ?>
-                                <a href="#" class="list-group-item " data-toggle="modal" data-target="#AulaModal">
-                                    <h4 class="list-group-item-heading">Matematica</h4>
-                                    <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
-                                </a>
-                                <?php
-                            endfor;
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3 col-md-2 hidden-xs no-padding">
-            <?php include '../Chat/barra-lateral.php'; ?>
+<div id="submenu" >
+    <!-- Nav tabs -->
+    <ul class="nav  nav-tabs row no-margin" role="tablist">
+        <li role="presentation" class="active col-xs-6"><a href="#caderno-disc" aria-controls="caderno-disc" role="tab" data-toggle="tab">Disciplinas</a></li>
+        <li role="presentation" class="col-xs-6"><a href="#caderno-aula" aria-controls="caderno-aula" role="tab" data-toggle="tab">Aulas</a></li>
+    </ul>
+</div>
+<div style="padding: 10px" class="tab-content">
+    <div role="tabpanel" class="tab-pane active " id="caderno-disc">
+        <a href="#" aria-controls="caderno-aula" class="list-group-item ">
+            <h4>Matematica</h4>
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="caderno-aula">
+        <div class="list-group">
+            <?php
+            for ($i = 0; $i < 30; $i++):
+                ?>
+                <a href="#" class="list-group-item " data-toggle="modal" data-target="#AulaModal">
+                    <h4 class="list-group-item-heading">Matematica</h4>
+                    <p class="list-group-item-text">Aula 1 | Funções de primeiro grau</p>
+                </a>
+                <?php
+            endfor;
+            ?>
         </div>
     </div>
 </div>
@@ -84,5 +60,3 @@
         </div>
     </div>
 </div>
-<!-- Tab panes -->
-<?php require ROOT . 'rodape.php'; ?>

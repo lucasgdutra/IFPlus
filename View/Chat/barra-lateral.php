@@ -1,12 +1,4 @@
-
-<!--        <div id="principal">
-            div msg podera ser removida
-        </div>
-        Comentada por Lucas -> Desnecessária-->
-
-
-
-<div  class="affix" style=" padding-top: 50px; height: 100vh; background-color: #ccc">
+<div  class="affix" style=" margin-top: -50px; padding-top: 50px; height: 100vh; background-color: #ccc">
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; ">
         <div class="list-group">
             <?php for ($i = 1; $i <= 70; $i++): ?>

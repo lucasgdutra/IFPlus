@@ -10,9 +10,9 @@ require_once("mostra-alerta.php");
         define('ROOT', $_SERVER['DOCUMENT_ROOT'] . DS);
         require_once ROOT . 'Funcoes' . DS . 'Login' . DS . 'logica-usuario.php';
         ?>
-        <title>IFPLUS | <?php echo $nome_tela ?></title>
+        <title>IFPLUS <?php echo $nome_tela ?></title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 min-scale=1.0 max-scale=10.0">
         <link type="text/css" rel="stylesheet" href="/View/bibliotecas/css/reset.css">
         <link type="text/css" rel="stylesheet" href="/View/bibliotecas/bootstrap/css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="/View/bibliotecas/css/style.css">

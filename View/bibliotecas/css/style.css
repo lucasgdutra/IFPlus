@@ -48,6 +48,11 @@ body{
     cursor: default;
 }
 
+#main{
+    margin-top: 50px;
+}
+
+
 .list-group-item{
     text-align: center;
 }
