@@ -5,13 +5,13 @@ require_once("logica-usuario.php");
 
 $usuario = buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 echo $usuario;
-//if ($usuario == null) {
-//    $_SESSION["danger"] = "Usuário ou senha inválido.";
-//    header("Location: /index.php");
-//} else {
-//    $_SESSION["success"] = "Usuário logado com sucesso.";
-//    $tipousuario = tipoUsuario($conexao, $usuario["id"]);
-//    logaUsuario($usuario["email"], $tipousuario);
-//    header("Location: /index.php");
-//}
-//die();
+if ($usuario == null) {
+    $_SESSION["danger"] = "Usuário ou senha inválido.";
+    header("Location: /index.php");
+} else {
+    $_SESSION["success"] = "Usuário logado com sucesso.";
+    $tipousuario = tipoUsuario($conexao, $usuario["id"]);
+    logaUsuario($usuario["email"], $tipousuario);
+    header("Location: /index.php");
+}
+die();
