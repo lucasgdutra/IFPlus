@@ -1,6 +1,11 @@
 <?php $nome_tela = "Login Mobile"; ?>
 <?php include_once '../cabecalho.php'; ?>
-
+<div>
+    <?php mostraAlerta("success"); ?>
+    <?php mostraAlerta("danger"); ?>
+    <?php mostraAlerta("info"); ?>
+    <?php mostraAlerta("warning"); ?>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2">

@@ -4,6 +4,31 @@ require_once '../../cabecalho.php';
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
+<script type="text/javascript">
+    $(function () {
+        $("#pesquisaaula").keyup(function () {
+            var index = $(this).parent().index();
+            var nth = "#tabelaaula td:nth-child(" + (index + 1).toString() + ")";
+            var valor = $(this).val().toUpperCase();
+            $("#tabelaaula tbody tr").show();
+            $(nth).each(function () {
+                if ($(this).text().toUpperCase().indexOf(valor) < 0) {
+                    $(this).parent().hide();
+                }
+            });
+        });
+
+        $("#pesquisaaula").blur(function () {
+            $(this).val("");
+        });
+    });
+</script>
+<div>
+    <?php mostraAlerta("success"); ?>
+    <?php mostraAlerta("danger"); ?>
+    <?php mostraAlerta("info"); ?>
+    <?php mostraAlerta("warning"); ?>
+</div>
 
 <?php if (usuarioTipo() == "professor"): ?>
     <div id="main" class="container-fluid">
@@ -12,7 +37,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
                 <?php require_once ROOT . "View" . DS . "Caderno" . DS . "prof.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php include '../Chat/barra-lateral.php'; ?>
+                <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
             </div>
         </div>
     </div>
@@ -25,7 +50,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
                 <?php require_once ROOT . "View" . DS . "Caderno" . DS . "aluno.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php include '../Chat/barra-lateral.php'; ?>
+                <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
             </div>
         </div>
     </div>
@@ -33,3 +58,4 @@ require_once ROOT . 'View' . DS . 'navbar.php';
 
 
 <?php require ROOT . 'rodape.php'; ?>
+

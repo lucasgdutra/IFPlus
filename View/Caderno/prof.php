@@ -1,67 +1,64 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-2">
-            <h2>Aulas</h2>
-        </div>
-        <div class="col-sm-8">
-            <div class="input-group h2">
-                <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Aulas">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
+    <hr>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <div class="panel-title row">
+                    <div class="col-xs-6 media-bottom">
+                        <h4>
+                            <a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                História 1º Ano
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="col-xs-6 media-bottom">
+                        <a href="#" class="btn btn-default pull-right col-sm-6">Nova Aula</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+
+                    <input  name="pesquisaaula" class="form-control" id="pesquisaaula" type="text" placeholder="Pesquisar Aulas">
+
+                    <div class="table-responsive pre-scrollable">
+                        <table id="tabelaaula" class="table table-striped" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th><strong>Título</strong></th>
+                                    <th><strong>Nº</strong></th>
+                                    <th class="actions"><strong>Ações</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Lorem ipsum dolor</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Feijão</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-sm-2">
-            <a href="add.html" class="btn btn-default pull-right h2">Nova Aula</a>
-        </div>
-    </div> <!-- /#top -->
+    </div>
 
-    <hr/>
-
-    <div class="row">
-        <div class="table-responsive col-xs-12">
-            <table class="table table-striped" cellspacing="0" cellpadding="0">
-                <thead>
-                    <tr>
-                        <th>Nº</th>
-                        <th>Título</th>
-                        <th>Disciplina</th>
-                        <th>Ano</th>
-                        <th class="actions">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>Período Joanino e o processo de independência do Brasil</td>
-                        <td>História</td>
-                        <td>3º</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-
-    </div> <!-- /#list -->
-
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="pagination">
-                <li class="disabled"><a>&lt; Anterior</a></li>
-                <li class="disabled"><a>1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-            </ul><!-- /.pagination -->
-        </div>
-    </div> <!-- /#bottom -->
 </div>
 <!-- Modal -->
 <div class="modal fade" id="apaga-aula-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">

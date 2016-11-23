@@ -54,8 +54,6 @@
                     <?php
                     if ($nome_tela == 'Chat') {
                         echo 'active';
-                    } else {
-                        echo ' "';
                     }
                     ?>">
                         <a  href="/View/Chat/">

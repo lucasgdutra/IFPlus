@@ -1,15 +1,25 @@
-<?php $nome_tela = "Chat"; ?>
-<?php include_once '../../cabecalho.php'; ?>
-<?php verificaUsuario(); ?>
-<?php require ROOT . 'View' . DS . 'navbar.php'; ?>
+<?php
+$nome_tela = "Chat";
+require_once '../../cabecalho.php';
+verificaUsuario();
+require_once ROOT . 'View' . DS . 'navbar.php';
+?>
+<div>
+    <?php mostraAlerta("success"); ?>
+    <?php mostraAlerta("danger"); ?>
+    <?php mostraAlerta("info"); ?>
+    <?php mostraAlerta("warning"); ?>
+</div>
 
-<div class="row">
-    <div style="width: 100%" class="col-xs-12">
-        <?php require_once './barra-lateral.php'; ?>
+
+<div id="main" class="container-fluid">
+    <div class="row">
+
+        <div class = "col-xs-12 no-padding">
+            <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
+        </div>
     </div>
 </div>
 
-<script src="/View/bibliotecas/js/jquery.js"></script>
-<script src="/View/bibliotecas/bootstrap/js/bootstrap.js"></script>
-</body>
-</html>
+<?php require ROOT . 'rodape.php'; ?>
+

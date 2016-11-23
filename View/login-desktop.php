@@ -4,6 +4,8 @@
 <div>
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
+    <?php mostraAlerta("info"); ?>
+    <?php mostraAlerta("warning"); ?>
 </div>
 <div class="container">
     <div class="row">
