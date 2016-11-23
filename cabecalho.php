@@ -24,7 +24,7 @@ require_once("mostra-alerta.php");
             <link type="text/css" rel="stylesheet" href="/View/bibliotecas/css/login-smart.css">
         <?php endif; ?>
         <?php if ($nome_tela == "Arquivos"): ?>
-            <link type="text/css" rel="stylesheet" href="/View/bibliotecas/css/login-smart.css">
+            <link type="text/css" rel="stylesheet" href="/View/bibliotecas/css/arquivo-prof.css">
         <?php endif; ?>
         <script src="/View/bibliotecas/js/jquery.js"></script>
         <script src="/View/bibliotecas/bootstrap/js/bootstrap.js"></script>
