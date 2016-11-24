@@ -9,7 +9,6 @@ if ($usuario == null) {
     $_SESSION["danger"] = "Usuário ou senha inválido.";
     header("Location: /index.php");
 } else {
-    $_SESSION["success"] = "Usuário logado com sucesso.";
     $tipousuario = tipoUsuario($conexao, $usuario["id"]);
     logaUsuario($usuario["email"], $tipousuario);
     header("Location: /index.php");

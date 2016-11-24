@@ -1,7 +1,8 @@
 <?php $nome_tela = "Login Desktop"; ?>
-<?php require_once '../cabecalho.php'; ?>
+<?php require_once '../config.php'; ; ?>
+<?php require_once ROOT . "cabecalho.php"; ?>
 <?php require 'header-initial.php'; ?>
-<div>
+<div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
     <?php mostraAlerta("info"); ?>

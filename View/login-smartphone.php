@@ -1,10 +1,12 @@
 <?php $nome_tela = "Login Mobile"; ?>
-<?php include_once '../cabecalho.php'; ?>
+<?php require_once '../config.php';
+; ?>
+    <?php require_once ROOT . "cabecalho.php"; ?>
 <div>
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
     <?php mostraAlerta("info"); ?>
-    <?php mostraAlerta("warning"); ?>
+<?php mostraAlerta("warning"); ?>
 </div>
 <div class="container">
     <div class="row">

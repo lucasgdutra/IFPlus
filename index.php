@@ -1,7 +1,7 @@
-<?php
-require_once("cabecalho.php");
-require_once ROOT . '/Funcoes/funcaomobile.php';
-?>
+
+<?php require_once './config.php'; ?>
+<?php require_once ROOT . "cabecalho.php"; ?>
+<?php require_once ROOT . '/Funcoes/funcaomobile.php';?>
 
 <h1>Bem vindo!</h1>
 

@@ -18,7 +18,7 @@
     }
 </style>
 <header>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="navbar-header col-md-6">

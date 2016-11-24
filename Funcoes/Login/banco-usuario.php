@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../cabecalho.php';
+require_once '../../config.php';
 require_once ROOT . 'Funcoes' . DS . 'conecta.php';
 
 function buscaUsuario($conexao, $email, $senha) {

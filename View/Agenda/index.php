@@ -1,10 +1,11 @@
 <?php
 $nome_tela = "Agenda";
-require_once '../../cabecalho.php';
+require_once '../../config.php';
+require_once ROOT . "cabecalho.php";
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
-<div>
+<div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
     <?php mostraAlerta("info"); ?>

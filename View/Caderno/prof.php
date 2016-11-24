@@ -78,3 +78,22 @@
         </div>
     </div>
 </div>
+<div class="modal fade " id="AulaModal" tabindex="-1" role="dialog" aria-labelledby="AulaModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Aula 2 - História do Brasil - Período Joanino e o processo de independência do Brasil</h4>
+            </div>
+            <div class="modal-body">
+                <textarea name="editor1">Easy (and free!) You should check out our premium features.</textarea>
+                <script>
+            CKEDITOR.replace( 'editor1' );
+        </script>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

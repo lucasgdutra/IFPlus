@@ -1,9 +1,12 @@
 <?php
 $nome_tela = "Caderno";
-require_once '../../cabecalho.php';
+require_once '../../config.php';
+require_once ROOT . "cabecalho.php";
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
+<script src="//cdn.ckeditor.com/4.6.0/standard-all/ckeditor.js"></script>
+
 <script type="text/javascript">
     $(function () {
         $("#pesquisaaula").keyup(function () {
@@ -23,7 +26,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
         });
     });
 </script>
-<div>
+<div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
     <?php mostraAlerta("info"); ?>
