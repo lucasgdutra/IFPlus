@@ -18,6 +18,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
 
         <div class = "col-xs-12 no-padding">
             <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
+            <?php require_once ROOT . "bibliotecas" . DS . "js" . DS . 'functions.js'; ?>
         </div>
     </div>
 </div>

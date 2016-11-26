@@ -1,15 +1,4 @@
-/*/chat*/
 
-/*-*{margin:0;padding:0;box-sizing:border-box;height: 100%;})(Parte retirada por lucas | desconfigura o menu principal)*/
-
-/*body{
-    background:black;
-    width:100%;
-    margin-left:auto;
-    margin-right:auto;
-
-}(Parte retirada por Lucas)*/
-/*algum erro bloquear esta parte*/
 #principal{
     float:left;
     width: 66%;
@@ -19,10 +8,8 @@
 
 }
 #mensageiro{
-    /*   float:right;*/
-    /*     width:240px;
-    margin:11px;
-    modificado por Lucas -> contrapositor*/
+
+
     background-color: #ccc;
     max-height:10%;
     overflow: auto;
@@ -121,14 +108,14 @@ ul{
     background-color:#090;
 }
 
-/** asside dos chats position: absolute**/
+/** asside dos chats position: absolute bottom:0;height:50px;
+    background: #069;**/
 #chats{
-    position: absolute;
-    bottom:0;
+
+    padding-top: 24%;
     left:0;
     width:82.6%;
-    /**height:50px;
-    background: #069;**/
+
 }
 
 /**janelas **/

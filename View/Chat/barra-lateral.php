@@ -30,7 +30,7 @@
         </div>
     </div>
 </div>
-<!--<aside id="chats">
+<aside id="chats" class="affix">
     <div class="window" id="janela_x">
         <div class="header_window">
             <a href="#" class="close">x</a>
@@ -54,4 +54,4 @@
             </div>
         </div>
     </div>
-</aside>-->
+</aside>
