@@ -26,6 +26,15 @@ require_once ROOT . 'View' . DS . 'navbar.php';
         });
     });
 </script>
+<script type="text/javascript">
+    function mostra_aula(id) {
+        
+        $.post('/Funcoes/Caderno/mostra_aula.php', {acao: 'incluir', id: id}, function (retorno) {
+            $("#modalAula").modal({backdrop: 'static'});
+            $("#conteudo-aula").html(retorno);
+        });
+    }
+</script>
 <div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>

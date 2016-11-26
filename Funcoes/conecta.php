@@ -9,7 +9,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "u244818129_ifplu";
+$database = "ifplus";
 
 function conexao($host, $user, $pass, $database) {
     $conexao = mysqli_connect($host, $user, $pass, $database);

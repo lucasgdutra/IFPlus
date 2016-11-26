@@ -38,7 +38,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#">Editar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#AulaModal">Editar</a>
                                         <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
                                     </td>
                                 </tr>
@@ -47,7 +47,7 @@
                                     <td>2</td>
                                     <td class="actions">
                                         <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#">Editar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
                                         <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
                                     </td>
                                 </tr>
@@ -78,21 +78,36 @@
         </div>
     </div>
 </div>
-<div class="modal fade " id="AulaModal" tabindex="-1" role="dialog" aria-labelledby="AulaModal">
+<div class="modal fade " id="edita-aula-modal" tabindex="-1" role="dialog" aria-labelledby="edita-aula-modal">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Aula 2 - História do Brasil - Período Joanino e o processo de independência do Brasil</h4>
+                <h4 class="modal-title" id="exampleModalLabel">Editar aula</h4>
             </div>
             <div class="modal-body">
-                <textarea name="editor1">Easy (and free!) You should check out our premium features.</textarea>
-                <script>
-            CKEDITOR.replace( 'editor1' );
-        </script>
+                <form class="">
+                    <div class="form-group">
+                        <label for="TituloAula" class="control-label">Titulo:</label>
+                        <input type="text" class="form-control" id="TituloAula">
+                    </div>
+                    <div class="form-group">
+                        <label for="NumAula" class="control-label">Aula nº:</label>
+                        <input type="number" class="form-control" id="NumAula" placeholder="1" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="ConteudoAula" class="control-label">Conteúdo:</label>
+                        <textarea class="form-control" rows="8" id="ConteudoAula"></textarea>
+                        <script>
+                            CKEDITOR.replace('ConteudoAula', {
+                            });
+                        </script>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-default">Salvar</button>
             </div>
         </div>
     </div>
