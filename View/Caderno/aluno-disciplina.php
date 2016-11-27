@@ -22,6 +22,8 @@
 <div class="list-group" >
     <form class="pesquisa-disciplina" method="post" action="/View/Caderno/index.php" id="EnviaDisciplina">
         <input  name="escolha" value="1" type="hidden">
+        <input  name="disciplina" value="matematica" type="hidden">
+        <input  name="ano" value="1" type="hidden">
         <button class="list-group-item">Matematica</button>
     </form>
     <form class="pesquisa-disciplina" method="post" action="/View/Caderno/index.php" id="EnviaDisciplina">
