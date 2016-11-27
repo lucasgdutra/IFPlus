@@ -7,34 +7,6 @@ require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
 <script src="//cdn.ckeditor.com/4.6.0/standard-all/ckeditor.js"></script>
 
-<script type="text/javascript">
-    $(function () {
-        $("#pesquisaaula").keyup(function () {
-            var index = $(this).parent().index();
-            var nth = "#tabelaaula td:nth-child(" + (index + 1).toString() + ")";
-            var valor = $(this).val().toUpperCase();
-            $("#tabelaaula tbody tr").show();
-            $(nth).each(function () {
-                if ($(this).text().toUpperCase().indexOf(valor) < 0) {
-                    $(this).parent().hide();
-                }
-            });
-        });
-
-        $("#pesquisaaula").blur(function () {
-            $(this).val("");
-        });
-    });
-</script>
-<script type="text/javascript">
-    function mostra_aula(id) {
-        
-        $.post('/Funcoes/Caderno/mostra_aula.php', {acao: 'incluir', id: id}, function (retorno) {
-            $("#modalAula").modal({backdrop: 'static'});
-            $("#conteudo-aula").html(retorno);
-        });
-    }
-</script>
 <div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>

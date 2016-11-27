@@ -1,3 +1,23 @@
+<script type="text/javascript">
+    $(function () {
+
+        $(".caixa-pesquisa-aula").keyup(function () {
+            var texto = $(this).val();
+
+            $(".pesquisa-aula").each(function () {
+                var resultado = $(this).text().toUpperCase().indexOf(' ' + texto.toUpperCase());
+
+                if (resultado < 0) {
+                    $(this).fadeOut();
+                } else {
+                    $(this).fadeIn();
+                }
+            });
+
+        });
+
+    });
+</script>
 <div class="container-fluid">
     <hr>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -20,7 +40,7 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
 
-                    <input  name="pesquisaaula" class="form-control" id="pesquisaaula" type="text" placeholder="Pesquisar Aulas">
+                    <input  name="pesquisaaula" class="form-control caixa-pesquisa-aula" id="pesquisaaula" type="text" placeholder="Pesquisar Aulas">
 
                     <div class="table-responsive pre-scrollable">
                         <table id="tabelaaula" class="table table-striped" cellspacing="0" cellpadding="0">
@@ -33,7 +53,7 @@
                             </thead>
                             <tbody>
 
-                                <tr>
+                                <tr class="pesquisa-aula">
                                     <td>Lorem ipsum dolor</td>
                                     <td>1</td>
                                     <td class="actions">
@@ -42,8 +62,8 @@
                                         <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Feijão</td>
+                                <tr class="pesquisa-aula">
+                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
                                     <td>2</td>
                                     <td class="actions">
                                         <a class="btn btn-success btn-xs" href="#">Visualizar</a>
