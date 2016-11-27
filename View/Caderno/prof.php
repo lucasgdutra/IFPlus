@@ -24,15 +24,15 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <div class="panel-title row">
-                    <div class="col-xs-6 media-bottom">
+                    <div class="col-sm-6 ">
                         <h4>
                             <a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
                                 História 1º Ano
                             </a>
                         </h4>
                     </div>
-                    <div class="col-xs-6 media-bottom">
-                        <a href="#" class="btn btn-default pull-right col-sm-6">Nova Aula</a>
+                    <div class="col-sm-6 ">
+                        <a href="#" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</a>
                     </div>
                 </div>
 
