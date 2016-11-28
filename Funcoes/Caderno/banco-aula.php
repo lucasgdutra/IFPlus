@@ -55,8 +55,8 @@ function listaAulas($conexao, $Disciplina) {
 
 function mostraAula($conexao, $aula) {
 
-    $aulas = array();
-    $query = "select Aula.conteudo from Aula WHERE Aula.id = '{$aula}'";
+   $aulas = array();
+    $query = "select Aula.* from Aula WHERE Aula.id = '{$aula}'";
 
     $resultado = mysqli_query($conexao, $query);
 

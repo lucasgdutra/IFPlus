@@ -84,9 +84,12 @@ if (isset($mostraaula) && $mostraaula == 1) {
                             <form class = "pesquisa-aula" method = "post" action = "#" id = "EnviaDisciplina">
                                 <input name = "escolha" value = "1" type = "hidden">
                                 <input name = "mostraaula" value = "1" type = "hidden">
-                                <input name = "id" value = "<?= $aula->getId() ?>" type = "hidden">
-                                <input name = "aula" value = "<?= $aula->getTitulo() ?>" type = "hidden">
-                                <input name = "aula" value = "<?= $aula->getNumero() ?>" type = "hidden">
+                                <input name = "id" value = "<?= $disciplina_id ?> " type = "hidden">
+                                <input name = "disciplina" value = "<?= $disciplina_nome ?> " type = "hidden">
+                                <input name = "ano" value = "<?= $disciplina_ano ?> " type = "hidden">
+                                <input name = "id_aula" value = "<?= $aula->getId() ?>" type = "hidden">
+                                <input name = "titulo_aula" value = "<?= $aula->getTitulo() ?>" type = "hidden">
+                                <input name = "numero_aula" value = "<?= $aula->getNumero() ?>" type = "hidden">
                                 <button class = "list-group-item"><?= utf8_encode($aula->getTitulo()) ?></button>
 
                             </form>
