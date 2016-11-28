@@ -2,8 +2,7 @@
     <div class="modal-dialog modal-lg"  role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Aula 2 - História do Brasil - Período Joanino e o processo de independência do Brasil</h4>
+
             </div>
             <div class="modal-body" id="conteudo-aula">
 
@@ -16,18 +15,38 @@
 </div>
 
 <?php
+//Capturando variáveis
 $disciplina_id = $_REQUEST['id'];
 $disciplina_nome = $_REQUEST['disciplina'];
 $disciplina_ano = $_REQUEST['ano'];
 $mostraaula = $_REQUEST['mostraaula'];
-if (isset($mostraaula) && $mostraaula == 1) {
-    ?>
+?>
 
+<?php
+if (isset($mostraaula) && $mostraaula == 1) {
+    $aula = mostraAula($conexao, $aula);
+    foreach ($aula as $aula) :
+        ?>
+        <form class = "pesquisa-aula" method = "post" action = "#" id = "EnviaDisciplina">
+            <input name = "escolha" value = "1" type = "hidden">
+            <input name = "mostraaula" value = "1" type = "hidden">
+            <input name = "id" value = "<?= $disciplina_id ?> " type = "hidden">
+            <input name = "disciplina" value = "<?= $disciplina_nome ?> " type = "hidden">
+            <input name = "ano" value = "<?= $disciplina_ano ?> " type = "hidden">
+            <input name = "id_aula" value = "<?= $aula->getId() ?>" type = "hidden">
+            <input name = "titulo_aula" value = "<?= $aula->getTitulo() ?>" type = "hidden">
+            <input name = "numero_aula" value = "<?= $aula->getNumero() ?>" type = "hidden">
+            <button class = "list-group-item"><?= utf8_encode($aula->getTitulo()) ?></button>
+
+        </form>
+        <?php
+    endforeach;
+    ?>
     <script type = "text/javascript">
-        $(".modal-title").load("newhtml.html");
+        $(".modal-title").replaceWith("<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h4 class='modal-title' id='myModalLabel'>Aula 2 - História do Brasil - Período Joanino e o processo de independência do Brasil</h4>");
         $(".modal-body").load("newhtml.html");
         $('#modalAula').modal('show');
-
+        
     </script>
 <?php }
 ?>
