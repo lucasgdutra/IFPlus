@@ -1,7 +1,7 @@
 <?php
 
 require_once '../../config.php';
-require_once ROOT . 'Funcoes' . DS . 'conecta.php';
+
 
 function buscaUsuario($conexao, $email, $senha) {
     $senhaMd5 = md5($senha);
@@ -13,14 +13,21 @@ function buscaUsuario($conexao, $email, $senha) {
 }
 
 function tipoUsuario($conexao, $id) {
-    $query = "select * from Aluno where id_usuario='{$id}'";
+    $query = "select * from Professor WHERE id_usuario='{$id}'";
     $resultado = mysqli_query($conexao, $query);
     $usuario = mysqli_fetch_assoc($resultado);
     if ($usuario == NULL) {
-        $tipoUsuario = professor;
-    }
-    else {
         $tipoUsuario = aluno;
     }
+    else {
+        $tipoUsuario = professor;
+    }
     return $tipoUsuario;
+}
+
+function buscaTurma($conexao, $id) {
+    $query = "select Aluno.id_turma from Aluno WHERE aluno.id_usuario=2 ";
+    $resultado = mysqli_query($conexao, $query);
+    $id_turma = mysqli_fetch_assoc($resultado);
+    return $id_turma['id_turma'];
 }

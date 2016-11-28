@@ -10,7 +10,14 @@ if ($usuario == null) {
     header("Location: /index.php");
 } else {
     $tipousuario = tipoUsuario($conexao, $usuario["id"]);
-    logaUsuario($usuario["email"], $tipousuario);
+    
+    if ($tipousuario == "aluno") {
+        $buscaturma = buscaTurma($conexao, $usuario["id"]);
+    }
+    
+    logaUsuario($usuario["email"]);
+    defineTipo($tipousuario);
+    defineTurma($buscaturma);
     header("Location: /index.php");
 }
 die();

@@ -12,20 +12,32 @@ function verificaUsuario() {
         header("Location: /index.php");
         die();
     }
-    
+}
+
+function defineTipo($tipo) {
+    $_SESSION["tipo_usuario"] = $tipo;
+}
+
+function usuarioTipo() {
+
+    return $_SESSION["tipo_usuario"];
+}
+
+function defineTurma($turma) {
+        $_SESSION["id_turma"] = $turma;
+}
+
+function alunoTurma() {
+
+    return $_SESSION["id_turma"];
+}
+
+function logaUsuario($email) {
+    $_SESSION["usuario_logado"] = $email;
 }
 
 function usuarioLogado() {
     return $_SESSION["usuario_logado"];
-}
-
-function usuarioTipo() {
-    return $_SESSION["tipo_usuario"];
-}
-
-function logaUsuario($email, $tipo) {
-    $_SESSION["usuario_logado"] = $email;
-    $_SESSION["tipo_usuario"] = $tipo;
 }
 
 function logout() {
