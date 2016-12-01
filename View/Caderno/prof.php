@@ -71,6 +71,42 @@
                                         <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
                                     </td>
                                 </tr>
+                                <tr class="pesquisa-aula">
+                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
+                                <tr class="pesquisa-aula">
+                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
+                                <tr class="pesquisa-aula">
+                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
+                                <tr class="pesquisa-aula">
+                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
