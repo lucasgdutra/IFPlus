@@ -1,21 +1,3 @@
-<?php
-include "funcoes_arquivo.php";
-
-$op = @ $_REQUEST['op'];
-
-if (!isset($op)) {
-    $op = 0;
-}
-
-if (!isset($up)) {
-    $up = 0;
-}
-
-if ($op == 1) {
-    $up = upload();
-}
-?>
-
 <div  class="container-fluid">
 
     <div style=" padding: 0;" class="container-fluid">

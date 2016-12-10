@@ -1,9 +1,29 @@
 <?php
-$nome_tela = "Arquivos";
-require_once '../../config.php';
-require_once ROOT . "cabecalho.php";
-verificaUsuario();
-require_once ROOT . 'View' . DS . 'navbar.php';
+    $nome_tela = "Arquivos";
+    require_once '../../config.php';
+    require_once ROOT . "cabecalho.php";
+    verificaUsuario();
+    require_once ROOT . 'View' . DS . 'navbar.php';
+
+    $op = @ $_REQUEST['op'];
+    $primeiroa = @ $_REQUEST['primA'];
+    $primeirob = @ $_REQUEST['primB'];
+    $primeiroc = @ $_POST['primC'];
+    $primeirod = @ $_REQUEST['primD'];
+    $primeiroe = @ $_REQUEST['primE'];
+
+    if (!isset($op)) {
+        $op = 0;
+    }
+
+    if (!isset($up)) {
+        $up = 0;
+    }
+
+    if ($op == 1) {
+        include "funcoes_arquivo.php";
+        $up = upload();
+    }
 ?>
 <div id="alert">
     <?php mostraAlerta("success"); ?>

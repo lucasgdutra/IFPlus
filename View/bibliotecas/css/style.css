@@ -1,5 +1,8 @@
 body{
     /*FONTE*/
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
 }
 #alert{
     margin-top: 50px;
@@ -84,4 +87,9 @@ button.list-group-item{
 
 .vertical-bottom{
     vertical-align: bottom;
+}
+
+#input-name
+{
+    margin-bottom: 15px;
 }
