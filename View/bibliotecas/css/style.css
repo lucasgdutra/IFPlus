@@ -89,7 +89,26 @@ button.list-group-item{
     vertical-align: bottom;
 }
 
+/* Upstream, based on origin/master*/
 #input-name
 {
     margin-bottom: 15px;
+}
+/*=======*/
+.status{
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid transparent;
+    background-color: #FFFF00;
+}
+
+.off{
+    background-color:red;
+}
+
+.on{
+    background-color:#090;
+/*>>>>>>> 5e8c4cf vejam se esta aparecendo a janela do chat e se esta no lugar certo pfv*/
 }

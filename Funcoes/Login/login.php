@@ -16,6 +16,7 @@ if ($usuario == null) {
     }
     
     logaUsuario($usuario["email"]);
+    define_id($usuario["id"]);
     defineTipo($tipousuario);
     defineTurma($buscaturma);
     header("Location: /index.php");

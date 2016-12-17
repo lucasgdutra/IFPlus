@@ -14,6 +14,16 @@ function verificaUsuario() {
     }
 }
 
+/*logica chat*/
+function define_id($id) {
+    $_SESSION["id_user"] = $row ->id;
+}
+
+function id_logado() {
+
+    return $_SESSION["id_user"];
+}
+
 function defineTipo($tipo) {
     $_SESSION["tipo_usuario"] = $tipo;
 }
@@ -31,7 +41,7 @@ function alunoTurma() {
 
     return $_SESSION["id_turma"];
 }
-
+//variavel email ja tem
 function logaUsuario($email) {
     $_SESSION["usuario_logado"] = $email;
 }

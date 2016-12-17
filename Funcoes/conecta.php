@@ -1,10 +1,10 @@
 <?php
+
 //
 //$host = "mysql.hostinger.com.br";
 //$user = "u244818129_dipol";
 //$pass = "Olo()176";
 //$database = "u244818129_ifplu";
-
 //
 $host = "localhost";
 $user = "root";
