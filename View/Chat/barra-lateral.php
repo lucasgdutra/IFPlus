@@ -21,28 +21,38 @@
     </aside>
 */-->
 
-
+<?php
+    require_once (ROOT . "Classes/chat.php");
+    BD::conn();
+?>
 <div  class="affix" style=" margin-top: -50px; padding-top: 50px; height: 100vh; background-color: #ccc">
 
 
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; " id="users_online">
-        <?php
-        $query = "select * from 'usuario' where 'email'= ?";
-        $resultado = mysqli_query($conexao, $query);
-        print_r($resultado);
-        ?>
         <ul>
-            <?php for ($i = 1; $i <= 30; $i++): ?>
+        <?php
+            $query = BD::conn()->prepare("SELECT * FROM `Usuario` WHERE `email` != ?");
+            $query->execute(array($_SESSION["usuario_logado"]));
+            while ($row = $query->fetch()) {
+                $foto = ($row['foto'] == '') ? 'default.jpg' : $row['foto'];
+                $agora = date('Y-m-d H:i:s');
+                $status = 'on';
+                if($agora >= $row['limite']){
+                    $status = 'off';
+                }
+        ?>
                 <div><!--div msg podera ser removida-->
-                    <li id="5">
+                    <li id="<?php echo $row['id']?>">
                         <div class="imgSmall">
-                            <img src="<?= BASEURL ?>View/bibliotecas/img/breno.png" border="0">
+                            <img src="<?php echo $foto;?>" border="0">
                         </div>
-                        <a href="#" id="3:5" class="comecar">Breno mendes</a>
-                        <span id="5" class="status off"></span>
+                        <a href="#" id="<?php echo $_SESSION['id_user'].':'.$row['id'];?>" class="comecar"><?php echo utf8_encode($row['nome']);?></a>
+                        <span id="<?php echo $row['id'];?>" class="status <?php echo $status;?>"></span>
                     </li>
                 </div>
-            <?php endfor; ?>
+        <?php
+            }
+        ?>
         </ul>
     </aside>
 

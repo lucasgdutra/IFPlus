@@ -11,6 +11,11 @@ $user = "root";
 $pass = "";
 $database = "u244818129_ifplu";
 
+define(HOST, "localhost");
+define(USER, "root");
+define(PASS, "");
+define(DB, "u244818129_ifplu");
+
 function conexao($host, $user, $pass, $database) {
     $conexao = mysqli_connect($host, $user, $pass, $database);
 // Verifica se ocorreu algum erro
@@ -21,4 +26,4 @@ function conexao($host, $user, $pass, $database) {
     return $conexao;
 }
 
-$conexao = conexao($host, $user, $pass, $database);
+$conexao = conexao(HOST, USER, PASS, DB);
