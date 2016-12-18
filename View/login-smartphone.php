@@ -1,6 +1,8 @@
 <?php $nome_tela = "Login Mobile"; ?>
-<?php require_once '../config.php';
-; ?>
+<?php
+require_once '../config.php';
+;
+?>
     <?php require_once ROOT . "cabecalho.php"; ?>
 <div>
     <?php mostraAlerta("success"); ?>
@@ -11,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
-            <form action="/Funcoes/Login/login.php" method="post" class="form-signin">
+            <form action="<?= BASEURL ?>Funcoes/Login/login.php" method="post" class="form-signin">
                 <center>
                     <h2 class="form-signin-heading">Login</h2>
                 </center>

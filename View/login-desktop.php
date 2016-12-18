@@ -1,5 +1,5 @@
 <?php $nome_tela = "Login Desktop"; ?>
-<?php require_once '../config.php'; ; ?>
+<?php require_once '../config.php'; ?>
 <?php require_once ROOT . "cabecalho.php"; ?>
 <?php require 'header-initial.php'; ?>
 <div id="alert">

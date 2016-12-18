@@ -1,8 +1,5 @@
 <?php
 
-require_once '../../config.php';
-
-
 function buscaUsuario($conexao, $email, $senha) {
     $senhaMd5 = md5($senha);
     $email = mysqli_real_escape_string($conexao, $email);
@@ -18,15 +15,14 @@ function tipoUsuario($conexao, $id) {
     $usuario = mysqli_fetch_assoc($resultado);
     if ($usuario == NULL) {
         $tipoUsuario = aluno;
-    }
-    else {
+    } else {
         $tipoUsuario = professor;
     }
     return $tipoUsuario;
 }
 
-function buscaTurma($conexao, $id) {
-    $query = "select Aluno.id_turma from Aluno WHERE aluno.id_usuario=2 ";
+function buscaTurma($conexao = null, $id = null) {
+    $query = "select id_turma from aluno WHERE id_usuario = {$id} ";
     $resultado = mysqli_query($conexao, $query);
     $id_turma = mysqli_fetch_assoc($resultado);
     return $id_turma['id_turma'];

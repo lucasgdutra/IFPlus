@@ -1,7 +1,7 @@
 <?php
 $nome_tela = "Caderno";
 require_once '../../config.php';
-require_once '../../Funcoes/Caderno/banco-aula.php';
+require_once ROOT . 'Funcoes/Caderno/banco-aula.php';
 require_once ROOT . "cabecalho.php";
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';

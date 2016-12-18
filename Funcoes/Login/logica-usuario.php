@@ -1,5 +1,6 @@
 <?php
 
+require_once 'banco-usuario.php';
 session_start();
 
 function usuarioEstaLogado() {
@@ -34,11 +35,20 @@ function usuarioTipo() {
     return $_SESSION["tipo_usuario"];
 }
 
+function defineAno($turma) {
+    $_SESSION["ano_turma"] = $turma;
+}
+
+function anoTurma() {
+
+    return $_SESSION["ano_turma"];
+}
+
 function defineTurma($turma) {
     $_SESSION["id_turma"] = $turma;
 }
 
-function alunoTurma() {
+function idTurma() {
 
     return $_SESSION["id_turma"];
 }

@@ -19,5 +19,4 @@ if (usuarioEstaLogado()) {
 ?>
 <?php
 require_once("rodape.php");
-echo "O que que houve";
 ?>

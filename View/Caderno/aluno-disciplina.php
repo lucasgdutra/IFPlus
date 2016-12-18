@@ -22,9 +22,7 @@
 <input  name="pesquisa" class="form-control caixa-pesquisa-disciplina" style="margin: 10px 0 10px" type="text" placeholder="Pesquisar Disciplinas">
 <div class="list-group" >
     <?php
-    $turma = alunoTurma();
-
-    $disciplinas = listaDisciplinas($conexao, $turma);
+    $disciplinas = listaDisciplinas($conexao, idTurma());
     if ($disciplinas != 0) {
         foreach ($disciplinas as $disciplina) :
             ?>
