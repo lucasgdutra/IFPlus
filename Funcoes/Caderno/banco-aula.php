@@ -1,4 +1,5 @@
 <?php
+
 require_once '../../config.php';
 
 function listaDisciplinas($conexao, $Turma) {
@@ -10,13 +11,14 @@ function listaDisciplinas($conexao, $Turma) {
             . "                                                 grade.curso = turma.curso and"
             . "                                                 Turma.id = {$Turma}";
     $resultado = mysqli_query($conexao, $query);
-    if ($resultado == null) {
-        return
-        ?>
-        <div class="bg-danger text-center">
+    if ($resultado->num_rows == 0) {
+        $disciplinas = "
+
+        <div class=\"bg-danger text-center\">
             <p>Nenhuma disciplina para listar, ocorreu algum erro na conexao ou o administrador não adicionou as disciplinas de sua grade</p>
         </div>
-        <?php
+        ";
+        return $disciplinas;
     } else {
         while ($disciplina_array = mysqli_fetch_assoc($resultado)) {
 

@@ -25,18 +25,22 @@
     $turma = alunoTurma();
 
     $disciplinas = listaDisciplinas($conexao, $turma);
-    foreach ($disciplinas as $disciplina) :
-        ?>
-        <form class = "pesquisa-disciplina" method = "post" action = "#" id = "EnviaDisciplina">
-            <input name = "escolha" value = "1" type = "hidden">
-            <input name = "id" value = "<?= $disciplina->getId() ?>" type = "hidden">
-            <input name = "disciplina" value = "<?= $disciplina->getNome() ?>" type = "hidden">
-            <input name = "ano" value = "<?= $disciplina->getAno() ?>" type = "hidden">
-            <button class = "list-group-item"><?= $disciplina->getNome() ?></button>
+    if ($disciplinas != 0) {
+        foreach ($disciplinas as $disciplina) :
+            ?>
+            <form class = "pesquisa-disciplina" method = "post" action = "#" id = "EnviaDisciplina">
+                <input name = "escolha" value = "1" type = "hidden">
+                <input name = "id" value = "<?= $disciplina->getId() ?>" type = "hidden">
+                <input name = "disciplina" value = "<?= $disciplina->getNome() ?>" type = "hidden">
+                <input name = "ano" value = "<?= $disciplina->getAno() ?>" type = "hidden">
+                <button class = "list-group-item"><?= $disciplina->getNome() ?></button>
 
-        </form>
-        <?php
-    endforeach;
+            </form>
+            <?php
+        endforeach;
+    } else {
+        print_r($disciplinas);
+    }
     ?>
 
 </div>

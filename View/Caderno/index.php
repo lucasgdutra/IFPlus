@@ -20,7 +20,6 @@ require_once ROOT . 'View' . DS . 'navbar.php';
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
                 <?php require_once ROOT . "View" . DS . "Caderno" . DS . "prof.php"; ?>
-                <?php require_once ROOT . "View" . DS . "Chat" . DS . "caixamsg.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
                 <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
