@@ -89,7 +89,7 @@
       								?>
       						</select>
       					</div>
-      					<div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 15px;">
+      					<!--<div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 15px;">
       						<select class="form-control" id="turma" name="turma">
         						<option>Turma</option>
         						<option>1A</option>
@@ -108,7 +108,7 @@
         						<option>3D</option>
         						<option>3E</option>
       						</select>
-      					</div>
+      					</div>-->
       					<div class="input-group-btn" style="padding-left: 50%; padding-right: 50%;">
       						<button type="submit" class="btn btn-default">Criar</button>
                         </div>
