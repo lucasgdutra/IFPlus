@@ -80,7 +80,7 @@ if (isset($mostraaula) && $mostraaula == 1) {
                     <h4>
                         <a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
                             <?= $disciplina_nome . " " . $disciplina_ano . "º Ano" ?>
-                        </a
+                        </a>
                     </h4>
                 </div>
                 <div class="col-sm-6 ">
