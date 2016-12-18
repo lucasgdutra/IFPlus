@@ -18,101 +18,119 @@
 
     });
 </script>
+
+
+
 <div class="container-fluid">
     <hr>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <div class="panel-title row">
-                    <div class="col-sm-6 ">
-                        <h4>
-                            <a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
-                                História 1º Ano
-                            </a>
-                        </h4>
+        <?php
+        $disciplinas = listaDisciplinas($conexao, 5);
+        if ($disciplinas != 0) {
+            foreach ($disciplinas as $disciplina) :
+                ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <div class="panel-title row">
+                            <div class="col-sm-6 ">
+                                <h4>
+                                    <a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                        <?= $disciplina->getNome() ?> <?= $disciplina->getAno() ?>º Ano
+                                    </a>
+                                </h4>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <form>
+                                    <input type="hidden" name="id" value="<?= $disciplina->getId() ?>">
+                                    <button type="" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</button>
+                                </form>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class="col-sm-6 ">
-                        <a href="#" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</a>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+
+                            <input  name="pesquisaaula" class="form-control caixa-pesquisa-aula" id="pesquisaaula" type="text" placeholder="Pesquisar Aulas">
+
+                            <div class="table-responsive pre-scrollable">
+                                <table id="tabelaaula" class="table table-striped" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Título</strong></th>
+                                            <th><strong>Nº</strong></th>
+                                            <th class="actions"><strong>Ações</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr class="pesquisa-aula">
+                                            <td>Lorem ipsum dolor</td>
+                                            <td>1</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#AulaModal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="pesquisa-aula">
+                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                            <td>2</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="pesquisa-aula">
+                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                            <td>2</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="pesquisa-aula">
+                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                            <td>2</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="pesquisa-aula">
+                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                            <td>2</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="pesquisa-aula">
+                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
+                                            <td>2</td>
+                                            <td class="actions">
+                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
+                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-
-                    <input  name="pesquisaaula" class="form-control caixa-pesquisa-aula" id="pesquisaaula" type="text" placeholder="Pesquisar Aulas">
-
-                    <div class="table-responsive pre-scrollable">
-                        <table id="tabelaaula" class="table table-striped" cellspacing="0" cellpadding="0">
-                            <thead>
-                                <tr>
-                                    <th><strong>Título</strong></th>
-                                    <th><strong>Nº</strong></th>
-                                    <th class="actions"><strong>Ações</strong></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr class="pesquisa-aula">
-                                    <td>Lorem ipsum dolor</td>
-                                    <td>1</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#AulaModal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr class="pesquisa-aula">
-                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                    <td>2</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr class="pesquisa-aula">
-                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                    <td>2</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr class="pesquisa-aula">
-                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                    <td>2</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr class="pesquisa-aula">
-                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                    <td>2</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr class="pesquisa-aula">
-                                    <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                    <td>2</td>
-                                    <td class="actions">
-                                        <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <?php
+            endforeach;
+        } else {
+            print_r($disciplinas);
+        }
+        ?>
     </div>
 
 </div>
