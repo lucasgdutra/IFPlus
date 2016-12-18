@@ -5,11 +5,11 @@ require_once '../../config.php';
 function listaDisciplinas($conexao, $Turma) {
 
     $disciplinas = array();
-    $query = "select Disciplina.* from Disciplina, Grade, Turma WHERE "
-            . "                                                 Grade.`id_Disciplina`=Disciplina.id and"
-            . "                                                 Grade.ano = turma.anoatual and"
+    $query = "select disciplina.* from disciplina, drade, durma WHERE "
+            . "                                                 drade.`id_disciplina`=disciplina.id and"
+            . "                                                 drade.ano = turma.anoatual and"
             . "                                                 grade.curso = turma.curso and"
-            . "                                                 Turma.id = {$Turma}";
+            . "                                                 durma.id = {$Turma}";
     $resultado = mysqli_query($conexao, $query);
     if ($resultado->num_rows == 0) {
         $disciplinas = "
@@ -40,7 +40,7 @@ function listaDisciplinas($conexao, $Turma) {
 function listaAulas($conexao, $Disciplina) {
 
     $aulas = array();
-    $query = "select Aula.* from Aula WHERE Aula.`id_Disciplina` = '{$Disciplina}'";
+    $query = "select aula.* from aula WHERE aula.`id_disciplina` = '{$Disciplina}'";
 
     $resultado = mysqli_query($conexao, $query);
 
@@ -65,7 +65,7 @@ function listaAulas($conexao, $Disciplina) {
 function mostraAula($conexao, $aula) {
 
     $aulas = array();
-    $query = "select Aula.* from Aula WHERE Aula.id = '{$aula}'";
+    $query = "select aula.* from aula WHERE aula.id = '{$aula}'";
 
     $resultado = mysqli_query($conexao, $query);
 
