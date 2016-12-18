@@ -25,7 +25,14 @@
     $turma = alunoTurma();
 
     $disciplinas = listaDisciplinas($conexao, $turma);
-    foreach ($disciplinas as $disciplina) :
+    if ($disciplinas == null) {
+        ?>
+        <div class="bg-danger text-center">
+            <p>Nenhuma disciplina para listar, ocorreu algum erro na conexao ou o administrador não adicionou as disciplinas de sua grade</p>
+        </div>
+        <?php
+        }
+        foreach ($disciplinas as $disciplina) :
         ?>
         <form class = "pesquisa-disciplina" method = "post" action = "#" id = "EnviaDisciplina">
             <input name = "escolha" value = "1" type = "hidden">
@@ -36,8 +43,8 @@
 
         </form>
         <?php
-    endforeach;
-    ?>
+        endforeach;
+        ?>
 
 </div>
 
