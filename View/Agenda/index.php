@@ -2,6 +2,7 @@
 $nome_tela = "Agenda";
 require_once '../../config.php';
 require_once ROOT . "cabecalho.php";
+//require_once 'insert_db.php';
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
@@ -11,8 +12,6 @@ require_once ROOT . 'View' . DS . 'navbar.php';
     <?php mostraAlerta("info"); ?>
     <?php mostraAlerta("warning"); ?>
 </div>
-
-
 <?php if (usuarioTipo() == "professor"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
@@ -38,6 +37,4 @@ require_once ROOT . 'View' . DS . 'navbar.php';
         </div>
     </div>
 <?php endif; ?>
-
-
 <?php require ROOT . 'rodape.php'; ?>
