@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 define('DS', DIRECTORY_SEPARATOR);
 /** caminho absoluto para a pasta do sistema * */
 if (!defined('ROOT')) {
-    define('ROOT', dirname(__FILE__) . DS);
+    define('ROOT', __DIR__ . DS);
 }
 
 /** caminho no server para o sistema * */

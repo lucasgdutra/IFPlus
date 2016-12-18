@@ -71,7 +71,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="/Funcoes/Login/logout.php">Deslogar</a>
+                                <a href="<?= BASEURL ?>Funcoes/Login/logout.php">Deslogar</a>
                             </li>
                             <li>
                                 <a href="#" data-toggle="modal" data-target="#ConfigModal">

@@ -9,14 +9,15 @@ function usuarioEstaLogado() {
 function verificaUsuario() {
     if (!usuarioEstaLogado()) {
         $_SESSION["danger"] = "Você não tem acesso a esta funcionalidade.";
-        header("Location: /index.php");
+        header('Location:' . BASEURL . 'index.php');
         die();
     }
 }
 
-/*logica chat*/
+/* logica chat */
+
 function define_id($id) {
-    $_SESSION["id_user"] = $row ->id;
+    $_SESSION["id_user"] = $row->id;
 }
 
 function id_logado() {
@@ -34,13 +35,14 @@ function usuarioTipo() {
 }
 
 function defineTurma($turma) {
-        $_SESSION["id_turma"] = $turma;
+    $_SESSION["id_turma"] = $turma;
 }
 
 function alunoTurma() {
 
     return $_SESSION["id_turma"];
 }
+
 //variavel email ja tem
 function logaUsuario($email) {
     $_SESSION["usuario_logado"] = $email;

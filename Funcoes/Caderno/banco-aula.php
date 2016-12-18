@@ -1,5 +1,4 @@
 <?php
-
 require_once '../../config.php';
 
 function listaDisciplinas($conexao, $Turma) {
@@ -11,21 +10,29 @@ function listaDisciplinas($conexao, $Turma) {
             . "                                                 grade.curso = turma.curso and"
             . "                                                 Turma.id = {$Turma}";
     $resultado = mysqli_query($conexao, $query);
+    if ($resultado == null) {
+        return
+        ?>
+        <div class="bg-danger text-center">
+            <p>Nenhuma disciplina para listar, ocorreu algum erro na conexao ou o administrador não adicionou as disciplinas de sua grade</p>
+        </div>
+        <?php
+    } else {
+        while ($disciplina_array = mysqli_fetch_assoc($resultado)) {
 
-    while ($disciplina_array = mysqli_fetch_assoc($resultado)) {
-
-        $id = $disciplina_array['id'];
-        $nome = $disciplina_array['nome'];
-        $ano = $disciplina_array['ano'];
+            $id = $disciplina_array['id'];
+            $nome = $disciplina_array['nome'];
+            $ano = $disciplina_array['ano'];
 
 
-        $disciplina = new Disciplina($id, $nome, $ano);
+            $disciplina = new Disciplina($id, $nome, $ano);
 
 
-        array_push($disciplinas, $disciplina);
+            array_push($disciplinas, $disciplina);
+        }
+
+        return $disciplinas;
     }
-
-    return $disciplinas;
 }
 
 function listaAulas($conexao, $Disciplina) {
@@ -42,7 +49,7 @@ function listaAulas($conexao, $Disciplina) {
         $numero = $aula_array['numero'];
         $conteudo = $aula_array['conteudo'];
         $Disciplina = $aula_array['Disciplina'];
-        
+
         $aula = new Aula($id, $titulo, $numero, $conteudo, $Disciplina);
 
 
@@ -55,7 +62,7 @@ function listaAulas($conexao, $Disciplina) {
 
 function mostraAula($conexao, $aula) {
 
-   $aulas = array();
+    $aulas = array();
     $query = "select Aula.* from Aula WHERE Aula.id = '{$aula}'";
 
     $resultado = mysqli_query($conexao, $query);
@@ -67,7 +74,7 @@ function mostraAula($conexao, $aula) {
         $numero = $aula_array['numero'];
         $conteudo = $aula_array['conteudo'];
         $Disciplina = $aula_array['Disciplina'];
-        
+
         $aula = new Aula($id, $titulo, $numero, $conteudo, $Disciplina);
 
 

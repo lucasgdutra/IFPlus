@@ -13,7 +13,7 @@ if (usuarioEstaLogado()) {
     if ($mobile) {
         header('Location:' . BASEURL . 'View/login-smartphone.php');
     } else {
-        header('Location:' . BASEURL . 'View/login-destop.php');
+        header('Location:' . BASEURL . 'View/login-desktop.php');
     }
 }
 ?>
