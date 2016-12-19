@@ -131,7 +131,7 @@ function insereAula($conexao, $titulo, $numero, $conteudo, $Disciplina) {
     return mysqli_query($conexao, $query);
 }
 
-function alteraProduto(
+function alteraAula(
 $conexao, Produto $produto) {
 
     $query = "update produtos set nome = '{$produto->getNome()}',

@@ -41,9 +41,9 @@
                                 </h4>
                             </div>
                             <div class="col-sm-6 ">
-                                <form>
+                                <form action="add.php" method="post">
                                     <input type="hidden" name="id" value="<?= $disciplina->getId() ?>">
-                                    <a href="add.php" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</a>
+                                    <button type="submit" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</button>
 
                                 </form>
                             </div>

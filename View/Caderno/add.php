@@ -1,5 +1,6 @@
 <?php
 require_once('functions.php');
+$id_disciplina = $_POST['id'];
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -28,7 +29,7 @@ require_once('functions.php');
                 <script>
                     CKEDITOR.replace('conteudo');
                 </script>
-                <input type="hidden" name="id_disciplina" value="45">
+                <input type="hidden" name="id_disciplina" value="<?= $id_disciplina ?>">
             </div>
         </div>
         <div id="actions" class="row">
