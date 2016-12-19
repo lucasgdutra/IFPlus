@@ -14,12 +14,15 @@ if ($usuario == null) {
 
     if ($tipousuario == "aluno") {
         $buscaturma = buscaTurma($conexao, $usuario["id"]);
+    } else if ($tipousuario == "professor") {
+        $buscaprofessor = buscaProfessor($conexao, $usuario["id"]);
     }
 
     logaUsuario($usuario["email"]);
     define_id($usuario["id"]);
     defineTipo($tipousuario);
     defineTurma($buscaturma);
+    defineProfessor($buscaprofessor);
     header('Location:' . BASEURL . '/index.php');
 }
 die();

@@ -25,7 +25,7 @@
     <hr>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <?php
-        $disciplinas = listaDisciplinasprofessor($conexao, 45);
+        $disciplinas = listaDisciplinasprofessor($conexao, idProfessor());
         if ($disciplinas != 0) {
             foreach ($disciplinas as $disciplina) :
                 ?>
@@ -58,7 +58,7 @@
                                 <table id="tabelaaula" class="table table-striped" cellspacing="0" cellpadding="0">
                                     <thead>
                                         <tr>
-                                            <th><strong>Título</strong></th>
+                                            <th width="80%"><strong>Título</strong></th>
                                             <th><strong>Nº</strong></th>
                                             <th class="actions"><strong>Ações</strong></th>
                                         </tr>

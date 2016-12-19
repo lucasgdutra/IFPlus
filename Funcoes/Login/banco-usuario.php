@@ -27,3 +27,10 @@ function buscaTurma($conexao = null, $id = null) {
     $id_turma = mysqli_fetch_assoc($resultado);
     return $id_turma['id_turma'];
 }
+
+function buscaProfessor($conexao = null, $id = null) {
+    $query = "select id from professor WHERE id_usuario = {$id} ";
+    $resultado = mysqli_query($conexao, $query);
+    $id_professor = mysqli_fetch_assoc($resultado);
+    return $id_professor['id'];
+}

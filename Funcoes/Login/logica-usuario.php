@@ -53,6 +53,15 @@ function idTurma() {
     return $_SESSION["id_turma"];
 }
 
+function defineProfessor($professor) {
+    $_SESSION["id_professor"] = $professor;
+}
+
+function idProfessor() {
+
+    return $_SESSION["id_professor"];
+}
+
 //variavel email ja tem
 function logaUsuario($email) {
     $_SESSION["usuario_logado"] = $email;
