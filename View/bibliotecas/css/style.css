@@ -2,7 +2,7 @@ body{
     /*FONTE*/
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+
 }
 #alert{
     margin-top: 50px;
@@ -110,5 +110,5 @@ button.list-group-item{
 
 .on{
     background-color:#090;
-/*>>>>>>> 5e8c4cf vejam se esta aparecendo a janela do chat e se esta no lugar certo pfv*/
+    /*>>>>>>> 5e8c4cf vejam se esta aparecendo a janela do chat e se esta no lugar certo pfv*/
 }

@@ -22,10 +22,10 @@ function tipoUsuario($conexao, $id) {
 }
 
 function buscaTurma($conexao = null, $id = null) {
-    $query = "select id_turma from aluno WHERE id_usuario = {$id} ";
+    $query = "select turma.* from aluno, turma WHERE aluno.id = {$id} and aluno.id_turma = turma.id";
     $resultado = mysqli_query($conexao, $query);
     $id_turma = mysqli_fetch_assoc($resultado);
-    return $id_turma['id_turma'];
+    return $id_turma;
 }
 
 function buscaProfessor($conexao = null, $id = null) {

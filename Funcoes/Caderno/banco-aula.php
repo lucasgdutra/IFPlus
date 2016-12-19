@@ -2,14 +2,17 @@
 
 require_once '../../config.php';
 
-function listaDisciplinas($conexao, $Turma) {
+function listaDisciplinas($conexao, $idTurma, $anoTurma) {
 
     $disciplinas = array();
     $query = "select disciplina.* from disciplina, grade, turma WHERE "
-            . "                                                 grade.`id_Disciplina`=disciplina.id and"
-            . "                                                 grade.ano = turma.anoatual and"
-            . "                                                 grade.curso = turma.curso and"
-            . "                                                 turma.id = {$Turma}";
+            . "grade.`id_Disciplina`=disciplina.id and "
+            . "grade.ano = turma.anoatual and "
+            . "grade.curso = turma.curso and "
+            . "turma.id = {$idTurma} union "
+            . "select disciplina.* from disciplina, grade WHERE "
+            . "grade.`id_Disciplina`=disciplina.id and "
+            . "grade.ano = {$anoTurma} and grade.curso = 'MEDIO' ORDER by nome";
     $resultado = mysqli_query($conexao, $query);
     if ($resultado->num_rows == 0) {
         $disciplinas = "
@@ -74,7 +77,8 @@ function listaDisciplinasprofessor($conexao, $professor) {
 function listaAulas($conexao, $Disciplina) {
 
     $aulas = array();
-    $query = "select Aula.* from Aula WHERE Aula.`id_Disciplina` = '{$Disciplina}'";
+    $query = "select aula.* from aula WHERE aula.`id_Disciplina` = '{$Disciplina}'";
+
 
     $resultado = mysqli_query($conexao, $query);
 
@@ -121,14 +125,9 @@ function mostraAula($conexao, $aula) {
     return $aulas;
 }
 
-function insereProduto(
-$conexao, Produto $produto) {
+function insereAula($conexao, Aula $aula) {
 
-    $query = "insert into produtos (nome, preco, descricao, categoria_id, usado)
-                values ('{$produto->getNome()}', {$produto->getPreco()},
-                '{$produto->getDescricao()}', {$produto->getCategoria()->getId()},
-                {$produto->isUsado()})";
-
+    $query = "INSERT INTO `aula` (`id`, `titulo`, `numero`, `conteudo`, `id_Disciplina`) VALUES (NULL, '{$aula->getTitulo()}', '{$aula->getNumero()}', '{$aula->getDisciplina()});";
     return mysqli_query($conexao, $query);
 }
 
@@ -139,35 +138,6 @@ $conexao, Produto $produto) {
                 preco = {$produto->getPreco()}, descricao = '{$produto->getDescricao()}',
                 categoria_id = {$produto->getCategoria()->getId()},
                 usado = {$produto->isUsado()} where id = '{$produto->getId()}'";
-
-    return mysqli_query($conexao, $query);
-}
-
-function buscaProduto(
-$conexao, $id) {
-
-    $query = "select * from produtos where id = {$id}";
-    $resultado = mysqli_query($conexao, $query);
-    $produto_buscado = mysqli_fetch_assoc($resultado);
-
-    $categoria = new Categoria();
-    $categoria->setId($produto_buscado['categoria_id']);
-
-    $nome = $produto_buscado['nome'];
-    $descricao = $produto_buscado['descricao'];
-    $preco = $produto_buscado['preco'];
-    $usado = $produto_buscado['usado'];
-
-    $produto = new Produto($nome, $preco, $descricao, $categoria, $usado);
-    $produto->setId($produto_buscado['id']);
-
-    return $produto;
-}
-
-function removeProduto(
-$conexao, $id) {
-
-    $query = "delete from produtos where id = {$id}";
 
     return mysqli_query($conexao, $query);
 }

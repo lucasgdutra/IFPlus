@@ -21,7 +21,8 @@ if ($usuario == null) {
     logaUsuario($usuario["email"]);
     define_id($usuario["id"]);
     defineTipo($tipousuario);
-    defineTurma($buscaturma);
+    defineTurma($buscaturma['id']);
+    defineAno($buscaturma['anoatual']);
     defineProfessor($buscaprofessor);
     header('Location:' . BASEURL . '/index.php');
 }
