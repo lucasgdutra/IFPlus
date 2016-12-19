@@ -1,3 +1,7 @@
+<?php
+	require_once '../../insert_db.php';
+?>
+
 <div style="padding: 0" class="container-fluid">
     <div class="row">
         <div id="submenu">
@@ -6,13 +10,19 @@
                 <li role="presentation" class="active col-xs-4 col-lg-4 col-md-4 col-sm-4">
                     <a class="disabled">Novo</a>
                 </li>
+                <li role="presentation" class="default col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                    <a class="disabled">Todos</a>
+                </li>
+                <li role="presentation" class="default col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                    <a class="disabled">Concluídos</a>
+                </li>
             </ul>
         </div>
         <br>
         <div  class="container-fluid">
             <div style="padding-left: 15px; padding-right: 15px;" class="row">
                 <div  class="container-fluid">
-                	<form class="form-horizontal" method="POST" action="insert_db.php">
+                	<form class="form-horizontal" method="POST" action="">
                     <div style="padding-left: 15px; padding-right: 15px;" class="row">
                     	<p style="color: #AAAAAA;">Novo lembrete</p>
                         <div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -89,26 +99,6 @@
       								?>
       						</select>
       					</div>
-      					<!--<div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 15px;">
-      						<select class="form-control" id="turma" name="turma">
-        						<option>Turma</option>
-        						<option>1A</option>
-        						<option>1B</option>
-        						<option>1C</option>
-        						<option>1D</option>
-        						<option>1E</option>
-        						<option>2A</option>
-        						<option>2B</option>
-        						<option>2C</option>
-        						<option>2D</option>
-        						<option>2E</option>
-        						<option>3A</option>
-        						<option>3B</option>
-        						<option>3C</option>
-        						<option>3D</option>
-        						<option>3E</option>
-      						</select>
-      					</div>-->
       					<div class="input-group-btn" style="padding-left: 50%; padding-right: 50%;">
       						<button type="submit" class="btn btn-default">Criar</button>
                         </div>

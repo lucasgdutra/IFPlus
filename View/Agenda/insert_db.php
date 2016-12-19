@@ -1,7 +1,9 @@
 <?php
 	$titulo = $_POST['titulo'];
 	$descricao = $_POST['descricao'];
-	$dia = $_POST['dia'];
+	echo $titulo;
+	echo $descricao;
+	/*$dia = $_POST['dia'];
 	$mes = $_POST['mes'];
 	$ano = $_POST['ano'];
 	$hora = $_POST['hora'];
@@ -27,4 +29,5 @@
       				</div>";
 			}
 		}
+	*/
 ?>

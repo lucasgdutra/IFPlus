@@ -1,3 +1,7 @@
+<?php
+	require_once '../../insert_db.php';
+?>
+
 <div style="padding: 0" class="container-fluid">
     <div class="row">
         <div id="submenu">
@@ -6,13 +10,19 @@
                 <li role="presentation" class="active col-xs-4 col-lg-4 col-md-4 col-sm-4">
                     <a class="disabled">Novo</a>
                 </li>
+                <li role="presentation" class="default col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                    <a class="disabled">Todos</a>
+                </li>
+                <li role="presentation" class="default col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                    <a class="disabled">Concluídos</a>
+                </li>
             </ul>
         </div>
         <br>
         <div  class="container-fluid">
             <div style="padding-left: 15px; padding-right: 15px;" class="row">
                 <div  class="container-fluid">
-                	<form class="form-horizontal" method="POST" action="insert_db.php">
+                	<form class="form-horizontal" method="POST" action="">
                     <div style="padding-left: 15px; padding-right: 15px;" class="row">
                     	<p style="color: #AAAAAA;">Novo lembrete</p>
                         <div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
