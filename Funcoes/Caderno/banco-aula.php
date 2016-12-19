@@ -37,6 +37,40 @@ function listaDisciplinas($conexao, $Turma) {
     }
 }
 
+function listaDisciplinasprofessor($conexao, $professor) {
+
+    $disciplinas = array();
+    $query = "select disciplina.* from disciplina, ministra, professor WHERE "
+            . "                                                 professor.id=ministra.id_professor and"
+            . "                                                 ministra.id_disciplina = disciplina.id and"
+            . "                                                 professor.id = {$professor}";
+    $resultado = mysqli_query($conexao, $query);
+    if ($resultado->num_rows == 0) {
+        $disciplinas = "
+
+        <div class=\"bg-danger text-center\">
+            <p>Nenhuma disciplina para listar, ocorreu algum erro na conexao ou o administrador não adicionou as disciplinas de sua grade</p>
+        </div>
+        ";
+        return $disciplinas;
+    } else {
+        while ($disciplina_array = mysqli_fetch_assoc($resultado)) {
+
+            $id = $disciplina_array['id'];
+            $nome = $disciplina_array['nome'];
+            $ano = $disciplina_array['ano'];
+
+
+            $disciplina = new Disciplina($id, $nome, $ano);
+
+
+            array_push($disciplinas, $disciplina);
+        }
+
+        return $disciplinas;
+    }
+}
+
 function listaAulas($conexao, $Disciplina) {
 
     $aulas = array();

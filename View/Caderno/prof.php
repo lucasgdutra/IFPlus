@@ -25,7 +25,7 @@
     <hr>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <?php
-        $disciplinas = listaDisciplinas($conexao, 5);
+        $disciplinas = listaDisciplinasprofessor($conexao, 45);
         if ($disciplinas != 0) {
             foreach ($disciplinas as $disciplina) :
                 ?>
@@ -64,61 +64,34 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $aulas = listaAulas($conexao, $disciplina->getId());
+                                        if ($aulas == null) {
+                                            ?>
 
-                                        <tr class="pesquisa-aula">
-                                            <td>Lorem ipsum dolor</td>
-                                            <td>1</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#AulaModal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="pesquisa-aula">
-                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                            <td>2</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="pesquisa-aula">
-                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                            <td>2</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="pesquisa-aula">
-                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                            <td>2</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="pesquisa-aula">
-                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                            <td>2</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="pesquisa-aula">
-                                            <td>Fundamentos da metafísca | Emanuel Kant</td>
-                                            <td>2</td>
-                                            <td class="actions">
-                                                <a class="btn btn-success btn-xs" href="#">Visualizar</a>
-                                                <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
-                                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
-                                            </td>
-                                        </tr>
+                                            <tr class = "bg-danger text-center">>
+                                                <td colspan="3">
+                                                    Sem aulas para listar, houve algum erro de conexão com o banco ou o professor da disciplina não adicionou nenhuma aula
+                                                </td>
+                                            </tr>
+
+                                            <?php
+                                        } else {
+                                            foreach ($aulas as $aula) :
+                                                ?>
+                                                <tr class="pesquisa-aula">
+                                                    <td><?= $aula->getTitulo() ?></td>
+                                                    <td><?= $aula->getNumero() ?></td>
+                                                    <td class="actions">
+                                                        <a class="btn btn-success btn-xs" href="?remove=<?= $aula->getId() ?>">Visualizar</a>
+                                                        <a class="btn btn-warning btn-xs" href="#" data-toggle="modal" data-target="#edita-aula-modal">Editar</a>
+                                                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#apaga-aula-modal">Excluir</a>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
