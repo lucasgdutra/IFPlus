@@ -9,6 +9,7 @@ if (!defined('ROOT')) {
 
 /** caminho no server para o sistema * */
 if (!defined('BASEURL')) {
+    //define('BASEURL', '/antigo/ifplus/');
     define('BASEURL', '/ifplus/');
 }
 require_once ROOT . "Funcoes" . DS . "conecta.php";

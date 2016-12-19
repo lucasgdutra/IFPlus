@@ -31,7 +31,7 @@
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; " id="users_online">
         <ul>
         <?php
-            $query = BD::conn()->prepare("SELECT * FROM `Usuario` WHERE `email` != ?");
+            $query = BD::conn()->prepare("SELECT * FROM `usuario` WHERE `email` != ?");
             $query->execute(array($_SESSION["usuario_logado"]));
             while ($row = $query->fetch()) {
                 $foto = ($row['foto'] == '') ? 'default.jpg' : $row['foto'];
