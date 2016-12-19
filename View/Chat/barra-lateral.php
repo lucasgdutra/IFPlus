@@ -2,19 +2,19 @@
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; ">
         <div class="list-group" id="users_online">
 <?php for ($i = 1; $i <= 70; $i++): ?>
-                                <a href="#"  class="list-group-item" style="">
-                                    <div class="row no-margin">
-                                        <div class="col-xs-2 no-padding vertical-bottom">
-                                            <img class="img img-responsive img-circle " src="<?= BASEURL ?>View/bibliotecas/img/breno.png" border="0">
+                                    <a href="#"  class="list-group-item" style="">
+                                        <div class="row no-margin">
+                                            <div class="col-xs-2 no-padding vertical-bottom">
+                                                <img class="img img-responsive img-circle " src="<?= BASEURL ?>View/bibliotecas/img/breno.png" border="0">
+                                            </div>
+                                            <div class="col-xs-8 no-padding vertical-bottom">
+                                                Breno Mendes
+                                            </div>
+                                            <div class="col-xs-2 no-padding vertical-bottom">
+                                                <span  class="status off "></span>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-8 no-padding vertical-bottom">
-                                            Breno Mendes
-                                        </div>
-                                        <div class="col-xs-2 no-padding vertical-bottom">
-                                            <span  class="status off "></span>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
 <?php endfor; ?>
         </div>
 
@@ -30,11 +30,7 @@ BD::conn();
 
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; " id="users_online">
         <ul>
-<<<<<<< HEAD
-        <?php
-=======
             <?php
->>>>>>> 83e09e16eb59a264870ea979c1499a69d95bc2c6
             $query = BD::conn()->prepare("SELECT * FROM `usuario` WHERE `email` != ?");
             $query->execute(array($_SESSION["usuario_logado"]));
             while ($row = $query->fetch()) {
