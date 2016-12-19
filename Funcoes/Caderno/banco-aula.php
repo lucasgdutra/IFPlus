@@ -131,13 +131,10 @@ function insereAula($conexao, $titulo, $numero, $conteudo, $Disciplina) {
     return mysqli_query($conexao, $query);
 }
 
-function alteraAula(
-$conexao, Produto $produto) {
+function alteraAula($conexao, $titulo, $numero, $conteudo) {
 
-    $query = "update produtos set nome = '{$produto->getNome()}',
-                preco = {$produto->getPreco()}, descricao = '{$produto->getDescricao()}',
-                categoria_id = {$produto->getCategoria()->getId()},
-                usado = {$produto->isUsado()} where id = '{$produto->getId()}'";
+    $query = "update aula set titulo = '{$titulo}',
+                numero = {$numero}, conteudo = '{$conteudo}'";
 
     return mysqli_query($conexao, $query);
 }
