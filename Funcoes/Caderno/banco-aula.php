@@ -125,9 +125,9 @@ function mostraAula($conexao, $aula) {
     return $aulas;
 }
 
-function insereAula($conexao, Aula $aula) {
+function insereAula($conexao, $titulo, $numero, $conteudo, $Disciplina) {
 
-    $query = "INSERT INTO `aula` (`id`, `titulo`, `numero`, `conteudo`, `id_Disciplina`) VALUES (NULL, '{$aula->getTitulo()}', '{$aula->getNumero()}', '{$aula->getDisciplina()});";
+    $query = "INSERT INTO `aula` (`id`, `titulo`, `numero`, `conteudo`, `id_Disciplina`) VALUES (NULL, '{$titulo}', '{$numero}', '{$conteudo}', '{$Disciplina}');";
     return mysqli_query($conexao, $query);
 }
 

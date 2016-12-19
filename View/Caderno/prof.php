@@ -71,7 +71,7 @@
                                         if ($aulas == null) {
                                             ?>
 
-                                            <tr class = "bg-danger text-center">>
+                                            <tr class = "bg-danger text-center">
                                                 <td colspan="3">
                                                     Sem aulas para listar, houve algum erro de conexão com o banco ou o professor da disciplina não adicionou nenhuma aula
                                                 </td>

@@ -4,21 +4,21 @@ require_once("../../Classes/Aula.php");
 require_once '../../Funcoes/Caderno/banco-aula.php';
 
 
-$titulo = $_POST['aula[titulo]'];
-$numero = $_POST['aula[numero]'];
-$conteudo = $_POST['aula[conteudo]'];
-$Disciplina = $_POST['aula[id_disciplina]'];
+$titulo = $_POST['titulo'];
+$numero = $_POST['numero'];
+$conteudo = $_POST['conteudo'];
+$Disciplina = $_POST['id_disciplina'];
 
 
 
 if (insereAula($conexao, $titulo, $numero, $conteudo, $Disciplina)) {
     ?>
-    <p class="text-success">A aula <?= $aula->getTitulo() ?>, foi adicionado.</p>
+    <p class="text-success">A aula <?= $titulo ?>, foi adicionado.</p>
     <?php
 } else {
     $msg = mysqli_error($conexao);
     ?>
-    <p class="text-danger">A aula<?= $aula->getTitulo() ?> não foi adicionada: <?= $msg ?></p>
+    <p class="text-danger">A aula<?= $titulo ?> não foi adicionada: <?= $msg ?></p>
     <?php
 }
 ?>

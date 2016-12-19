@@ -8,7 +8,7 @@ Class Aula {
     private $conteudo;
     private $Disciplina;
 
-    function __construct($titulo, $numero, $conteudo, $Disciplina) {
+    function __construct($id, $titulo, $numero, $conteudo, $Disciplina) {
         $this->id = $id;
         $this->titulo = $titulo;
         $this->numero = $numero;

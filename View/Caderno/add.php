@@ -14,21 +14,21 @@ require_once('functions.php');
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="campo1">Titulo</label>
-                <input type="text" class="form-control" name="aula[titulo]" value="">
+                <input type="text" class="form-control" name="titulo">
             </div>
 
             <div class="form-group col-md-6">
                 <label for="campo2">Numero</label>
-                <input type="number" class="form-control" name="aula[numero]" value="">
+                <input type="number" class="form-control" name="numero" >
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-12">
-                <textarea class="form-control" name="aula[conteudo]" ></textarea>
+                <textarea class="form-control" name="conteudo" ></textarea>
                 <script>
-                    CKEDITOR.replace('aula[conteudo]');
+                    CKEDITOR.replace('conteudo');
                 </script>
-                <input type="hidden" name="aula[Disciplina_id]" value="45">
+                <input type="hidden" name="id_disciplina" value="45">
             </div>
         </div>
         <div id="actions" class="row">
