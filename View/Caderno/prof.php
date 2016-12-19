@@ -43,7 +43,7 @@
                             <div class="col-sm-6 ">
                                 <form>
                                     <input type="hidden" name="id" value="<?= $disciplina->getId() ?>">
-                                    <button type="submit" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</button>
+                                    <a href="add.php" class="btn btn-default btn-block pull-right col-sm-6">Nova Aula</a>
 
                                 </form>
                             </div>
