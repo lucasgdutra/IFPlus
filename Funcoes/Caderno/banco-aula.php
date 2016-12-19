@@ -5,11 +5,45 @@ require_once '../../config.php';
 function listaDisciplinas($conexao, $Turma) {
 
     $disciplinas = array();
-    $query = "select Disciplina.* from Disciplina, Grade, Turma WHERE "
-            . "                                                 Grade.`id_Disciplina`=Disciplina.id and"
-            . "                                                 Grade.ano = turma.anoatual and"
+    $query = "select disciplina.* from disciplina, grade, turma WHERE "
+            . "                                                 grade.`id_Disciplina`=disciplina.id and"
+            . "                                                 grade.ano = turma.anoatual and"
             . "                                                 grade.curso = turma.curso and"
-            . "                                                 Turma.id = {$Turma}";
+            . "                                                 turma.id = {$Turma}";
+    $resultado = mysqli_query($conexao, $query);
+    if ($resultado->num_rows == 0) {
+        $disciplinas = "
+
+        <div class=\"bg-danger text-center\">
+            <p>Nenhuma disciplina para listar, ocorreu algum erro na conexao ou o administrador não adicionou as disciplinas de sua grade</p>
+        </div>
+        ";
+        return $disciplinas;
+    } else {
+        while ($disciplina_array = mysqli_fetch_assoc($resultado)) {
+
+            $id = $disciplina_array['id'];
+            $nome = $disciplina_array['nome'];
+            $ano = $disciplina_array['ano'];
+
+
+            $disciplina = new Disciplina($id, $nome, $ano);
+
+
+            array_push($disciplinas, $disciplina);
+        }
+
+        return $disciplinas;
+    }
+}
+
+function listaDisciplinasprofessor($conexao, $professor) {
+
+    $disciplinas = array();
+    $query = "select disciplina.* from disciplina, ministra, professor WHERE "
+            . "                                                 professor.id=ministra.id_professor and"
+            . "                                                 ministra.id_disciplina = disciplina.id and"
+            . "                                                 professor.id = {$professor}";
     $resultado = mysqli_query($conexao, $query);
     if ($resultado->num_rows == 0) {
         $disciplinas = "

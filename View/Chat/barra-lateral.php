@@ -2,19 +2,19 @@
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; ">
         <div class="list-group" id="users_online">
 <?php for ($i = 1; $i <= 70; $i++): ?>
-                        <a href="#"  class="list-group-item" style="">
-                            <div class="row no-margin">
-                                <div class="col-xs-2 no-padding vertical-bottom">
-                                    <img class="img img-responsive img-circle " src="<?= BASEURL ?>View/bibliotecas/img/breno.png" border="0">
-                                </div>
-                                <div class="col-xs-8 no-padding vertical-bottom">
-                                    Breno Mendes
-                                </div>
-                                <div class="col-xs-2 no-padding vertical-bottom">
-                                    <span  class="status off "></span>
-                                </div>
-                            </div>
-                        </a>
+                                <a href="#"  class="list-group-item" style="">
+                                    <div class="row no-margin">
+                                        <div class="col-xs-2 no-padding vertical-bottom">
+                                            <img class="img img-responsive img-circle " src="<?= BASEURL ?>View/bibliotecas/img/breno.png" border="0">
+                                        </div>
+                                        <div class="col-xs-8 no-padding vertical-bottom">
+                                            Breno Mendes
+                                        </div>
+                                        <div class="col-xs-2 no-padding vertical-bottom">
+                                            <span  class="status off "></span>
+                                        </div>
+                                    </div>
+                                </a>
 <?php endfor; ?>
         </div>
 
@@ -22,37 +22,41 @@
 */-->
 
 <?php
-    require_once (ROOT . "Classes/chat.php");
-    BD::conn();
+require_once (ROOT . "Classes/chat.php");
+BD::conn();
 ?>
 <div  class="affix" style=" margin-top: -50px; padding-top: 50px; height: 100vh; background-color: #ccc">
 
 
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; " id="users_online">
         <ul>
+<<<<<<< HEAD
         <?php
+=======
+            <?php
+>>>>>>> 83e09e16eb59a264870ea979c1499a69d95bc2c6
             $query = BD::conn()->prepare("SELECT * FROM `usuario` WHERE `email` != ?");
             $query->execute(array($_SESSION["usuario_logado"]));
             while ($row = $query->fetch()) {
                 $foto = ($row['foto'] == '') ? 'default.jpg' : $row['foto'];
                 $agora = date('Y-m-d H:i:s');
                 $status = 'on';
-                if($agora >= $row['limite']){
+                if ($agora >= $row['limite']) {
                     $status = 'off';
                 }
-        ?>
+                ?>
                 <div><!--div msg podera ser removida-->
-                    <li id="<?php echo $row['id']?>">
+                    <li id="<?php echo $row['id'] ?>">
                         <div class="imgSmall">
-                            <img src="<?php echo $foto;?>" border="0">
+                            <img src="<?php echo $foto; ?>" border="0">
                         </div>
-                        <a href="#" id="<?php echo $_SESSION['id_user'].':'.$row['id'];?>" class="comecar"><?php echo utf8_encode($row['nome']);?></a>
-                        <span id="<?php echo $row['id'];?>" class="status <?php echo $status;?>"></span>
+                        <a href="#" id="<?php echo $_SESSION['id_user'] . ':' . $row['id']; ?>" class="comecar"><?php echo utf8_encode($row['nome']); ?></a>
+                        <span id="<?php echo $row['id']; ?>" class="status <?php echo $status; ?>"></span>
                     </li>
                 </div>
-        <?php
+                <?php
             }
-        ?>
+            ?>
         </ul>
     </aside>
 
