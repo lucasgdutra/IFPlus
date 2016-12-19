@@ -1,14 +1,6 @@
 <?php
 
-function mostra_janela($texto)
-{
-    echo "<script type=\"text/javascript\" language=\"javascript\">";
-    echo "alert(\"$texto\");";
-    echo "</script>";
-}
-
-
-function upload()
+function upload($nome, $desc)
 {
 
   $erro = "";
@@ -19,7 +11,7 @@ function upload()
   $_UP['tamanho'] = 1024 * 1024 * 2; // 2Mb
   //
   // Array com as extensões permitidas
-  $_UP['extensoes'] = array('pdf', 'jpg');
+  $_UP['extensoes'] = array('pdf');
 
   // Renomeia o arquivo? (Se true, o arquivo será salvo como .jpg e um nome único)
   $_UP['renomeia'] = true;
@@ -61,7 +53,9 @@ function upload()
   // Primeiro verifica se deve trocar o nome do arquivo
   if ($_UP['renomeia'] == true) {
     // Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
-    $nome_final = md5(time()).'.' . $extensao;
+    $test = str_replace(" ", "_", $nome;
+    $nome_final = $test . $extensao;
+
   } else {
     // Mantém o nome original do arquivo
     $nome_final = $_FILES['arquivo']['name'];
@@ -71,9 +65,10 @@ function upload()
   if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
     // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
     
+    $query = DB::conn()->prepare("INSERT INTO `arquivo` (`id`, `id_professor`, `id_turma`, `nome`, `descricao`, `local`) VALUES (NULL, '1', '4', 'GPO', '', '/uploads/GOPR.pdf'), (NULL, '1', '1', 'asdasd', NULL, 'asdasd')");
+
     mostra_janela("Upload efetuado com sucesso!");
     return 1;
-    //echo '<a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
   } else {
     // Não foi possível fazer o upload, provavelmente a pasta está incorreta
     mostra_janela("Não foi possível enviar o arquivo, tente novamente");

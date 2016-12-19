@@ -30,7 +30,11 @@ BD::conn();
 
     <aside style="height: calc(100% - 50px); overflow: auto; padding: 10px; " id="users_online">
         <ul>
+<<<<<<< HEAD
+        <?php
+=======
             <?php
+>>>>>>> 83e09e16eb59a264870ea979c1499a69d95bc2c6
             $query = BD::conn()->prepare("SELECT * FROM `usuario` WHERE `email` != ?");
             $query->execute(array($_SESSION["usuario_logado"]));
             while ($row = $query->fetch()) {
