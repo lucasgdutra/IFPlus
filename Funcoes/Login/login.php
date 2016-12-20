@@ -24,6 +24,6 @@ if ($usuario == null) {
     defineTurma($buscaturma['id']);
     defineAno($buscaturma['anoatual']);
     defineProfessor($buscaprofessor);
-    header('Location:' . BASEURL . '/index.php');
+    header('Location:' . BASEURL . 'index.php');
 }
 die();
