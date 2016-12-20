@@ -4,7 +4,7 @@ require_once '../../config.php';
 require_once("../../Classes/Aula.php");
 require_once '../../Funcoes/Caderno/banco-aula.php';
 
-
+$id = $_POST['id'];
 $titulo = $_POST['titulo'];
 $numero = $_POST['numero'];
 $conteudo = $_POST['conteudo'];
@@ -12,7 +12,7 @@ $Disciplina = $_POST['id_disciplina'];
 
 
 
-if (alteraAula($conexao, $titulo, $numero, $conteudo, $Disciplina)) {
+if (alteraAula($conexao,$id, $titulo, $numero, $conteudo)) {
 
     $_SESSION['success'] = 'A aula ' . $titulo . ' foi alterada.';
 } else {

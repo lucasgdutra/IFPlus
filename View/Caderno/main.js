@@ -32,7 +32,7 @@ $('#edit-modal').on('show.bs.modal', function (event) {
     var id = button.data('customer');
 
     var modal = $(this);
-    modal.find('.modal-title').text('Atualizar aula #' + id);
+    modal.find('.modal-title').text('Atualizar aula');
     $("#conteudoModaledit").load('edit.php?id=' + id);
 
 });
@@ -43,6 +43,6 @@ $('#delete-modal').on('show.bs.modal', function (event) {
     var id = button.data('customer');
 
     var modal = $(this);
-    modal.find('.modal-title').text('Excluir aula #' + id);
+    modal.find('.modal-title').text('Excluir aula');
     modal.find('#confirm').attr('href', 'delete.php?id=' + id);
-})
+});

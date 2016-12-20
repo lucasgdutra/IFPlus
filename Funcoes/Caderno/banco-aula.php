@@ -77,7 +77,7 @@ function listaDisciplinasprofessor($conexao, $professor) {
 function listaAulas($conexao, $Disciplina) {
 
     $aulas = array();
-    $query = "select aula.* from aula WHERE aula.`id_Disciplina` = '{$Disciplina}'";
+    $query = "select aula.* from aula WHERE aula.`id_Disciplina` = '{$Disciplina}' ORDER by numero";
 
 
     $resultado = mysqli_query($conexao, $query);
@@ -131,10 +131,10 @@ function insereAula($conexao, $titulo, $numero, $conteudo, $Disciplina) {
     return mysqli_query($conexao, $query);
 }
 
-function alteraAula($conexao, $titulo, $numero, $conteudo) {
+function alteraAula($conexao, $id,  $titulo, $numero, $conteudo) {
 
     $query = "update aula set titulo = '{$titulo}',
-                numero = {$numero}, conteudo = '{$conteudo}'";
+                numero = {$numero}, conteudo = '{$conteudo}' WHERE id= {$id}";
 
     return mysqli_query($conexao, $query);
 }

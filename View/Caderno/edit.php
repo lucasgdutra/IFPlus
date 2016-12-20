@@ -1,3 +1,4 @@
+<script src="validator.js"></script>
 <?php
 require_once('functions.php');
 require_once '../../Funcoes/Caderno/banco-aula.php';
@@ -21,12 +22,13 @@ if ($aula == null) {
 
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="campo1">Titulo</label>
+                    <input type="hidden" name="id" value="<?=$aula->getId() ?>">
+                    <label for="titulo">Titulo</label>
                     <input type="text" class="form-control" name="titulo" value="<?=$aula->getTitulo() ?>">
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="campo2">Numero</label>
+                    <label for="numero">Numero</label>
                     <input type="number" class="form-control" name="numero" value="<?=$aulanumber?>" >
                 </div>
             </div>
@@ -41,7 +43,7 @@ if ($aula == null) {
             </div>
             <div id="actions" class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-default">Salvar</button>
+                    <button id="enviaaula" type="submit" class="btn btn-default">Salvar</button>
                     <a href="index.php" class="btn btn-danger">Cancelar</a>
                 </div>
             </div>

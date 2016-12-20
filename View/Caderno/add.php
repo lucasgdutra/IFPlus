@@ -2,7 +2,7 @@
 require_once('functions.php');
 $id_disciplina = $_POST['id'];
 ?>
-
+<script src="validator.js"></script>
 <?php include(HEADER_TEMPLATE); ?>
 <script src="ckeditor/ckeditor.js"></script>
 <div class="container">
@@ -14,18 +14,18 @@ $id_disciplina = $_POST['id'];
 
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="campo1">Titulo</label>
+                <label for="titulo">Titulo</label>
                 <input type="text" class="form-control" name="titulo">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="campo2">Numero</label>
+                <label for="numero">Numero</label>
                 <input type="number" class="form-control" name="numero" >
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-12">
-                <textarea class="form-control" name="conteudo" ></textarea>
+                <textarea class="form-control" name="conteudo" aria-invalid="true" ></textarea>
                 <script>
                     CKEDITOR.replace('conteudo');
                 </script>
@@ -34,7 +34,7 @@ $id_disciplina = $_POST['id'];
         </div>
         <div id="actions" class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-default">Salvar</button>
+                <button id="enviaaula" type="submit" class="btn btn-default">Salvar</button>
                 <a href="index.php" class="btn btn-danger">Cancelar</a>
             </div>
         </div>

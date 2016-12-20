@@ -8,25 +8,7 @@ $mostraaula = $_REQUEST['mostraaula'];
 ?>
 
 
-<script type="text/javascript">
-    $(function () {
-
-        $(".caixa-pesquisa-aula").keyup(function () {
-            var texto = $(this).val();
-
-            $(".pesquisa-aula").each(function () {
-                var resultado = $(this).text().toUpperCase().indexOf(' ' + texto.toUpperCase());
-
-                if (resultado < 0) {
-                    $(this).fadeOut();
-                } else {
-                    $(this).fadeIn();
-                }
-            });
-
-        });
-
-    });
+<script type="text/javascript" src="filtro.js">
 </script>
 
 <hr>
