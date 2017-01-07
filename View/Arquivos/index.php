@@ -57,15 +57,13 @@
 
 <?php if (usuarioTipo() == "professor"): ?>
     <?php
-$prof = id($_SESSION["usuario_logado"]);
-$disc = disciplina($prof["id"]);
-$grad = grade($disc["id_disciplina"]);
-$query = BD::conn()->prepare("SELECT * FROM turma WHERE turma.grade_id = ?");
-$query->execute(array($grad["id"]));
-$result = $query->fetchAll();
-$row = $query->rowCount();
-if($row == 0)
-{
+    $email = $_SESSION["usuario_logado"];
+    $prof = id_prof($email);
+    $disc = disciplina($prof["id"]);
+    $row = prof_turma($disc["disciplina_id"]);
+
+    if($row == 0)
+    {
     ?>
 
     <div class="col-xs-12">

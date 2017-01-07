@@ -10,7 +10,9 @@ if (!defined('ROOT'))
 
 /** caminho no server para o sistema * */
 if (!defined('BASEURL'))
-    define('BASEURL', '//');
+{
+	define('BASEURL', '/IFPlus/');
+}
 
 /** caminho do arquivo de banco de dados * */
 if (!defined('DBAPI'))
