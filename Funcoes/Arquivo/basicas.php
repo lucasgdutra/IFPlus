@@ -1,4 +1,5 @@
 <?php
+
 require_once (ROOT . "Classes/chat.php");
 
 
