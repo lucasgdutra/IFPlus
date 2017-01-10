@@ -11,10 +11,10 @@ $user = "root";
 $pass = "";
 $database = "u244818129_ifplu";
 
-define(HOST, "$host");
-define(USER, "$user");
-define(PASS, "$pass");
-define(DB, "$database");
+define("HOST", "$host");
+define("USER", "$user");
+define("PASS", "$pass");
+define("DB", "$database");
 
 function conexao($host, $user, $pass, $database) {
     $conexao = mysqli_connect($host, $user, $pass, $database);

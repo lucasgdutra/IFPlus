@@ -3,11 +3,11 @@
     require_once '../../config.php';
     require_once ROOT . "cabecalho.php";
     verificaUsuario();
-    require_once ROOT . 'View' . DS . 'navbar.php';
+    require_once ROOT . 'View/navbar.php';
     require_once ROOT . "Funcoes/Arquivo/basicas.php";
-    require_once (ROOT . "Classes/chat.php");
+    require_once (ROOT . "Classes/BD.class.php");
+    include ROOT . "Classes/init.php";
     BD::conn();
-
 
     $op = @ $_REQUEST['op'];
 
@@ -55,11 +55,10 @@
     <?php mostraAlerta("warning"); ?>
 </div>
 
-<?php if (usuarioTipo() == "professor"): ?>
+<?php if ($user->tipo == "professor"): ?>
     <?php
-    $email = $_SESSION["usuario_logado"];
-    $prof = id_prof($email);
-    $disc = disciplina($prof["id"]);
+
+    $disc = disciplina($user->getId());
     $row = prof_turma($disc["disciplina_id"]);
 
     if($row == 0)
@@ -72,31 +71,31 @@
     </div>
 
     <?php
-}
+    }
 else
 {
 ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
-                <?php require_once ROOT . "View" . DS . "Arquivos" . DS . "prof.php"; ?>
+                <?php require_once ROOT . "View/Arquivos/Professor/prof.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php require_once ROOT . "View" . DS . "Chat" . DS . 'barra-lateral.php'; ?>
+                <?php require_once ROOT . "View/Chat/barra-lateral.php"; ?>
             </div>
         </div>
     </div>
 <?php } ?>
 <?php endif; ?>
 
-<?php if (usuarioTipo() == "aluno"): ?>
+<?php if ($user->tipo == "aluno"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
-                <?php require_once ROOT . "View" . DS . "Arquivos" . DS . "aluno.php"; ?>
+                <?php require_once ROOT . "View/Arquivos/Aluno/aluno.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php require_once ROOT . "View" . DS . "Chat" . DS . "barra-lateral.php"; ?>
+                <?php require_once ROOT . "View/Chat/barra-lateral.php"; ?>
             </div>
         </div>
     </div>

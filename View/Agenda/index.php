@@ -6,6 +6,9 @@ require_once ROOT . "cabecalho.php";
 //require_once 'insert_db.php';
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
+
+/* Objetos $user e $turma */
+include ROOT . "Classes/init.php";
 ?>
 <div id="alert">
     <?php mostraAlerta("success"); ?>
@@ -13,7 +16,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
     <?php mostraAlerta("info"); ?>
     <?php mostraAlerta("warning"); ?>
 </div>
-<?php if (usuarioTipo() == "professor"): ?>
+<?php if ($user->tipo == "professor"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
@@ -26,7 +29,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
     </div>
 <?php endif; ?>
 
-<?php if (usuarioTipo() == "aluno"): ?>
+<?php if ($user->tipo == "aluno"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">

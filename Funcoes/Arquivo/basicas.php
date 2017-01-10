@@ -1,6 +1,6 @@
 <?php
 
-require_once (ROOT . "Classes/chat.php");
+require_once (ROOT . "Classes/BD.class.php");
 
 
 function id_prof($email)

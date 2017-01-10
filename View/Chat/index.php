@@ -2,7 +2,6 @@
 $nome_tela = "Chat";
 require_once '../../config.php';
 require_once ROOT . "cabecalho.php";
-verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
 ?>
 <div id="alert">

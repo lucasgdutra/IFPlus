@@ -5,6 +5,9 @@ require_once ROOT . 'Funcoes/Caderno/banco-aula.php';
 require_once ROOT . "cabecalho.php";
 verificaUsuario();
 require_once ROOT . 'View' . DS . 'navbar.php';
+
+/* Objetos $user e $turma */
+include ROOT . "Classes/init.php";
 ?>
 <script src="//cdn.ckeditor.com/4.6.0/standard-all/ckeditor.js"></script>
 
@@ -15,7 +18,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
     <?php mostraAlerta("warning"); ?>
 </div>
 
-<?php if (usuarioTipo() == "professor"): ?>
+<?php if ($user->tipo == "professor"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
@@ -28,7 +31,7 @@ require_once ROOT . 'View' . DS . 'navbar.php';
     </div>
 <?php endif; ?>
 
-<?php if (usuarioTipo() == "aluno"): ?>
+<?php if ($user->tipo == "aluno"): ?>
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">

@@ -27,7 +27,7 @@ require_once ROOT . "mostra-alerta.php";
 require_once ROOT . 'Funcoes' . DS . 'Login' . DS . 'logica-usuario.php';
 
 function carregaClasse($nomeDaClasse) {
-    require_once("Classes/" . $nomeDaClasse . ".php");
+    require_once("Classes/" . $nomeDaClasse . ".class.php");
 }
 
 spl_autoload_register("carregaClasse");

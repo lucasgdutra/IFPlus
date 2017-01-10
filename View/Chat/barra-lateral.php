@@ -22,7 +22,7 @@
 */-->
 
 <?php
-require_once (ROOT . "Classes/chat.php");
+require_once (ROOT . "Classes/BD.class.php");
 BD::conn();
 ?>
 <div  class="affix" style=" margin-top: -50px; padding-top: 50px; height: 100vh; background-color: #ccc">
