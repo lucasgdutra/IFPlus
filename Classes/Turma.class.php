@@ -21,6 +21,13 @@ class Turma {
     function __construct($aluno)
     {
 		$this->aluno = (object) $aluno;
+
+        if ($this->aluno->tipo == "professor")
+        {
+            $this->aluno = NULL;
+            return "Tal objeto não é um aluno";
+        }
+
 		$this->setId();
     }
 
