@@ -1,9 +1,7 @@
 <div class="row">
     <div class="panel-group col-xs-12 col-sm-11 col-md-11 col-lg-11" id="paineis-info">
     <?php
-        $test = $user->getId_turma_prof();
-
-        //print_r($test);
+        $test = $user->getId_turma_prof("*");
 
         foreach ($test as $ts => $turma) {
     ?>

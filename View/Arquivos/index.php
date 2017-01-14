@@ -74,6 +74,7 @@
     }
 else
 {
+    require_once ROOT . 'Funcoes/Arquivo/arquivo.func.php';
 ?>
     <div id="main" class="container-fluid">
         <div class="row">

@@ -12,79 +12,54 @@
                     <h6>
                         Selecione a turma para quem você deseja enviar o arquivo
                     </h6>
-                    <div class="col-xs-3">
-                        <h6>Primeiro ano</h6>
-                    <?php
-                        for($i = 0; $i < $row; $i ++)
-                        {
-                            if($result[$i][2] == 1)
-                            {
-                                $primeiro[$result[$i]['sigla']] = 1;
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <h6>Primeiro ano</h6>
+                                <?php
+                                    $test = $user->getId_turma_prof(1);
+                                    print_r($test);
+                                    if($test != NULL)
+                                    {
+                                        foreach($test as $ts => $turma):
                                 ?>
                                 <div class="checkbox">
-                                <label>
-                                <input name="<?php echo $result[$i]['curso'] . $result[$i]['anoatual'];?>" type="checkbox" value="<?=$result[$i]["id"]?>">1°<?=$result[$i]['sigla']?>
-                                </label>
+                                    <label>
+                                        <input name="1C" type="checkbox" value="test">1°
+                                    </label>
                                 </div>
-                    <?php   }
-                            else
-                            {
-                                $primeiro[$result[$i]['sigla']] = 0;
-                            }
-                        }
-                    ?>
-                    </div>
-                    <div class="col-xs-3 col-xs-offset-1">
-                        <h6>Segundo ano</h6>
-                    <?php
-                        for($i = 0; $i < $row; $i ++)
-                        {
-                            if($result[$i][2] == 2)
-                            {
-                                $segundo[$result[$i]['sigla']] = 1;
+                                <?php
+                                        endforeach;
+                                    }
+                                    else
+                                    {
+                                        echo "bl";
+                                    }
+
                                 ?>
+                            </div>
+                            <div class="col-xs-2">
+                                <h6>Segundo ano</h6>
                                 <div class="checkbox">
-                                <label>
-                                <input name="<?php echo $result[$i]['curso'] . $result[$i]['anoatual'] . $result[$i]['sigla'];?>" type="checkbox" value="<?=$result[$i]["id"]?>">2°<?=$result[$i]['sigla']?>
-                                </label>
+                                    <label>
+                                        <input name="" type="checkbox" value="">2°
+                                    </label>
                                 </div>
-                            <?php
-                            }
-                            else
-                            {
-                                $segundo[$result[$i]['sigla']] = 0;
-                            }
-                        }
-                        var_dump($segundo);
-                    ?>
-                    </div>
-                    <div class="col-xs-3 col-xs-offset-1">
-                        <h6>Terceiro ano</h6>
-                    <?php
-                        for($i = 0; $i < $row; $i ++)
-                        {
-                            if($result[$i][2] == 3)
-                            {
-                                $terceiro[$result[$i]['sigla']] = 1;
-                                ?>
+                            </div>
+                            <div class="col-xs-2">
+                                <h6>Terceiro ano</h6>
                                 <div class="checkbox">
-                                <label>
-                                <input name="<?php echo $result[$i]['curso'] . $result[$i]['anoatual'];?>" type="checkbox" value="<?=$result[$i]["id"]?>">3°<?=$result[$i]['sigla']?>
-                                </label>
+                                    <label>
+                                        <input name="" type="checkbox" value="">3°
+                                    </label>
                                 </div>
-                            <?php
-                            }
-                            else
-                            {
-                                $terceiro[$result[$i]['sigla']] = 0;
-                            }
-                        } 
-                    ?>
+                            </div>
+                        </div>
                     </div>
                     <div class="input-group col-xs-8" id="input-name">
                       <input id="nome" type="text" class="form-control" placeholder="Nome do Arquivo" aria-describedby="basic-addon2" required>
                       <span class="input-group-addon " id="basic-addon2">
-                        <a href="#" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Ajuda" data-content="Este será o nome exibido aos alunos."></a>
+                        <a tabindex="0" class="glyphicon glyphicon-question-sign" role="button" data-placement="left" data-toggle="popover" data-trigger="focus" title="Ajuda" data-content="Este será o nome exibido aos alunos."></a>
                       </span>
                     </div>
                     <textarea id="desc" class="col-xs-11" rows="4" cols="50" placeholder="Descrição"></textarea>

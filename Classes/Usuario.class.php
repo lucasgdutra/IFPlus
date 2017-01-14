@@ -55,41 +55,56 @@ class Usuario {
         return $this->cpf;
     }
 
-    function getId_turma_prof(){
+    function getTurmas_prof($disciplina_id){
+        $query = BD::conn()->prepare("SELECT * FROM turma_has_disciplina WHERE disciplina_id = {$disciplina_id}");
+        $query->execute();
+        $i = 1;
+        while($linha = $query->fetch(PDO::FETCH_ASSOC)){
+            $array[$i] = $linha["turma_id"];
+            $i ++;
+        }
+        return $array;
+    }
+
+    function getAllturma_prof($turmas_id){
+
+        foreach ($turmas_id as $id):
+            $select = BD::conn()->prepare("SELECT * FROM turma WHERE id = {$id}");
+            $select->execute();
+            $linha = $select->fetch(PDO::FETCH_ASSOC);
+            $array[] = $linha;
+        endforeach;
+                    
+        return $array;
+    }
+
+    function getAllturma_prof_limit($turmas_id, $ano){
+
+        foreach ($turmas_id as $id):
+            $select = BD::conn()->prepare("SELECT * FROM turma WHERE id = {$id} AND anoatual = {$ano}");
+            $select->execute();
+            $linha = $select->fetch(PDO::FETCH_ASSOC);
+            $array[] = $linha;
+        endforeach;
+                    
+        return $array;
+    }
+
+    function getId_turma_prof($ano){
         if($this->tipo == "aluno")
             return;
-
-        function getTurmas_prof($disciplina_id){
-            $query = BD::conn()->prepare("SELECT * FROM turma_has_disciplina WHERE disciplina_id = {$disciplina_id}");
-            $query->execute();
-            $i = 1;
-            while($linha = $query->fetch(PDO::FETCH_ASSOC)){
-                $array[$i] = $linha["turma_id"];
-                $i ++;
-            }
-            return $array;
-        }
-
-        function getAllturma_prof($turmas_id){
-
-            foreach ($turmas_id as $id):
-                $select = BD::conn()->prepare("SELECT anoatual, curso, sigla FROM turma WHERE id = {$id}");
-                $select->execute();
-                $linha = $select->fetch(PDO::FETCH_ASSOC);
-                $array[] = $linha;
-            endforeach;
-                        
-            return $array;
-        }
 
         $query = BD::conn()->prepare("SELECT * FROM ministra WHERE professor_id = ?");
         $query->execute(array($this->id));
         $row = $query->fetch(PDO::FETCH_ASSOC);
         //print_r($row);
 
-        $test = getTurmas_prof($row["disciplina_id"]);
+        $test = $this->getTurmas_prof($row["disciplina_id"]);
 
-        $return = getAllturma_prof($test);
+        if($ano == "*")
+            $return = $this->getAllturma_prof($test);
+        else
+            $return = $this->getAllturma_prof_limit($test, $ano);
 
         return $return;
     }

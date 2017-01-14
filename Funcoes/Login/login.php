@@ -9,7 +9,7 @@ require_once ROOT . "Classes/BD.class.php";
 $usuario = buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 if ($usuario == null) {
     $_SESSION["danger"] = "Usuário ou senha inválido.";
-    //header('Location:' . BASEURL . '/index.php');
+    header('Location:' . BASEURL . '/index.php');
 } else {
     $tipousuario = tipoUsuario($conexao, $usuario["id"]);
 
