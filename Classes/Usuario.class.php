@@ -83,10 +83,10 @@ class Usuario {
         foreach ($turmas_id as $id):
             $select = BD::conn()->prepare("SELECT * FROM turma WHERE id = {$id} AND anoatual = {$ano}");
             $select->execute();
-            $linha = $select->fetch(PDO::FETCH_ASSOC);
-            $array[] = $linha;
+            while($linha = $select->fetch(PDO::FETCH_ASSOC))
+                $array[] = $linha;
         endforeach;
-                    
+
         return $array;
     }
 

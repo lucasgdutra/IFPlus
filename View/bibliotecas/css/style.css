@@ -1,8 +1,7 @@
 body{
     /*FONTE*/
-    width: 100%;
-    height: 100%;
 
+    height: initial;
 }
 #alert{
     margin-top: 50px;
@@ -93,7 +92,14 @@ button.list-group-item{
 #input-name
 {
     margin-bottom: 15px;
+    margin-top: 15px;
 }
+
+.textarea-desc
+{
+    margin-bottom: 15px;
+}
+
 /*=======*/
 .status{
     border-radius: 50%;
