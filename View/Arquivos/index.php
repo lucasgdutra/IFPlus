@@ -2,52 +2,13 @@
     $nome_tela = "Arquivos";
     require_once '../../config.php';
     require_once ROOT . "cabecalho.php";
-    verificaUsuario();
     require_once ROOT . 'View/navbar.php';
     require_once ROOT . "Funcoes/Arquivo/basicas.php";
-    require_once (ROOT . "Classes/BD.class.php");
+    //require_once (ROOT . "Classes/BD.class.php");
     include ROOT . "Classes/init.php";
     BD::conn();
 
-    $op = @ $_REQUEST['op'];
-
-    $nome = @ $_REQUEST['nome'];
-    $desc = @ $_REQUEST['desc'];
-
-    $agro1a = @ $_REQUEST['AGROPECUARIA1A'];
-    $agro1b = @ $_REQUEST['AGROPECUARIA1B'];
-    $agro2a = @ $_REQUEST['AGROPECUARIA2A'];
-    $agro2b = @ $_REQUEST['AGROPECUARIA2B'];
-    $agro3a = @ $_REQUEST['AGROPECUARIA3A'];
-    $agro3b = @ $_REQUEST['AGROPECUARIA3B'];
-
-    $info1 = @ $_REQUEST['INFORMATICA1C'];
-    $info2 = @ $_REQUEST['INFORMATICA2C'];
-    $info3 = @ $_REQUEST['INFORMATICA3C'];
-
-    $meio1 = @ $_REQUEST['MEIOAMBIENTE1D'];
-    $meio2 = @ $_REQUEST['MEIOAMBIENTE2D'];
-    $meio3 = @ $_REQUEST['MEIOAMBIENTE3D'];
-
-    $alim1 = @ $_REQUEST['ALIMENTOS1E'];
-    $alim2 = @ $_REQUEST['ALIMENTOS2E'];
-    $alim3 = @ $_REQUEST['ALIMENTOS3E'];
-
-    echo $desc;
-
-    if (!isset($op)) {
-        $op = 0;
-    }
-
-    if (!isset($up)) {
-        $up = 0;
-    }
-
-//     if ($op == 1) {
-//         require_once (ROOT. "Funcoes/Arquivo/upload.php");
-//         $up = upload($nome, $desc;
-//     }
-// ?>
+ ?>
 <div id="alert">
     <?php mostraAlerta("success"); ?>
     <?php mostraAlerta("danger"); ?>
@@ -74,6 +35,7 @@
     }
 else
 {
+
     require_once ROOT . 'Funcoes/Arquivo/arquivo.func.php';
 ?>
     <div id="main" class="container-fluid">

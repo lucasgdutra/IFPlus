@@ -1,11 +1,61 @@
 <?php
+  require_once '../../config.php';
+  require_once ROOT . "Funcoes/Arquivo/basicas.php";
+  require_once( ROOT . "Funcoes/Arquivo/arquivo.func.php");
+  require_once( ROOT . "Funcoes/funcoes_basicas.php");
+  include ROOT . "Classes/init.php";
+  BD::conn();
 
-function upload($nome, $desc)
-{
+  $nome = @ $_REQUEST['nome'];
+
+  $desc = @ $_REQUEST['desc'];
+
+  $agroA[] = @ $_REQUEST['AGROPECUARIA1A'];
+  $agroA[] = @ $_REQUEST['AGROPECUARIA2A'];
+  $agroA[] = @ $_REQUEST['AGROPECUARIA3A'];
+
+  $agroB[] = @ $_REQUEST['AGROPECUARIA1B'];
+  $agroB[] = @ $_REQUEST['AGROPECUARIA2B'];
+  $agroB[] = @ $_REQUEST['AGROPECUARIA3B'];
+
+  $info[] = @ $_REQUEST['INFORMATICA1C'];
+  $info[] = @ $_REQUEST['INFORMATICA2C'];
+  $info[] = @ $_REQUEST['INFORMATICA3C'];
+
+  $meio[] = @ $_REQUEST['MEIOAMBIENTE1D'];
+  $meio[] = @ $_REQUEST['MEIOAMBIENTE2D'];
+  $meio[] = @ $_REQUEST['MEIOAMBIENTE3D'];
+
+  $alim[] = @ $_REQUEST['ALIMENTOS1E'];
+  $alim[] = @ $_REQUEST['ALIMENTOS2E'];
+  $alim[] = @ $_REQUEST['ALIMENTOS3E'];
+
+
+  $id = $user->getId();
+  $nome_prof = str_replace(" ", "_", $user->nome);
+  $dir = ROOT . "uploads/" . $nome_prof . "/";
+
+  if (!checkDir($dir)):
+    mkdir($dir, 0777);
+  endif;
+
+
+  if(!$agroA)
+    $agroA = NULL;
+  if(!$agroB)
+    $agroB = NULL;
+  if(!$info)
+    $info = NULL;
+  if(!$meio)
+    $meio = NULL;
+  if(!$alim)
+    $alim = NULL;
+  if(!$desc)
+    $alim = NULL;
 
   $erro = "";
   // Pasta onde o arquivo vai ser salvo
-  $_UP['pasta'] =  ROOT . 'uploads/';
+  $_UP['pasta'] =  $dir;
 
   // Tamanho máximo do arquivo (em Bytes)
   $_UP['tamanho'] = 1024 * 1024 * 2; // 2Mb
@@ -25,9 +75,8 @@ function upload($nome, $desc)
 
   // Verifica se houve algum erro com o upload. Se sim, exibe a mensagem do erro
   if ($_FILES['arquivo']['error'] != 0) {
-    $erro = $erro . "Não foi possível fazer o upload, erro:" . $_UP['erros'][$_FILES['arquivo']['error']];
-    mostra_janela($erro);
-    return 0; // Para a execução do script
+    $_SESSION['danger'] = $erro . "Não foi possível fazer o upload, erro:" . $_UP['erros'][$_FILES['arquivo']['error']];
+    header('Location:' . BASEURL . 'View/Arquivos/'); 
   }
 
   // Caso script chegue a esse ponto, não houve erro com o upload e o PHP pode continuar
@@ -36,16 +85,14 @@ function upload($nome, $desc)
   $tmp = explode('.', $_FILES['arquivo']['name']);
   $extensao = end($tmp);
   if (array_search($extensao, $_UP['extensoes']) === false) {
-    $erro = $erro . " Por favor, envie arquivos com as seguintes extensões: pdf";
-    mostra_janela($erro);
-    return 0;
+    $_SESSION['warning'] = $erro . " Por favor, envie arquivos com as seguintes extensões: pdf";
+    header('Location:' . BASEURL . 'View/Arquivos/'); 
   }
 
   // Faz a verificação do tamanho do arquivo
   if ($_UP['tamanho'] < $_FILES['arquivo']['size']) {
-    $erro = $erro . " O arquivo enviado é muito grande, envie arquivos de até 2Mb.";
-    mostra_janela($erro);
-    return 0;
+    $_SESSION['warning'] = $erro . " O arquivo enviado é muito grande, envie arquivos de até 2Mb.";
+    header('Location:' . BASEURL . 'View/Arquivos/');
   }
 
   // O arquivo passou em todas as verificações, hora de tentar movê-lo para a pasta
@@ -53,25 +100,56 @@ function upload($nome, $desc)
   // Primeiro verifica se deve trocar o nome do arquivo
   if ($_UP['renomeia'] == true) {
     // Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
-    $test = str_replace(" ", "_", $nome;
-    $nome_final = $test . $extensao;
+    //$test = str_replace(" ", "_", $nome);
+    $nome_final = md5($nome);
 
   } else {
     // Mantém o nome original do arquivo
     $nome_final = $_FILES['arquivo']['name'];
   }
 
-  // Depois verifica se é possível mover o arquivo para a pasta escolhida
-  if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)) {
-    // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
-    
-    $query = DB::conn()->prepare("INSERT INTO `arquivo` (`id`, `id_professor`, `id_turma`, `nome`, `descricao`, `local`) VALUES (NULL, '1', '4', 'GPO', '', '/uploads/GOPR.pdf'), (NULL, '1', '1', 'asdasd', NULL, 'asdasd')");
+  $file = $_UP['pasta'] . $nome_final . "." . $extensao;
 
-    mostra_janela("Upload efetuado com sucesso!");
-    return 1;
+
+  // Depois verifica se é possível mover o arquivo para a pasta escolhida
+  if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final . "." . $extensao)) {
+    $file = $_UP['pasta'] . $nome_final . "." . $extensao;
+    // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
+    $_SESSION['success'] = "Arquivo Enviado para as turmas: ";
+    if($agroA)
+      $mensagem = salva_arquivo($agroA, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file);
+
+    $msg = ajuda_array($mensagem);
+    $_SESSION['success'] = $_SESSION['success'] . $msg;
+
+    if($agroB)
+      $mensagem = salva_arquivo($agroB, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file);
+
+    $msg = ajuda_array($mensagem);
+    $_SESSION['success'] = $_SESSION['success'] . $msg;
+
+    if($info)
+      $mensagem = salva_arquivo($info, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file);
+
+    $msg = ajuda_array($mensagem);
+    $_SESSION['success'] = $_SESSION['success'] . $msg;
+
+    if($meio)
+      $mensagem = salva_arquivo($meio, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file);
+
+    $msg = ajuda_array($mensagem);
+    $_SESSION['success'] = $_SESSION['success'] . $msg;
+
+    if($alim)
+      $mensagem = salva_arquivo($alim, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file);
+
+    $msg = ajuda_array($mensagem);
+    $_SESSION['success'] = $_SESSION['success'] . $msg;
+
   } else {
     // Não foi possível fazer o upload, provavelmente a pasta está incorreta
-    mostra_janela("Não foi possível enviar o arquivo, tente novamente");
-    return 0;
+    unlink($_UP['pasta'] . $nome_final . $extensao);
+    echo "<script> alert('Algo de errado ocorreu em nosso servidor, tente novamente mais tarte');</script>";
   }
-}
+
+  // header('Location:' . BASEURL . 'View/Arquivos/'); 

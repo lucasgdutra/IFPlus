@@ -1,10 +1,10 @@
 <script src="<?= BASEURL?>Funcoes/Arquivo/arquivo.func.js" type="text/javascript"></script>
-<form method="post" action="" enctype="multipart/form-data">
-    <div class="container">
+<form method="post" action="<?=BASEURL?>Funcoes/Arquivo/upload.php" enctype="multipart/form-data">
+    <div class="container-fluid">
         <div id="select-file" class="row">
             <input type="file" name="arquivo" class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" required>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div id="select-turm" class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" required>
                     <h4>
@@ -13,9 +13,9 @@
                     <h6>
                         Selecione a turma para quem você deseja enviar o arquivo
                     </h6>
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-2">
+                            <div class="col-xs-4">
                                 <h6>Primeiro ano</h6>
                                 <?php
                                     $test = $user->getId_turma_prof(1);
@@ -26,7 +26,7 @@
                                 ?>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="<?= $turma['curso'] . 1 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . 2 . $turma['sigla']?>" id="myCheck">1°<?= $turma['sigla']?>
+                                        <input name="<?= $turma['curso'] . 1 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . "_" . 1 . "_" . $turma['sigla']?>" id="myCheck">1°<?= $turma['sigla']?>
                                     </label>
                                 </div>
                                 <?php
@@ -36,14 +36,14 @@
                                     {
                                         ?>
                                         <div class="bg-info text-center col-xs-9">
-                                            Você não ministra nenhuma disciplinas para o 1° ano
+                                            Você não ministra nenhuma disciplina para o 1° ano
                                         </div>
                                         <?php
                                     }
 
                                 ?>
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-4">
                                 <h6>Segundo ano</h6>
                                 <?php
                                     $test = $user->getId_turma_prof(2);
@@ -56,7 +56,7 @@
                                 ?>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="<?= $turma['curso'] . 2 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . 2 . $turma['sigla']?>" id="myCheck">2°<?= $turma['sigla']?>
+                                        <input name="<?= $turma['curso'] . 2 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . "_" . 2 . "_" . $turma['sigla']?>" id="myCheck">2°<?= $turma['sigla']?>
                                     </label>
                                 </div>
                                 <?php
@@ -64,11 +64,15 @@
                                     }
                                     else
                                     {
-
+                                        ?>
+                                        <div class="bg-info text-center col-xs-9">
+                                            Você não ministra nenhuma disciplina para o 2° ano
+                                        </div>
+                                        <?php
                                     }
                                 ?>
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-4">
                                 <h6>Terceiro ano</h6>
                                 <?php
                                     $test = $user->getId_turma_prof(3);
@@ -81,7 +85,7 @@
                                 ?>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="<?= $turma['curso'] . 3 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . 3 . $turma['sigla']?>" id="myCheck">3°<?= $turma['sigla']?>
+                                        <input name="<?= $turma['curso'] . 3 . $turma['sigla']?>" type="checkbox" value="<?= $turma['curso'] . "_" . 3 . "_" . $turma['sigla']?>" id="myCheck">3°<?= $turma['sigla']?>
                                     </label>
                                 </div>
                                 <?php
@@ -89,7 +93,11 @@
                                     }
                                     else
                                     {
-
+                                        ?>
+                                        <div class="bg-info text-center col-xs-9">
+                                            Você não ministra nenhuma disciplina para o 1° ano
+                                        </div>
+                                        <?php
                                     }
                                 ?>
                             </div>
@@ -97,14 +105,14 @@
                     </div>
                     <div class="input-group col-xs-8" id="input-name">
 
-                      <input id="nome" type="text" class="form-control" placeholder="Nome do Arquivo" aria-describedby="basic-addon2" required>
+                      <input id="nome" name="nome" type="text" class="form-control" placeholder="Nome do Arquivo" aria-describedby="basic-addon2" required>
 
                       <span class="input-group-addon " id="basic-addon2">
                         <a tabindex="0" class="glyphicon glyphicon-question-sign" role="button" data-placement="left" data-toggle="popover" data-trigger="focus" title="Ajuda" data-content="Este será o nome exibido aos alunos."></a>
                       </span>
                     </div>
 
-                    <textarea id="desc" class="col-xs-11 textarea-desc" rows="4" cols="50" placeholder="Descrição"></textarea>
+                    <textarea id="desc" name="desc" class="col-xs-11 textarea-desc" rows="4" cols="50" placeholder="Descrição"></textarea>
                 </div>
 
                 <button type="submit" class="btn-default btn col-xs-6 col-xs-offset-2 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" id="checkBtn">Enviar</button> 
