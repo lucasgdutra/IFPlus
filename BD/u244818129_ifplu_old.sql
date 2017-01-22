@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 22-Jan-2017 às 21:58
--- Versão do servidor: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Host: localhost
+-- Tempo de geração: 19/12/2016 às 05:42
+-- Versão do servidor: 10.1.16-MariaDB
+-- Versão do PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,30 +17,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u244818129_ifplu`
+-- Banco de dados: `u244818129_ifplu`
 --
-CREATE DATABASE IF NOT EXISTS `u244818129_ifplu` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `u244818129_ifplu` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `u244818129_ifplu`;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `aluno`
+-- Estrutura para tabela `aluno`
 --
 
 DROP TABLE IF EXISTS `aluno`;
-CREATE TABLE IF NOT EXISTS `aluno` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `aluno` (
+  `id` int(11) NOT NULL,
   `id_turma` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`id_turma`,`id_usuario`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_Aluno_Turma_idx` (`id_turma`),
-  KEY `fk_Aluno_Usuario1_idx` (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+  `id_usuario` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `aluno`
+-- Fazendo dump de dados para tabela `aluno`
 --
 
 INSERT INTO `aluno` (`id`, `id_turma`, `id_usuario`) VALUES
@@ -78,24 +74,21 @@ INSERT INTO `aluno` (`id`, `id_turma`, `id_usuario`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `arquivo`
+-- Estrutura para tabela `arquivo`
 --
 
 DROP TABLE IF EXISTS `arquivo`;
-CREATE TABLE IF NOT EXISTS `arquivo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `arquivo` (
+  `id` int(11) NOT NULL,
   `id_professor` int(11) NOT NULL,
   `id_turma` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL,
   `descricao` varchar(45) DEFAULT NULL,
-  `local` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`,`id_professor`,`id_turma`),
-  KEY `fk_Arquivo_Professor1_idx` (`id_professor`),
-  KEY `fk_Arquivo_Turma1_idx` (`id_turma`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `local` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `arquivo`
+-- Fazendo dump de dados para tabela `arquivo`
 --
 
 INSERT INTO `arquivo` (`id`, `id_professor`, `id_turma`, `nome`, `descricao`, `local`) VALUES
@@ -106,23 +99,20 @@ INSERT INTO `arquivo` (`id`, `id_professor`, `id_turma`, `nome`, `descricao`, `l
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `aula`
+-- Estrutura para tabela `aula`
 --
 
 DROP TABLE IF EXISTS `aula`;
-CREATE TABLE IF NOT EXISTS `aula` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `aula` (
+  `id` int(11) NOT NULL,
   `titulo` varchar(45) NOT NULL,
   `numero` varchar(45) NOT NULL,
   `conteudo` longtext NOT NULL,
-  `id_Disciplina` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_id_Disciplina` (`id_Disciplina`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `id_Disciplina` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `aula`
+-- Fazendo dump de dados para tabela `aula`
 --
 
 INSERT INTO `aula` (`id`, `titulo`, `numero`, `conteudo`, `id_Disciplina`) VALUES
@@ -131,24 +121,19 @@ INSERT INTO `aula` (`id`, `titulo`, `numero`, `conteudo`, `id_Disciplina`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `compartilhamento`
+-- Estrutura para tabela `compartilhamento`
 --
 
 DROP TABLE IF EXISTS `compartilhamento`;
-CREATE TABLE IF NOT EXISTS `compartilhamento` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `compartilhamento` (
+  `id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_turma` int(11) NOT NULL,
-  `id_lembrete` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_usuario` (`id_usuario`),
-  UNIQUE KEY `id_turma` (`id_turma`),
-  UNIQUE KEY `id_lembrete` (`id_lembrete`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `id_lembrete` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `compartilhamento`
+-- Fazendo dump de dados para tabela `compartilhamento`
 --
 
 INSERT INTO `compartilhamento` (`id`, `id_usuario`, `id_turma`, `id_lembrete`) VALUES
@@ -157,19 +142,18 @@ INSERT INTO `compartilhamento` (`id`, `id_usuario`, `id_turma`, `id_lembrete`) V
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `disciplina`
+-- Estrutura para tabela `disciplina`
 --
 
 DROP TABLE IF EXISTS `disciplina`;
-CREATE TABLE IF NOT EXISTS `disciplina` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `disciplina` (
+  `id` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
-  `ano` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+  `ano` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `disciplina`
+-- Fazendo dump de dados para tabela `disciplina`
 --
 
 INSERT INTO `disciplina` (`id`, `nome`, `ano`) VALUES
@@ -260,20 +244,17 @@ INSERT INTO `disciplina` (`id`, `nome`, `ano`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `grade`
+-- Estrutura para tabela `grade`
 --
 
 DROP TABLE IF EXISTS `grade`;
-CREATE TABLE IF NOT EXISTS `grade` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_Disciplina` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`id_Disciplina`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_Grade_Disciplina1_idx` (`id_Disciplina`)
-) ENGINE=MyISAM AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+CREATE TABLE `grade` (
+  `id` int(11) NOT NULL,
+  `id_Disciplina` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `grade`
+-- Fazendo dump de dados para tabela `grade`
 --
 
 INSERT INTO `grade` (`id`, `id_Disciplina`) VALUES
@@ -364,25 +345,22 @@ INSERT INTO `grade` (`id`, `id_Disciplina`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `lembrete`
+-- Estrutura para tabela `lembrete`
 --
 
 DROP TABLE IF EXISTS `lembrete`;
-CREATE TABLE IF NOT EXISTS `lembrete` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `lembrete` (
+  `id` int(11) NOT NULL,
   `titulo` varchar(45) NOT NULL,
   `descricao` varchar(45) DEFAULT NULL,
   `data` date NOT NULL,
   `hora` time NOT NULL,
   `concluida` tinyint(1) NOT NULL DEFAULT '0',
-  `usuario_id_remetente` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`usuario_id_remetente`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_Lembrete_Usuario2_idx` (`usuario_id_remetente`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `usuario_id_remetente` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `lembrete`
+-- Fazendo dump de dados para tabela `lembrete`
 --
 
 INSERT INTO `lembrete` (`id`, `titulo`, `descricao`, `data`, `hora`, `concluida`, `usuario_id_remetente`) VALUES
@@ -391,46 +369,39 @@ INSERT INTO `lembrete` (`id`, `titulo`, `descricao`, `data`, `hora`, `concluida`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mensagem`
+-- Estrutura para tabela `mensagem`
 --
 
 DROP TABLE IF EXISTS `mensagem`;
-CREATE TABLE IF NOT EXISTS `mensagem` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `mensagem` (
+  `id` int(11) NOT NULL,
   `usuario_id_destinatario` int(11) NOT NULL,
   `usuario_id_remetente` int(11) NOT NULL,
   `mensagem` mediumtext NOT NULL,
-  `time` time NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`,`usuario_id_destinatario`,`usuario_id_remetente`),
-  KEY `fk_Usuario_has_Usuario_Usuario2_idx` (`usuario_id_remetente`),
-  KEY `fk_Usuario_has_Usuario_Usuario1_idx` (`usuario_id_destinatario`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `status` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `mensagem`
+-- Fazendo dump de dados para tabela `mensagem`
 --
 
-INSERT INTO `mensagem` (`id`, `usuario_id_destinatario`, `usuario_id_remetente`, `mensagem`, `time`, `status`) VALUES
-(3, 2, 1, 'OlÃ¡!', '00:00:00', 0);
+INSERT INTO `mensagem` (`id`, `usuario_id_destinatario`, `usuario_id_remetente`, `mensagem`, `status`) VALUES
+(3, 2, 1, 'OlÃ¡!', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ministra`
+-- Estrutura para tabela `ministra`
 --
 
 DROP TABLE IF EXISTS `ministra`;
-CREATE TABLE IF NOT EXISTS `ministra` (
+CREATE TABLE `ministra` (
   `id_disciplina` int(11) NOT NULL,
-  `id_professor` int(11) NOT NULL,
-  PRIMARY KEY (`id_disciplina`,`id_professor`),
-  KEY `fk_Disciplina_has_Professor_Professor1_idx` (`id_professor`),
-  KEY `fk_Disciplina_has_Professor_Disciplina1_idx` (`id_disciplina`)
+  `id_professor` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `ministra`
+-- Fazendo dump de dados para tabela `ministra`
 --
 
 INSERT INTO `ministra` (`id_disciplina`, `id_professor`) VALUES
@@ -521,20 +492,17 @@ INSERT INTO `ministra` (`id_disciplina`, `id_professor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `professor`
+-- Estrutura para tabela `professor`
 --
 
 DROP TABLE IF EXISTS `professor`;
-CREATE TABLE IF NOT EXISTS `professor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`id_usuario`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_Professor_Usuario1_idx` (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+CREATE TABLE `professor` (
+  `id` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `professor`
+-- Fazendo dump de dados para tabela `professor`
 --
 
 INSERT INTO `professor` (`id`, `id_usuario`) VALUES
@@ -625,22 +593,21 @@ INSERT INTO `professor` (`id`, `id_usuario`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `turma`
+-- Estrutura para tabela `turma`
 --
 
 DROP TABLE IF EXISTS `turma`;
-CREATE TABLE IF NOT EXISTS `turma` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `turma` (
+  `id` int(11) NOT NULL,
   `anofinal` int(11) NOT NULL,
   `anoatual` int(11) NOT NULL,
   `curso` varchar(255) NOT NULL,
   `grade_id` int(11) NOT NULL,
-  `sigla` varchar(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+  `sigla` varchar(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `turma`
+-- Fazendo dump de dados para tabela `turma`
 --
 
 INSERT INTO `turma` (`id`, `anofinal`, `anoatual`, `curso`, `grade_id`, `sigla`) VALUES
@@ -660,24 +627,22 @@ INSERT INTO `turma` (`id`, `anofinal`, `anoatual`, `curso`, `grade_id`, `sigla`)
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura para tabela `usuario`
 --
 
 DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE IF NOT EXISTS `usuario` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `cpf` char(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(45) NOT NULL,
   `foto` varchar(255) DEFAULT NULL,
-  `sessao` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
+  `sessao` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Fazendo dump de dados para tabela `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `cpf`, `email`, `senha`, `foto`, `sessao`) VALUES
@@ -780,6 +745,163 @@ INSERT INTO `usuario` (`id`, `nome`, `cpf`, `email`, `senha`, `foto`, `sessao`) 
 (97, 'professorsociologia2', '12345678912', 'professorsociologia2@iftm.edu.br', '950f0129ab240dd16c1d31e377b8f3a7', NULL, 0),
 (98, 'professorsociologia3', '12345678912', 'professorsociologia3@iftm.edu.br', '950f0129ab240dd16c1d31e377b8f3a7', NULL, 0);
 
+--
+-- Índices de tabelas apagadas
+--
+
+--
+-- Índices de tabela `aluno`
+--
+ALTER TABLE `aluno`
+  ADD PRIMARY KEY (`id`,`id_turma`,`id_usuario`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`),
+  ADD KEY `fk_Aluno_Turma_idx` (`id_turma`),
+  ADD KEY `fk_Aluno_Usuario1_idx` (`id_usuario`);
+
+--
+-- Índices de tabela `arquivo`
+--
+ALTER TABLE `arquivo`
+  ADD PRIMARY KEY (`id`,`id_professor`,`id_turma`),
+  ADD KEY `fk_Arquivo_Professor1_idx` (`id_professor`),
+  ADD KEY `fk_Arquivo_Turma1_idx` (`id_turma`);
+
+--
+-- Índices de tabela `aula`
+--
+ALTER TABLE `aula`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`),
+  ADD KEY `fk_id_Disciplina` (`id_Disciplina`);
+
+--
+-- Índices de tabela `compartilhamento`
+--
+ALTER TABLE `compartilhamento`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`),
+  ADD UNIQUE KEY `id_turma` (`id_turma`),
+  ADD UNIQUE KEY `id_lembrete` (`id_lembrete`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Índices de tabela `disciplina`
+--
+ALTER TABLE `disciplina`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `grade`
+--
+ALTER TABLE `grade`
+  ADD PRIMARY KEY (`id`,`id_Disciplina`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`),
+  ADD KEY `fk_Grade_Disciplina1_idx` (`id_Disciplina`);
+
+--
+-- Índices de tabela `lembrete`
+--
+ALTER TABLE `lembrete`
+  ADD PRIMARY KEY (`id`,`usuario_id_remetente`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`),
+  ADD KEY `fk_Lembrete_Usuario2_idx` (`usuario_id_remetente`);
+
+--
+-- Índices de tabela `mensagem`
+--
+ALTER TABLE `mensagem`
+  ADD PRIMARY KEY (`id`,`usuario_id_destinatario`,`usuario_id_remetente`),
+  ADD KEY `fk_Usuario_has_Usuario_Usuario2_idx` (`usuario_id_remetente`),
+  ADD KEY `fk_Usuario_has_Usuario_Usuario1_idx` (`usuario_id_destinatario`);
+
+--
+-- Índices de tabela `ministra`
+--
+ALTER TABLE `ministra`
+  ADD PRIMARY KEY (`id_disciplina`,`id_professor`),
+  ADD KEY `fk_Disciplina_has_Professor_Professor1_idx` (`id_professor`),
+  ADD KEY `fk_Disciplina_has_Professor_Disciplina1_idx` (`id_disciplina`);
+
+--
+-- Índices de tabela `professor`
+--
+ALTER TABLE `professor`
+  ADD PRIMARY KEY (`id`,`id_usuario`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`),
+  ADD KEY `fk_Professor_Usuario1_idx` (`id_usuario`);
+
+--
+-- Índices de tabela `turma`
+--
+ALTER TABLE `turma`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas apagadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `aluno`
+--
+ALTER TABLE `aluno`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT de tabela `arquivo`
+--
+ALTER TABLE `arquivo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de tabela `aula`
+--
+ALTER TABLE `aula`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de tabela `compartilhamento`
+--
+ALTER TABLE `compartilhamento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de tabela `disciplina`
+--
+ALTER TABLE `disciplina`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+--
+-- AUTO_INCREMENT de tabela `grade`
+--
+ALTER TABLE `grade`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+--
+-- AUTO_INCREMENT de tabela `lembrete`
+--
+ALTER TABLE `lembrete`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de tabela `mensagem`
+--
+ALTER TABLE `mensagem`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de tabela `professor`
+--
+ALTER TABLE `professor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+--
+-- AUTO_INCREMENT de tabela `turma`
+--
+ALTER TABLE `turma`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
