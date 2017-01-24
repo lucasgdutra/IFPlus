@@ -48,9 +48,7 @@ function checkDir($Dir) {
 
 function salva_arquivo($curso, $nome_final, $extensao, $id, $nome, $desc, $_UP, $file)
 {
-	print_r($cusro);
-	foreach ($curso as $key) {
-		print_r($key);		
+	foreach ($curso as $key) {	
 		if($key)
 		{
 			$turma = explode("_", $key);
@@ -59,16 +57,17 @@ function salva_arquivo($curso, $nome_final, $extensao, $id, $nome, $desc, $_UP, 
 			$nome_final = $nome_final . $turma[1] . $turma[2] . "." . $extensao;
 			$local = $_UP['pasta'] . $nome_final;
 
+			echo $local . "<br>";
+
 			if(file_exists($file))
 			{
 				copy($file, $local);
-				unlink($file);
 			}
 
 			$query = BD::conn()->prepare("INSERT INTO `arquivo` (`id_professor`, `id_turma`, `nome`, `descricao`, `local`) VALUES ('{$id}', '{$test}', '{$nome}', '{$desc}', '{$local}')");
 			$query->execute();
 			$linha = $query->rowCount();
-			print_r($query);
+			//print_r($query);
 			// $t = array($id, $test, $nome, $desc, $local);
 			// print_r($t);
 			// print_r($turma);
@@ -94,8 +93,15 @@ function salva_arquivo($curso, $nome_final, $extensao, $id, $nome, $desc, $_UP, 
 function ajuda_array($value)
 {
 	$teste = "";
-	foreach ($value as $key) {
-		$teste = $teste . $key;
+	if($value == NULL)
+	{
+		return;
 	}
-	return $teste;
+	else
+	{
+		foreach ($value as $key) {
+			$teste = $teste . $key;
+		}
+		return $teste;
+	}
 }

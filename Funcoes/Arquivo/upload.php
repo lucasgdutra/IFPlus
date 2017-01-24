@@ -145,7 +145,7 @@
 
     $msg = ajuda_array($mensagem);
     $_SESSION['success'] = $_SESSION['success'] . $msg;
-
+    unlink($file);
   } else {
     // Não foi possível fazer o upload, provavelmente a pasta está incorreta
     unlink($_UP['pasta'] . $nome_final . $extensao);
