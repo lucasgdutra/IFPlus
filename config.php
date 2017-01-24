@@ -11,7 +11,7 @@ if (!defined('ROOT'))
 /** caminho no server para o sistema * */
 if (!defined('BASEURL'))
 {
-	define('BASEURL', '/IFPlus/');
+	define('BASEURL', 'http://localhost:8000/');
 }
 
 /** caminho do arquivo de banco de dados * */

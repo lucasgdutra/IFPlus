@@ -5,7 +5,7 @@ require_once '../../config.php';
 require_once '../../Funcoes/Caderno/banco-aula.php';
 require_once ROOT . "cabecalho.php";
 verificaUsuario();
-require_once ROOT . 'View' . DS . 'navbar.php';
+require_once ROOT . 'Views' . DS . 'navbar.php';
 ?>
 <script src="//cdn.ckeditor.com/4.6.0/standard-all/ckeditor.js"></script>
 

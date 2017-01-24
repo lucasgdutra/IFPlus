@@ -2,7 +2,7 @@
     $nome_tela = "Arquivos";
     require_once '../../config.php';
     require_once ROOT . "cabecalho.php";
-    require_once ROOT . 'View/navbar.php';
+    require_once ROOT . 'Views/navbar.php';
     require_once ROOT . "Funcoes/Arquivo/basicas.php";
     //require_once (ROOT . "Classes/BD.class.php");
     include ROOT . "Classes/init.php";
@@ -41,10 +41,10 @@ else
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
-                <?php require_once ROOT . "View/Arquivos/Professor/prof.php"; ?>
+                <?php require_once ROOT . "Views/Arquivos/Professor/prof.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php require_once ROOT . "View/Chat/barra-lateral.php"; ?>
+                <?php require_once ROOT . "Views/Chat/barra-lateral.php"; ?>
             </div>
         </div>
     </div>
@@ -55,10 +55,10 @@ else
     <div id="main" class="container-fluid">
         <div class="row">
             <div class="col-sm-9 col-md-10 no-padding">
-                <?php require_once ROOT . "View/Arquivos/Aluno/aluno.php"; ?>
+                <?php require_once ROOT . "Views/Arquivos/Aluno/aluno.php"; ?>
             </div>
             <div class = "col-sm-3 col-md-2 hidden-xs no-padding">
-                <?php require_once ROOT . "View/Chat/barra-lateral.php"; ?>
+                <?php require_once ROOT . "Views/Chat/barra-lateral.php"; ?>
             </div>
         </div>
     </div>

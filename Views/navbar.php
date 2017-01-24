@@ -17,7 +17,7 @@
                         echo 'class="active"';
                     }
                     ?>>
-                        <a href="<?= BASEURL ?>View/Agenda/">
+                        <a href="<?= BASEURL ?>Views/Agenda/">
                             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                             &nbsp;
                             Agenda
@@ -30,7 +30,7 @@
                         echo 'class="active"';
                     }
                     ?>>
-                        <a  href="<?= BASEURL ?>View/Arquivos/">
+                        <a  href="<?= BASEURL ?>Views/Arquivos/">
                             <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
                             &nbsp;
                             Arquivos
@@ -43,7 +43,7 @@
                         echo 'class="active"';
                     }
                     ?>>
-                        <a  href="<?= BASEURL ?>View/Caderno/">
+                        <a  href="<?= BASEURL ?>Views/Caderno/">
                             <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                             &nbsp;
                             Caderno
@@ -56,7 +56,7 @@
                         echo 'active';
                     }
                     ?>">
-                        <a  href="<?= BASEURL ?>View/Chat/">
+                        <a  href="<?= BASEURL ?>Views/Chat/">
                             <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                             &nbsp;
                             Chat
